@@ -5,17 +5,20 @@
         $input_gender = $_POST["gender"];
         $input_weight = floatval($_POST["weight"]);
         $input_height = floatval($_POST["height"]);
-    
-        $result = "Your BMI is: " . calculateBMI($input_gender, $input_weight, $input_height);
-        $result = BMIStatus($gender, $bmi);
+
+        $gender = $input_gender;
+        $bmi = calculateBMI($input_gender, $input_weight, $input_height);
+
          
+        if ($gender == "male") {
+            $bmi_status = showBMIStatusMale($bmi);
+            $result = "Your BMI: " . $bmi . " and Your Status: " . $bmi_status;
+            
+        } elseif ($gender == "female") {
+            showBMIStatusFemale($bmi);
+        }
+
         $_POST["result"] = $result;
-        
-        // if ($gender == "male") {
-        //     showBMIStatusMale($bmi);
-        // } elseif ($gender == "female") {
-        //     showBMIStatusFemale($bmi);
-        // }
     }
 ?>
 
@@ -27,9 +30,7 @@
     <title>BMI</title>
 
     <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
-
 </head>
-
 <body>
     <form method="post" action="">
         <label for="gender">Gender:</label>
@@ -46,8 +47,8 @@
 
         <input type="submit" name="submit" value="Calculate BMI">
     </form>
-
-    <?php echo $_POST["result"]; ?>
-
+    <div style="text-align: center;">
+        <?php echo $_POST["result"]; ?>
+    </div>
 </body>
 </html>
