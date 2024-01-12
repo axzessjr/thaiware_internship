@@ -17,7 +17,7 @@
             $bmi_status = showBMIStatusFemale($bmi);
         }
         
-        $result = "Your BMI: " . $bmi . " and Your Status: " . $bmi_status;
+        $result = "Your BMI: " . $bmi . " <br>Your Status: " . $bmi_status;
 
         $_POST["result"] = $result;
     }
