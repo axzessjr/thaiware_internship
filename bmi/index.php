@@ -12,11 +12,12 @@
          
         if ($gender == "male") {
             $bmi_status = showBMIStatusMale($bmi);
-            $result = "Your BMI: " . $bmi . " and Your Status: " . $bmi_status;
-            
-        } elseif ($gender == "female") {
-            showBMIStatusFemale($bmi);
+        } else
+        if ($gender == "female") {
+            $bmi_status = showBMIStatusFemale($bmi);
         }
+        
+        $result = "Your BMI: " . $bmi . " and Your Status: " . $bmi_status;
 
         $_POST["result"] = $result;
     }
@@ -30,6 +31,7 @@
     <title>BMI</title>
 
     <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
+
 </head>
 <body>
     <form method="post" action="">
@@ -47,8 +49,10 @@
 
         <input type="submit" name="submit" value="Calculate BMI">
     </form>
-    <div style="text-align: center;">
+    
+    <div class="rs">
         <?php echo $_POST["result"]; ?>
     </div>
+   
 </body>
 </html>

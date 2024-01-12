@@ -28,19 +28,18 @@
     }
 
     function showBMIStatusFemale($bmi) {
-        echo "<p>BMI Category: ";
         if ($bmi < 18.5) {
-            echo "Underweight";
+            return "Underweight";
         } elseif ($bmi >= 18.5 && $bmi <= 23.9) {
-            echo "Normal weight";
+            return "Normal weight";
         } elseif ($bmi >= 24 && $bmi <= 28.9) {
-            echo "Overweight";
+            return "Overweight";
         } elseif ($bmi >= 29 && $bmi <= 34.9) {
-            echo "Obese class I";
+            return "Obese class I";
         } elseif ($bmi >= 35 && $bmi <= 39.9) {
-            echo "Obese class II";
+            return "Obese class II";
         } else {
-            echo "Obese class III";
+            return "Obese class III";
         }
         echo "</p>";
     }

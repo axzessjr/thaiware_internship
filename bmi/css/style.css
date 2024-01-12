@@ -31,10 +31,10 @@ input[type="submit"] {
     margin-bottom: 20px;
 }
 
-p {
+.rs {
     text-align: center;
     margin-top: 50px;
     margin-bottom: -50px;
     font-size: 36px;
     color: rgba(0, 0, 0, 0.5);
-}
+} 
