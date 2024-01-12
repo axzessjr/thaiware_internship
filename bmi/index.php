@@ -7,6 +7,8 @@
     <title>BMI</title>
 </head>
 
+<link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
+
 <body>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <label for="gender">Gender:</label>
@@ -47,70 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-    <div class="table">
-        <table class="male" style="width:50%">
-        <tr>
-            <th>BMI ผู้ชาย (kg/m2)</th>
-            <th>อยู่ในเกณท์</th>
-        </tr>
-        <tr>
-            <td>น้อยกว่า 18.5</td>
-            <td>ผอม (Underweight)</td>
-        </tr>
-        <tr>
-            <td>18.5 - 24.9</td>
-            <td>ปกติ (Normal weight)</td>
-        </tr>
-        <tr>
-            <td>25 - 29.9</td>
-            <td>ท้วม (Overweight)</td>
-        </tr>
-        <tr>
-            <td>30 - 34.9</td>
-            <td>โรคอ้วนระดับ 1 (Obese class I)</td>
-        </tr>
-        <tr>
-            <td>35 - 39.9</td>
-            <td>โรคอ้วนระดับ 2 (Obese class II)</td>
-        </tr>
-        <tr>
-            <td>40 ขึ้นไป</td>
-            <td>โรคอ้วนระดับ 3 (Obese class III)</td>
-        </tr>
-        </table>
-
-        <table class="female" style="width:50%">
-        <tr>
-            <th>BMI ผู้หญิง (kg/m2)</th>
-            <th>อยู่ในเกณท์</th>
-        </tr>
-        <tr>
-            <td>น้อยกว่า 18.5</td>
-            <td>ผอม (Underweight)</td>
-        </tr>
-        <tr>
-            <td>18.5 - 23.9</td>
-            <td>ปกติ (Normal weight)</td>
-        </tr>
-        <tr>
-            <td>24 - 28.9</td>
-            <td>ท้วม (Overweight)</td>
-        </tr>
-        <tr>
-            <td>29 - 34.9</td>
-            <td>โรคอ้วนระดับ 1 (Obese class I)</td>
-        </tr>
-        <tr>
-            <td>35 - 39.9</td>
-            <td>โรคอ้วนระดับ 2 (Obese class II)</td>
-        </tr>
-        <tr>
-            <td>40 ขึ้นไป</td>
-            <td>โรคอ้วนระดับ 3 (Obese class III)</td>
-        </tr>
-        </table>
-    </div>
 
 </body>
 </html>
