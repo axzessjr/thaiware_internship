@@ -34,4 +34,36 @@ function showBMIStatusFemale($bmi) {
     }
     echo "</p>";
 }
+
+function calculateBMI ($gender, $weight, $height) {
+    $gender = $gender;
+    $weight = floatval($weight);
+    $height = floatval($height);
+    
+    $bmi = $weight / ($height * $height);
+
+    return  number_format($bmi, 2);
+}
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+//     $gender = $_POST["gender"];
+//     $weight = floatval($_POST["weight"]);
+//     $height = floatval($_POST["height"]);
+
+//     $bmi = $weight / ($height * $height);
+
+//     $result = "Your BMI is: " . number_format($bmi, 2);
+
+//     echo "<p>$result</p>";
+
+//     if ($gender == "male") {
+//         showBMIStatusMale($bmi);
+//     } elseif ($gender == "female") {
+//         showBMIStatusFemale($bmi);
+//     }
+// }
+
+
+
 ?>

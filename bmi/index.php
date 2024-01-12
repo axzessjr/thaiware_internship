@@ -1,4 +1,24 @@
+<?php
+    include "process.php";
 
+    if(isset($_POST["submit"])){
+        $input_gender = $_POST["gender"];
+        $input_weight = floatval($_POST["weight"]);
+        $input_height = floatval($_POST["height"]);
+    
+        $result = "Your BMI is: " . calculateBMI($input_gender, $input_weight, $input_height);
+    
+        $_POST["result"] = $result;
+        
+        //$_GET["result"] = $result;        
+    
+        // if ($gender == "male") {
+        //     showBMIStatusMale($bmi);
+        // } elseif ($gender == "female") {
+        //     showBMIStatusFemale($bmi);
+        // }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +30,7 @@
 <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
 
 <body>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<form method="post" action="">
     <label for="gender">Gender:</label>
     <select name="gender" required>
         <option value="male">Male</option>
@@ -23,32 +43,9 @@
     <label for="height">Height (m):</label>
     <input type="number" name="height" step="0.01" required><br>
 
-    <input type="submit" value="Calculate BMI">
+    <input type="submit" name="submit" value="Calculate BMI">
 </form>
-
-<?php
-// Include the PHP file containing functions
-include 'process.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $gender = $_POST["gender"];
-    $weight = floatval($_POST["weight"]);
-    $height = floatval($_POST["height"]);
-
-    $bmi = $weight / ($height * $height);
-
-    $result = "Your BMI is: " . number_format($bmi, 2);
-
-    echo "<p>$result</p>";
-
-    if ($gender == "male") {
-        showBMIStatusMale($bmi);
-    } elseif ($gender == "female") {
-        showBMIStatusFemale($bmi);
-    }
-}
-?>
+<?php echo $_POST["result"]; ?>
 
 </body>
 </html>
