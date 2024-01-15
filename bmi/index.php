@@ -29,10 +29,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    
+    <link rel="icon" type="image/png" href="/thaiware_internship/bmi/img/1.png">
     
     <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    
     <script src="/thaiware_internship/bmi/js/process.js"></script> 
 
 </head>
@@ -60,6 +63,18 @@
     </div>
 
     <input type="button" class="cal" onclick="calculateBMI()" value="Calculate BMI">
+
+    <script>
+        $(document).ready(function () {
+            $('#bmiForm').on('keypress', function (e) {
+                if (e.which === 13) {
+                    e.preventDefault();
+                    calculateBMI();
+                }
+            });
+        });
+    </script>
+
     
 </form>
     <div id="bmiResult"></div>
