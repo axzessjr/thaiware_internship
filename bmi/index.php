@@ -37,15 +37,15 @@
     <form method="post" action="">
         <label for="gender">Gender:</label>
         <select name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="male"<?php echo (isset($_POST['gender']) && $_POST['gender'] == 'male') ? 'selected' : ''; ?>>Male</option>
+            <option value="female"<?php echo (isset($_POST['gender']) && $_POST['gender'] == 'female') ? 'selected' : ''; ?>>Female</option>
         </select><br>
 
         <label for="weight">Weight (kg):</label>
-        <input type="number" name="weight" step="0.1" required><br>
+        <input type="number" name="weight" step="0.1" value="<?php echo $_POST["weight"]; ?>" required><br>
 
         <label for="height">Height (m):</label>
-        <input type="number" name="height" step="0.01" required><br>
+        <input type="number" name="height" step="0.01" value="<?php echo $_POST["height"]; ?>" required><br>
 
         <input type="submit" name="submit" value="Calculate BMI">
     </form>
