@@ -42,13 +42,19 @@
         var gender = document.getElementsByName('gender')[0].value;
         var weight = parseFloat(document.getElementsByName('weight')[0].value);
         var height = parseFloat(document.getElementsByName('height')[0].value);
+        var heightUnit = document.querySelector('input[name="heightUnit"]:checked').value;
+
+        if (heightUnit === 'cm') {
+            height /= 100;
+        }
 
         var bmi = weight / (height * height);
         var resultText = getBMIStatus(gender, bmi);
 
-        // Display result in the "bmiResult" div
+
         document.getElementById('bmiResult').innerHTML = "BMI: " + bmi.toFixed(2) + " - " + resultText;
         }
+        
 
         function getBMIStatus(gender, bmi) {
             if (gender === "male") {
@@ -96,25 +102,31 @@
     </script>
 
 
-    <form method="post" action="">
-        <label for="gender">Gender:</label>
-        <select name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select><br>
+<form id="bmiForm" method="post" action="">
+    <label for="gender">Gender:</label>
+    <select name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br>
 
-        <label for="weight">Weight (kg):</label>
-        <input type="number" name="weight" step="0.1" value="" required><br>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" name="weight" step="0.1" value="" required><br>
 
-        <label for="height">Height (m):</label>
-        <input type="number" name="height" step="0.01" value="" required><br>
-
-        <input type="button" name="submit" onclick="calculateBMI()" value="Calculate BMI">
+    <div class="height-op">
+        <label>Height:</label>
+        <label for="cm">cm</label>
+        <input type="radio" id="cm" name="heightUnit" value="cm" checked>
         
-        <div id="bmiResult"></div>
-    </form>
-    
+        <label for="m">m</label>
+        <input type="radio" id="m" name="heightUnit" value="m"><br>
 
+        <input type="number" name="height" step="0.01" value="" required><br>
+    </div>
+
+    <input type="button" onclick="calculateBMI()" value="Calculate BMI">
+    
+</form>
+   <div id="bmiResult"></div>
    
 </body>
 </html>
