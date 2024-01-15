@@ -38,34 +38,33 @@
 </head>
 <body>
     <script>
-        function calculateBMI() {
-        var gender = document.getElementsByName('gender')[0].value;
-        var weight = parseFloat(document.getElementsByName('weight')[0].value);
-        var height = parseFloat(document.getElementsByName('height')[0].value);
-        var heightUnit = document.querySelector('input[name="heightUnit"]:checked').value;
+        $(document).ready(function() {
+            function calculateBMI() {
+                var gender = $('select[name="gender"]').val();
+                var weight = parseFloat($('input[name="weight"]').val());
+                var height = parseFloat($('input[name="height"]').val());
+                var heightUnit = $('input[name="heightUnit"]:checked').val();
 
-        if (heightUnit === 'cm') {
-            height /= 100;
-        }
+                if (heightUnit === 'cm') {
+                    height /= 100;
+                }
 
-        var bmi = weight / (height * height);
-        var resultText = getBMIStatus(gender, bmi);
+                var bmi = weight / (height * height);
+                var resultText = getBMIStatus(gender, bmi);
 
-
-        document.getElementById('bmiResult').innerHTML = "BMI: " + bmi.toFixed(2) + " - " + resultText;
-        }
-        
-
-        function getBMIStatus(gender, bmi) {
-            if (gender === "male") {
-                return showBMIStatusMale(bmi);
-            } else if (gender === "female") {
-                return showBMIStatusFemale(bmi);
+                $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
             }
-        }
 
-        function showBMIStatusMale(bmi) {
-            if (bmi < 18.5) {
+            function getBMIStatus(gender, bmi) {
+                if (gender === "male") {
+                    return showBMIStatusMale(bmi);
+                } else if (gender === "female") {
+                    return showBMIStatusFemale(bmi);
+                }
+            }
+
+            function showBMIStatusMale(bmi) {
+                if (bmi < 18.5) {
                     return "Underweight";
                 } else if (bmi >= 18.5 && bmi <= 24.9) {
                     return "Normal weight";
@@ -78,12 +77,10 @@
                 } else {
                     return "Obese class III";
                 }
+            }
 
-            return "Status for males";
-        }
-
-        function showBMIStatusFemale(bmi) {
-            if (bmi < 18.5) {
+            function showBMIStatusFemale(bmi) {
+                if (bmi < 18.5) {
                     return "Underweight";
                 } else if (bmi >= 18.5 && bmi <= 23.9) {
                     return "Normal weight";
@@ -96,9 +93,12 @@
                 } else {
                     return "Obese class III";
                 }
+            }
 
-            return "Status for females";
-        }
+            $('#bmiForm input[type="button"]').click(function() {
+                calculateBMI();
+            });
+        });
     </script>
 
 
@@ -130,3 +130,4 @@
    
 </body>
 </html>
+
