@@ -30,8 +30,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
-
     <!-- <script src="/thaiware_internship/bmi/js/process.js"></script>  -->
 
 </head>
@@ -39,9 +40,8 @@
     <script>
         function calculateBMI(gender, weight, height) {
             var bmi = weight / (height * height);
-            console.log (gender + " " + weight + " " + height + " " + bmi)
-            // return bmi.toFixed(2);
-           
+            // console.log (gender + " " + weight + " " + height + " " + bmi)
+            return bmi.toFixed(2);
         }
 
         function showBMIStatusMale(bmi) {
@@ -84,9 +84,21 @@
             }
         }
 
-        console
+        // var input_gender = "female";
+        // var input_weight = 65;
+        // var input_height = 1.65;
+
+        // var out_put_bmi = calculateBMI(input_gender, input_weight, input_height);
+
+        // console.log("bmi: " + out_put_bmi);
+        // console.log("bmi status: " + BMIStatus(input_gender, out_put_bmi));
+
+        $("#bmiResult").html("bmi status: " + BMIStatus(input_gender, out_put_bmi));
 
     </script>
+
+    <div id="jobs">JOBS</div>
+    <div class="summer">SUMMER</div>
 
     <form method="post" action="">
         <label for="gender">Gender:</label>
@@ -102,6 +114,8 @@
         <input type="number" name="height" step="0.01" value="" required><br>
 
         <input type="submit" name="submit" value="Calculate BMI">
+        
+        <div id="bmiResult"></div>
     </form>
     
 
