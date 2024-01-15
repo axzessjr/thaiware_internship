@@ -38,45 +38,19 @@
 </head>
 <body>
     <script>
-        function calculateBMI(gender, weight, height) {
-            var bmi = weight / (height * height);
-            // console.log (gender + " " + weight + " " + height + " " + bmi)
-            return bmi.toFixed(2);
+        function calculateBMI() {
+        var gender = document.getElementsByName('gender')[0].value;
+        var weight = parseFloat(document.getElementsByName('weight')[0].value);
+        var height = parseFloat(document.getElementsByName('height')[0].value);
+
+        var bmi = weight / (height * height);
+        var resultText = getBMIStatus(gender, bmi);
+
+        // Display result in the "bmiResult" div
+        document.getElementById('bmiResult').innerHTML = "BMI: " + bmi.toFixed(2) + " - " + resultText;
         }
 
-        function showBMIStatusMale(bmi) {
-            if (bmi < 18.5) {
-                return "Underweight";
-            } else if (bmi >= 18.5 && bmi <= 24.9) {
-                return "Normal weight";
-            } else if (bmi >= 25 && bmi <= 29.9) {
-                return "Overweight";
-            } else if (bmi >= 30 && bmi <= 34.9) {
-                return "Obese class I";
-            } else if (bmi >= 35 && bmi <= 39.9) {
-                return "Obese class II";
-            } else {
-                return "Obese class III";
-            }
-        }
-
-        function showBMIStatusFemale(bmi) {
-            if (bmi < 18.5) {
-                return "Underweight";
-            } else if (bmi >= 18.5 && bmi <= 23.9) {
-                return "Normal weight";
-            } else if (bmi >= 24 && bmi <= 28.9) {
-                return "Overweight";
-            } else if (bmi >= 29 && bmi <= 34.9) {
-                return "Obese class I";
-            } else if (bmi >= 35 && bmi <= 39.9) {
-                return "Obese class II";
-            } else {
-                return "Obese class III";
-            }
-        }
-
-        function BMIStatus(gender, bmi) {
+        function getBMIStatus(gender, bmi) {
             if (gender === "male") {
                 return showBMIStatusMale(bmi);
             } else if (gender === "female") {
@@ -84,21 +58,43 @@
             }
         }
 
-        // var input_gender = "female";
-        // var input_weight = 65;
-        // var input_height = 1.65;
+        function showBMIStatusMale(bmi) {
+            if (bmi < 18.5) {
+                    return "Underweight";
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    return "Normal weight";
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    return "Overweight";
+                } else if (bmi >= 30 && bmi <= 34.9) {
+                    return "Obese class I";
+                } else if (bmi >= 35 && bmi <= 39.9) {
+                    return "Obese class II";
+                } else {
+                    return "Obese class III";
+                }
 
-        // var out_put_bmi = calculateBMI(input_gender, input_weight, input_height);
+            return "Status for males";
+        }
 
-        // console.log("bmi: " + out_put_bmi);
-        // console.log("bmi status: " + BMIStatus(input_gender, out_put_bmi));
+        function showBMIStatusFemale(bmi) {
+            if (bmi < 18.5) {
+                    return "Underweight";
+                } else if (bmi >= 18.5 && bmi <= 23.9) {
+                    return "Normal weight";
+                } else if (bmi >= 24 && bmi <= 28.9) {
+                    return "Overweight";
+                } else if (bmi >= 29 && bmi <= 34.9) {
+                    return "Obese class I";
+                } else if (bmi >= 35 && bmi <= 39.9) {
+                    return "Obese class II";
+                } else {
+                    return "Obese class III";
+                }
 
-        $("#bmiResult").html("bmi status: " + BMIStatus(input_gender, out_put_bmi));
-
+            return "Status for females";
+        }
     </script>
 
-    <div id="jobs">JOBS</div>
-    <div class="summer">SUMMER</div>
 
     <form method="post" action="">
         <label for="gender">Gender:</label>
@@ -113,7 +109,7 @@
         <label for="height">Height (m):</label>
         <input type="number" name="height" step="0.01" value="" required><br>
 
-        <input type="submit" name="submit" value="Calculate BMI">
+        <input type="button" name="submit" onclick="calculateBMI()" value="Calculate BMI">
         
         <div id="bmiResult"></div>
     </form>

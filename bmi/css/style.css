@@ -23,7 +23,7 @@ select, input[type="number"]  {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-input[type="submit"] {
+input[type="button"] {
     background-color: #0C78A6;
     color: white;
     border: none;
@@ -32,7 +32,7 @@ input[type="submit"] {
     margin-bottom: 20px;
 }
 
-.rs {
+#bmiResult {
     text-align: center;
     margin-top: 20px;
     font-size: 36px;
