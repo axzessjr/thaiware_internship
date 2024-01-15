@@ -62,8 +62,69 @@
     <input type="button" onclick="calculateBMI()" value="Calculate BMI">
     
 </form>
-   <div id="bmiResult"></div>
-   
+    <div id="bmiResult"></div>
+    <div class="table" style="text-align: center;">
+        <table name="tb-male" style="width: 100%;">
+            <tr>
+                <th style="font-size: 30px;">BMI male</th>
+                <th style="font-size: 30px;">BMI status</th>
+            </tr>
+            <tr>
+                <td>less 18.5</td>
+                <td>Underweight</td>
+            </tr>
+            <tr>
+                <td>18.5 - 24.9</td>
+                <td>Normal weight</td>
+            </tr>
+            <tr>
+                <td>25 - 29.9</td>
+                <td>Overweight</td>
+            </tr>
+            <tr>
+                <td>30 - 34.9</td>
+                <td>Obese class I</td>
+            </tr>
+            <tr>
+                <td>35 - 39.9</td>
+                <td>Obese class II</td>
+            </tr>
+            <tr>
+                <td>40 +</td>
+                <td>Obese class III</td>
+            </tr>
+        </table>
+        <table name="tb-female" style="width: 100%;">
+            <tr>
+                <th style="font-size: 30px;">BMI female</th>
+                <th style="font-size: 30px;">BMI status</th>
+            </tr>
+            <tr>
+                <td>less 18.5</td>
+                <td>Underweight</td>
+            </tr>
+            <tr>
+                <td>18.5 - 23.9</td>
+                <td>Normal weight</td>
+            </tr>
+            <tr>
+                <td>24 - 28.9</td>
+                <td>Overweight</td>
+            </tr>
+            <tr>
+                <td>29 - 34.9</td>
+                <td>Obese class I</td>
+            </tr>
+            <tr>
+                <td>35 - 39.9</td>
+                <td>Obese class II</td>
+            </tr>
+            <tr>
+                <td>40 +</td>
+                <td>Obese class III</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
 
