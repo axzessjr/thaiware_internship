@@ -66,7 +66,7 @@
     <div class="see-tb">
         <input type="button" id="stb" onclick="toggleTable()" value="see table">
     </div>
-    <div class="table">
+    <div class="table" style="display: none;">
         <div class="tb-gender">
             <div class="bmi-male">BMI male</div>
             <div>less 18.5</div>

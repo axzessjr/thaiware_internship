@@ -1,11 +1,16 @@
 
     function calculateBMI() {
         var gender = $('select[name="gender"]').val();
-        var weight = parseFloat($('input[name="weight"]').val());
-        var height = parseFloat($('input[name="height"]').val());
+        var weight = $('input[name="weight"]').val();
+        var height = $('input[name="height"]').val();
         var heightUnit = $('input[name="heightUnit"]:checked').val();
 
-        if (heightUnit === 'cm') {
+        if(weight === "" || height === "") {
+            $('#bmiResult').html("Please fill out the information completely.");
+            $('#bmiResult').css({"color":"rgba(200, 0, 0, 0.8)"});
+        }
+     else {
+         if (heightUnit === 'cm') {
             height /= 100;
         }
 
@@ -13,6 +18,8 @@
         var resultText = getBMIStatus(gender, bmi);
 
         $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
+        $('#bmiResult').css({"color":"rgba(0, 0, 0, 0.5)"})
+        }
     }
 
     function getBMIStatus(gender, bmi) {
