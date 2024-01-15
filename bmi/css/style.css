@@ -23,13 +23,14 @@ select, input[type="number"]  {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-input[type="button"] {
+.cal {
     background-color: #0C78A6;
     color: white;
     border: none;
     padding: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 #bmiResult {
@@ -38,3 +39,28 @@ input[type="button"] {
     font-size: 36px;
     color: rgba(0, 0, 0, 0.5);
 } 
+
+.table {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.bmi-male, .bmi-female, .status-male, .status-female {
+    font-size: 30px;
+}
+
+.see-tb {
+    text-align: center;
+}
+
+#stb {
+    border: none;
+    background: none;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration-line: underline;
+    cursor: pointer;
+}

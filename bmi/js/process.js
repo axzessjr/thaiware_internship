@@ -64,3 +64,7 @@
     $('#bmiForm input[type="button"]').click(function() {
         calculateBMI();
     });
+
+    function toggleTable() {
+        $(".table").toggle()
+    }
