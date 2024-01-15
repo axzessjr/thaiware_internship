@@ -37,8 +37,9 @@
     <form method="post" action="">
         <label for="gender">Gender:</label>
         <select name="gender" required>
-            <option value="male"<?php if ($_POST["gender"] == "male") { echo " selected"; } ?>>Male</option>
-            <option value="female"<?php echo (isset($_POST['gender']) && $_POST['gender'] == 'female') ? 'selected' : ''; ?>>Female</option>
+        <option value="male"<?php if ($_POST["gender"] == "male") { echo " selected"; } ?>>Male</option>
+        <option value="female"<?php if ($_POST["gender"] == "female") { echo " selected"; } ?>>Female</option>
+           
         </select><br>
 
         <label for="weight">Weight (kg):</label>
