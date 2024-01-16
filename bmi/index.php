@@ -67,7 +67,13 @@
         </div>
         <input type="button" class="cal" onclick="calculateBMI()" value="Calculate BMI">
     </form>
-    <div id="bmiResult"></div>
+    <div id="genderResult"></div>
+    <div id="weightResult"></div>
+    <div id="heightResult"></div>
+    <div id="bmiResult"></div><br>
+    <div class="re-icon" style="display: none;">
+        <img src="/thaiware_internship/bmi/img/refresh-icon.png" id="re-icon" onclick="hideandseek()">
+    </div>
     <div class="see-tb">
         <input type="button" id="stb" onclick="toggleTable()" value="see table">
     </div>

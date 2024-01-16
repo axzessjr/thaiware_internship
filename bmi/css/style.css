@@ -65,10 +65,18 @@ select, input[type="number"]  {
     cursor: pointer;
 }
 #bmiResult {
-    text-align: center;
-    margin-top: 20px;
     font-size: 36px;
     color: rgba(0, 0, 0, 0.5);
+}
+#bmiResult, #genderResult, #weightResult, #heightResult {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.5);
+} 
+#genderResult, #weightResult, #heightResult {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
 } 
 .table {
     display: flex;
@@ -81,6 +89,13 @@ select, input[type="number"]  {
 }
 .bmi-male, .bmi-female, .status-male, .status-female {
     font-size: 30px;
+}
+.re-icon {
+    text-align: center;
+}
+#re-icon {
+    width: 20px;
+    cursor: pointer;
 }
 .see-tb {
     text-align: center;
