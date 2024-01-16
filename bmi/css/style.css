@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Mitr:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Metrophobic', sans-serif;
-    font-family: 'Mitr', sans-serif; 
+    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Metrophobic', sans-serif;
+    font-family: 'Mitr', sans-serif;  */
 }
 .top-bar {
     background-color: #0C78A6;
