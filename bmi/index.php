@@ -37,6 +37,14 @@
 </head>
 <body>
     <div class="top-bar">
+        <div class="tab">
+            <img src="/thaiware_internship/bmi/img/table-icon.png" id="tab-icon">
+        </div>
+        <div class="menu">
+            <div>Home</div>
+            <div>Information</div>
+            <div>About</div>
+        </div>
         <div class="icon">
             <img src="/thaiware_internship/bmi/img/user-icon.png" id="user-icon">
         </div>
@@ -58,16 +66,6 @@
             <input type="number" name="height" step="0.01" value="" required><br>
         </div>
         <input type="button" class="cal" onclick="calculateBMI()" value="Calculate BMI">
-        <script>
-            $(document).ready(function () {
-                $('#bmiForm').on('keypress', function (e) {
-                    if (e.which === 13) {
-                        e.preventDefault();
-                        calculateBMI();
-                    }
-                });
-            });
-        </script>
     </form>
     <div id="bmiResult"></div>
     <div class="see-tb">

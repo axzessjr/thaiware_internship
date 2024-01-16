@@ -5,42 +5,55 @@
     box-sizing: border-box;
     font-family: 'Metrophobic', sans-serif;
     font-family: 'Mitr', sans-serif; 
-    color:  #0C78A6;
 }
 .top-bar {
     background-color: #0C78A6;
     width: auto;
     height: 60px;
 }
+#tab-icon {
+    display: none;
+}
+.menu {
+    color: white;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-left: 30px;
+    padding-top: 20px;
+}
 .icon {
     text-align: right;
-    padding-right: 10px;
-    padding-top: 10px;
 }
 #user-icon {
     width: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 form {
     display: grid;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    color:  #0C78A6;
 }
 label {
-    font-size: 30px;
+    font-size: 20px;
 }
 select, input[type="number"]  {
-    font-size: 40px;
-    height: 80px;
-    width: 400px;
+    font-size: 20px;
+    height: 50px;
+    width: 300px;
     padding: 10px;
     margin-top: 10px;
     border: none;
     background-color: rgba(0, 0, 0, 0.1);
+    color:  #0C78A6;
 }
 .cal {
-    font-size: 20px;
-    height: 50px;
+    font-size: 15px;
+    height: 30px;
     background-color: #0C78A6;
     color: white;
     border: none;
@@ -62,6 +75,7 @@ select, input[type="number"]  {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 50px;
+    color:  #0C78A6;
 }
 .bmi-male, .bmi-female, .status-male, .status-female {
     font-size: 30px;
@@ -79,21 +93,31 @@ select, input[type="number"]  {
 }
 /*  */
 @media screen and (max-width: 415px) {
-    * {
-        color: blueviolet;
-    }
     body {
-        font-size: 15px;
+        font-size: 10px;
     }
     .top-bar {
         background-color: blueviolet;
         height: 50px;
     }
+    #tab-icon {
+        display: block;
+        width: 30px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .menu {
+        display: none;
+    }
     #user-icon {
         width: 30px;
     }
+    form {
+        color: blueviolet;
+    }
     label {
-        font-size: 20px;
+        font-size: 14px;
     }
     .bmi-male, .bmi-female, .status-male, .status-female {
         font-size: 20px;
@@ -102,13 +126,17 @@ select, input[type="number"]  {
     .cal {
         background-color: blueviolet;
         margin-bottom: 0px;
-        font-size: 15px;
+        font-size: 14px;
     }
     select, input[type="number"] {
         margin-top: 0px;
-        font-size: 20px;
+        font-size: 14px;
         height: 50px;
         width: 300px;
+        color: blueviolet;
+    }
+    .table {
+        color: blueviolet;
     }
     .hide-tb {
         display: none;
