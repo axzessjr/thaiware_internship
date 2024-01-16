@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Mitr:wght@500&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -8,22 +7,40 @@
     font-family: 'Mitr', sans-serif; 
     color:  #0C78A6;
 }
-
+.top-bar {
+    background-color: #0C78A6;
+    width: auto;
+    height: 60px;
+}
+.icon {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+#user-icon {
+    width: 40px;
+}
 form {
     display: grid;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 20px;
 }
-
+label {
+    font-size: 30px;
+}
 select, input[type="number"]  {
+    font-size: 40px;
+    height: 80px;
+    width: 400px;
     padding: 10px;
     margin-top: 10px;
     border: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
-
 .cal {
+    font-size: 20px;
+    height: 50px;
     background-color: #0C78A6;
     color: white;
     border: none;
@@ -32,14 +49,12 @@ select, input[type="number"]  {
     margin-bottom: 20px;
     cursor: pointer;
 }
-
 #bmiResult {
     text-align: center;
     margin-top: 20px;
     font-size: 36px;
     color: rgba(0, 0, 0, 0.5);
 } 
-
 .table {
     display: flex;
     justify-content: space-evenly;
@@ -48,19 +63,57 @@ select, input[type="number"]  {
     padding-top: 20px;
     padding-bottom: 50px;
 }
-
 .bmi-male, .bmi-female, .status-male, .status-female {
     font-size: 30px;
 }
-
 .see-tb {
     text-align: center;
+    display: none;
 }
-
 #stb {
     border: none;
     background: none;
     color: rgba(0, 0, 0, 0.3);
     text-decoration-line: underline;
     cursor: pointer;
+}
+/*  */
+@media screen and (max-width: 415px) {
+    * {
+        color: blueviolet;
+    }
+    body {
+        font-size: 15px;
+    }
+    .top-bar {
+        background-color: blueviolet;
+        height: 50px;
+    }
+    #user-icon {
+        width: 30px;
+    }
+    label {
+        font-size: 20px;
+    }
+    .bmi-male, .bmi-female, .status-male, .status-female {
+        font-size: 20px;
+        color: blueviolet;
+    }
+    .cal {
+        background-color: blueviolet;
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    select, input[type="number"] {
+        margin-top: 0px;
+        font-size: 20px;
+        height: 50px;
+        width: 300px;
+    }
+    .hide-tb {
+        display: none;
+    }
+    .see-tb {
+        display: block;
+    }
 }

@@ -8,20 +8,16 @@
         if(weight === "" || height === "") {
             $('#bmiResult').html("Please fill out the information completely.");
             $('#bmiResult').css({"color":"rgba(200, 0, 0, 0.8)"});
-        }
-     else {
-         if (heightUnit === 'cm') {
-            height /= 100;
-        }
-
-        var bmi = weight / (height * height);
-        var resultText = getBMIStatus(gender, bmi);
-
-        $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
-        $('#bmiResult').css({"color":"rgba(0, 0, 0, 0.5)"})
+        } else {
+            if (heightUnit === 'cm') {
+                height /= 100;
+            }
+            var bmi = weight / (height * height);
+            var resultText = getBMIStatus(gender, bmi);
+            $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
+            $('#bmiResult').css({"color":"rgba(0, 0, 0, 0.5)"})
         }
     }
-
     function getBMIStatus(gender, bmi) {
         var gender_result
         if (gender === "male") {
@@ -31,7 +27,6 @@
         }
         return gender_result;
     }
-
     function showBMIStatusMale(bmi) {
         var male_result
         if (bmi < 18.5) {
@@ -49,7 +44,6 @@
         }
         return male_result;
     }
-
     function showBMIStatusFemale(bmi) {
         var female_result
         if (bmi < 18.5) {
@@ -67,11 +61,17 @@
         }
         return female_result;
     }
-
     $('#bmiForm input[type="button"]').click(function() {
         calculateBMI();
     });
-
     function toggleTable() {
-        $(".table").toggle()
+        $(".hide-tb").toggle()
     }
+    $(document).ready(function () {
+        $('#bmiForm').on('keypress', function (e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                calculateBMI();
+            }
+        });
+    });
