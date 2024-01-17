@@ -3,7 +3,6 @@ function calculateBMI() {
     var weight = $('input[name="weight"]').val();
     var height = $('input[name="height"]').val();
     var heightUnit = $('input[name="heightUnit"]:checked').val();
-
     if(weight === "" || height === "") {
         $('#bmi-error').html("Please fill out the information completely.");
         $('#bmi-error').css({"color":"rgba(200, 0, 0, 0.8)"});
@@ -18,24 +17,23 @@ function calculateBMI() {
         $('#bmi-error').hide()
         $('.info-result').show()
         $('#genderResult').html("gender: " + gender);
-        $('#weightResult').html("weight: " + weight + "kg");
+        $('#weightResult').html("weight: " + weight + " kg");
         if (heightUnit === 'cm') {
             height *= 100;
         }
         $('#heightResult').html("height: " + height + " " + heightUnit);
         $('#bmiResult').show()
-        if (bmi < 18) {
-            $('#bmiResult').css({"border":"solid #0C78A6","color": "gray"})
-        } else if (bmi >= 24) {
-            $('#bmiResult').css({"border":"solid #0C78A6","color": "red"})
-        } else {
-            $('#bmiResult').css({"border":"solid #0C78A6","color": "limegreen"})
-        }
         $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
         $('.re-icon').show()
     }
 }
 function getBMIStatus(gender, bmi) {
+    var bmiResult = $('#bmiResult');
+    if (gender === 'male') {
+        colorMale(bmiResult, bmi);
+    } else if (gender === 'female') {
+        colorFemale(bmiResult, bmi);
+    }
     var gender_result
     if (gender === "male") {
         gender_result =  showBMIStatusMale(bmi);
@@ -43,6 +41,25 @@ function getBMIStatus(gender, bmi) {
         gender_result = showBMIStatusFemale(bmi);
     }
     return gender_result;
+   
+}
+function colorMale(color, bmi) {
+    if (bmi < 18) {
+        color.css({"border": "solid #0C78A6", "color": "gray"});
+    } else if (bmi >= 25) {
+        color.css({"border": "solid #0C78A6", "color": "red"});
+    } else {
+        color.css({"border": "solid #0C78A6", "color": "limegreen"});
+    }
+}
+function colorFemale(color, bmi) {
+    if (bmi < 18) {
+        color.css({"border": "solid #0C78A6", "color": "gray"});
+    } else if (bmi >= 24) {
+        color.css({"border": "solid #0C78A6", "color": "red"});
+    } else {
+        color.css({"border": "solid #0C78A6", "color": "limegreen"});
+    }
 }
 function showBMIStatusMale(bmi) {
     var male_result
