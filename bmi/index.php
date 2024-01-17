@@ -61,10 +61,10 @@
         <input type="number" name="weight" step="0.1" value="" required><br>
         <div class="height-op">
             <label>Height:</label>
-            <label for="cm">(cm)</label>
             <input type="radio" id="cm" name="heightUnit" value="cm" checked>
-            <label for="m">(m)</label>
-            <input type="radio" id="m" name="heightUnit" value="m"><br>
+            <label for="cm">(cm)</label>
+            <input type="radio" id="m" name="heightUnit" value="m">
+            <label for="m">(m)</label><br>
             <input type="number" name="height" step="0.01" value="" required><br>
         </div>
         <input type="button" class="cal" onclick="calculateBMI()" value="Calculate BMI">
