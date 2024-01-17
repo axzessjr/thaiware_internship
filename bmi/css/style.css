@@ -64,30 +64,42 @@ select, input[type="number"]  {
     margin-bottom: 20px;
     cursor: pointer;
 }
-#bmiResult {
-    font-size: 36px;
+#bmi-error, #bmiResult {
+    font-size: 30px;
     color: rgba(0, 0, 0, 0.5);
 }
-#bmiResult, #genderResult, #weightResult, #heightResult {
+#bmi-error, #bmiResult, #genderResult, #weightResult, #heightResult {
     text-align: center;
     margin-top: 20px;
-    color: rgba(0, 0, 0, 0.5);
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 20px;
+    padding: 16px 0px;
 } 
 #genderResult, #weightResult, #heightResult {
-    font-size: 30px;
+    font-size: 25px;
     color: rgba(0, 0, 0, 0.5);
+    border: solid #0C78A6;
 } 
-.table {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    color:  #0C78A6;
-}
 .bmi-male, .bmi-female, .status-male, .status-female {
-    font-size: 30px;
+    font-size: 25px;
+    color: white;
+    background-color: #0C78A6;
+    padding: 5px 90px;
+}
+.bmi-male {
+    padding: 5px 105px;
+}
+.tb-male, .tb-female, .tb-sm, .tb-sf {
+    border: solid 1px;
+}
+.table-m, .table-f {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    color: #0C78A6;
+    margin-bottom: 30px;
 }
 .re-icon {
     text-align: center;
@@ -108,7 +120,7 @@ select, input[type="number"]  {
     cursor: pointer;
 }
 /*  */
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 720px) {
     body {
         font-size: 10px;
     }
@@ -137,7 +149,8 @@ select, input[type="number"]  {
     }
     .bmi-male, .bmi-female, .status-male, .status-female {
         font-size: 14px;
-        color: blueviolet;
+        color: white;
+        background-color: blueviolet;
     }
     .cal {
         background-color: blueviolet;
@@ -151,14 +164,29 @@ select, input[type="number"]  {
         width: 300px;
         color: blueviolet;
     }
-    #bmiResult {
+    #bmi-error {
         font-size: 20px;
+    }
+    #bmi-error, #bmiResult {
+        font-size: 20px;
+        border-color:  blueviolet !important;
     }
     #genderResult, #weightResult, #heightResult {
         font-size: 16px;
+        border: solid blueviolet;
     } 
     .table {
         color: blueviolet;
+    }
+    .table-m {
+        padding-top: 30px;
+    }
+    .table-m, .table-f {
+        display: grid;
+        color: blueviolet;
+    }
+    .bmi-male {
+        padding: 0px;
     }
     .hide-tb {
         display: none;

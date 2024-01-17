@@ -5,8 +5,9 @@ function calculateBMI() {
     var heightUnit = $('input[name="heightUnit"]:checked').val();
 
     if(weight === "" || height === "") {
-        $('#bmiResult').html("Please fill out the information completely.");
-        $('#bmiResult').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#bmi-error').html("Please fill out the information completely.");
+        $('#bmi-error').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#bmi-error').show()
     } else {
         if (heightUnit === 'cm') {
             height /= 100;
@@ -14,17 +15,19 @@ function calculateBMI() {
         var bmi = weight / (height * height);
         var resultText = getBMIStatus(gender, bmi);
         $('#bmiForm').hide()
-        $('#genderResult').show()
+        $('#bmi-error').hide()
+        $('.info-result').show()
         $('#genderResult').html("gender: " + gender);
-        $('#weightResult').show()
+        // $('#weightResult').show()
         $('#weightResult').html("weight: " + weight + "kg");
         if (heightUnit === 'cm') {
             height *= 100;
         }
-        $('#heightResult').show()
+        // $('#heightResult').show()
         $('#heightResult').html("height: " + height + " " + heightUnit);
         $('#bmiResult').show()
         $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
+        $('#bmiResult').css({"border":"solid #0C78A6","color": "limegreen"})
         $('.re-icon').show()
     }
 }
@@ -71,11 +74,19 @@ function showBMIStatusFemale(bmi) {
     }
     return female_result;
 }
-$('#bmiForm input[type="button"]').click(function() {
-    calculateBMI();
-});
+// $('#bmiForm input[type="button"]').click(function() {
+//     calculateBMI();
+// });
 function toggleTable() {
     $('.hide-tb').toggle()
+}
+function hideandseek() {
+    $('.info-result').hide()
+    // $('#weightResult').hide()
+    // $('#heightResult').hide()
+    $('#bmiResult').hide()
+    $('.re-icon').hide()
+    $('#bmiForm').show()
 }
 $(document).ready(function () {
     $('#bmiForm').on('keypress', function (e) {
@@ -85,11 +96,3 @@ $(document).ready(function () {
         }
     });
 });
-function hideandseek() {
-    $('#genderResult').hide()
-    $('#weightResult').hide()
-    $('#heightResult').hide()
-    $('#bmiResult').hide()
-    $('.re-icon').hide()
-    $('#bmiForm').show()
-}

@@ -67,10 +67,13 @@
         </div>
         <input type="button" class="cal" onclick="calculateBMI()" value="Calculate BMI">
     </form>
-    <div id="genderResult"></div>
-    <div id="weightResult"></div>
-    <div id="heightResult"></div>
-    <div id="bmiResult"></div><br>
+    <div class="info-result" style="display: none;">
+        <div id="genderResult"></div>
+        <div id="weightResult"></div>
+        <div id="heightResult"></div>
+    </div>
+    <div id="bmi-error"></div>
+    <div id="bmiResult" style="display: none;"></div><br>
     <div class="re-icon" style="display: none;">
         <img src="/thaiware_internship/bmi/img/refresh-icon.png" id="re-icon" onclick="hideandseek()">
     </div><br>
@@ -78,38 +81,44 @@
         <input type="button" id="stb" onclick="toggleTable()" value="see table">
     </div>
     <div class="hide-tb">
-        <div class="table">
-            <div class="tb-gender">
+        <div class="table-m">
+            <div class="tb-male">
                 <div class="bmi-male">BMI male</div>
-                <div>less 18.5</div>
-                <div>18.5 - 24.9</div>
-                <div>25 - 29.9</div>
-                <div>30 - 34.9</div>
-                <div>35 - 39.9</div>
-                <div>more 40</div>
-                <div class="bmi-female">BMI female</div>
-                <div>less 18.5</div>
-                <div>18.5 - 23.9</div>
-                <div>24 - 28.9</div>
-                <div>29 - 34.9</div>
-                <div>35 - 39.9</div>
-                <div>more 40</div>
+                <div style="padding: 10px 0px 5px 0px;">less 18.5</div>
+                <div style="padding: 5px 0px;">18.5 - 24.9</div>
+                <div style="padding: 5px 0px;">25 - 29.9</div>
+                <div style="padding: 5px 0px;">30 - 34.9</div>
+                <div style="padding: 5px 0px;">35 - 39.9</div>
+                <div style="padding: 5px 0px 10px 0px;">more 40</div>
             </div>
-            <div class="tb-status">
+            <div class="tb-sm">
                 <div class="status-male">BMI status</div>
-                <div>Underweight</div>
-                <div>Normal weight</div>
-                <div>Overweight</div>
-                <div>Obese class I</div>
-                <div>Obese class II</div>
-                <div>Obese class III</div>
+                <div style="padding: 10px 0px 5px 0px;">Underweight</div>
+                <div style="padding: 5px 0px;">Normal weight</div>
+                <div style="padding: 5px 0px;">Overweight</div>
+                <div style="padding: 5px 0px;">Obese class I</div>
+                <div style="padding: 5px 0px;">Obese class II</div>
+                <div style="padding: 5px 0px 10px 0px;">Obese class III</div>
+            </div>
+        </div>
+        <div class="table-f">
+            <div class="tb-female">
+                <div class="bmi-female">BMI female</div>
+                <div style="padding: 10px 0px 5px 0px;">less 18.5</div>
+                <div style="padding: 5px 0px;">18.5 - 23.9</div>
+                <div style="padding: 5px 0px;">24 - 28.9</div>
+                <div style="padding: 5px 0px;">29 - 34.9</div>
+                <div style="padding: 5px 0px;">35 - 39.9</div>
+                <div style="padding: 5px 0px 10px 0px;">more 40</div>
+            </div>
+            <div class="tb-sf">
                 <div class="status-female">BMI status</div>
-                <div>Underweight</div>
-                <div>Normal weight</div>
-                <div>Overweight</div>
-                <div>Obese class I</div>
-                <div>Obese class II</div>
-                <div>Obese class III</div>
+                <div style="padding: 10px 0px 5px 0px;">Underweight</div>
+                <div style="padding: 5px 0px;">Normal weight</div>
+                <div style="padding: 5px 0px;">Overweight</div>
+                <div style="padding: 5px 0px;">Obese class I</div>
+                <div style="padding: 5px 0px;">Obese class II</div>
+                <div style="padding: 5px 0px 10px 0px;">Obese class III</div>
             </div>
         </div>
     </div>
