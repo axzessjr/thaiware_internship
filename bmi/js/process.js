@@ -18,16 +18,20 @@ function calculateBMI() {
         $('#bmi-error').hide()
         $('.info-result').show()
         $('#genderResult').html("gender: " + gender);
-        // $('#weightResult').show()
         $('#weightResult').html("weight: " + weight + "kg");
         if (heightUnit === 'cm') {
             height *= 100;
         }
-        // $('#heightResult').show()
         $('#heightResult').html("height: " + height + " " + heightUnit);
         $('#bmiResult').show()
+        if (bmi < 18) {
+            $('#bmiResult').css({"border":"solid #0C78A6","color": "gray"})
+        } else if (bmi >= 24) {
+            $('#bmiResult').css({"border":"solid #0C78A6","color": "red"})
+        } else {
+            $('#bmiResult').css({"border":"solid #0C78A6","color": "limegreen"})
+        }
         $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
-        $('#bmiResult').css({"border":"solid #0C78A6","color": "limegreen"})
         $('.re-icon').show()
     }
 }
@@ -55,7 +59,7 @@ function showBMIStatusMale(bmi) {
     } else {
         male_result = "Obese class III";
     }
-    return male_result;
+    return male_result; 
 }
 function showBMIStatusFemale(bmi) {
     var female_result
@@ -74,16 +78,11 @@ function showBMIStatusFemale(bmi) {
     }
     return female_result;
 }
-// $('#bmiForm input[type="button"]').click(function() {
-//     calculateBMI();
-// });
 function toggleTable() {
     $('.hide-tb').toggle()
 }
 function hideandseek() {
     $('.info-result').hide()
-    // $('#weightResult').hide()
-    // $('#heightResult').hide()
     $('#bmiResult').hide()
     $('.re-icon').hide()
     $('#bmiForm').show()
