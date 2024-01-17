@@ -1,5 +1,5 @@
 function calculateBMI() {
-    var gender = $('select[name="gender"]').val();
+    var gender = $('input[name="genderUnit"]:checked').val();
     var weight = $('input[name="weight"]').val();
     var height = $('input[name="height"]').val();
     var heightUnit = $('input[name="heightUnit"]:checked').val();

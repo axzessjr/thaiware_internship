@@ -51,10 +51,12 @@
     </div>
     <form id="bmiForm" method="post" action="">
         <label for="gender">Gender:</label>
-        <select name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select><br>
+        <div class="gender" style="padding: 15px 5px 0px 0px;">
+            <input type="radio" name="genderUnit" value="male">
+            <label id="gm"> Male </label>
+            <input type="radio" name="genderUnit" value="female">
+            <label id="gf"> Female </label>
+        </div><br>
         <label for="weight">Weight (kg):</label>
         <input type="number" name="weight" step="0.1" value="" required><br>
         <div class="height-op">
