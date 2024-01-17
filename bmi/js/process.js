@@ -26,7 +26,6 @@ function calculateBMI() {
         $('#bmiResult').show()
         $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
         $('.re-icon').show()
-        // $('.re-icon').hide()
     }
 }
 function getBMIStatus(gender, bmi) {

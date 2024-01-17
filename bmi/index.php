@@ -73,7 +73,7 @@
     <div id="bmiResult"></div><br>
     <div class="re-icon" style="display: none;">
         <img src="/thaiware_internship/bmi/img/refresh-icon.png" id="re-icon" onclick="hideandseek()">
-    </div>
+    </div><br>
     <div class="see-tb">
         <input type="button" id="stb" onclick="toggleTable()" value="see table">
     </div>
