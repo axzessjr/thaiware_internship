@@ -1,30 +1,39 @@
 function calculateBMI() {
-    var gender = $('input[name="genderUnit"]:checked').val();
-    var weight = $('input[name="weight"]').val();
-    var height = $('input[name="height"]').val();
-    var heightUnit = $('input[name="heightUnit"]:checked').val();
-    if(weight === "" || height === "") {
+    var Inputgender = $('input[name="genderUnit"]:checked').val();
+    var Inputweight = $('input[name="weight"]').val();
+    var Inputheight = $('input[name="height"]').val();
+    var InputheightUnit = $('input[name="heightUnit"]:checked').val();
+    if(Inputweight === "" || Inputheight === "") {
         $('#bmi-error').html("Please fill out the information completely.");
         $('#bmi-error').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#bmi-error').show()
     } else {
-        if (heightUnit === 'cm') {
-            height /= 100;
-        }
-        var bmi = weight / (height * height);
-        var resultText = getBMIStatus(gender, bmi);
-        $('#bmiForm').hide()
-        $('#bmi-error').hide()
-        $('.info-result').show()
-        $('#genderResult').html("gender: " + gender);
-        $('#weightResult').html("weight: " + weight + " kg");
-        if (heightUnit === 'cm') {
-            height *= 100;
-        }
-        $('#heightResult').html("height: " + height + " " + heightUnit);
-        $('#bmiResult').show()
-        $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
-        $('.re-icon').show()
+        $.ajax({
+            url: "process.php",
+            method: "POST",
+            data: {
+                gender: Inputgender,
+                weight: Inputweight,
+                height: Inputheight,
+                heightUnit: InputheightUnit
+            },
+            success: function(data) {
+                var bmi = parseFloat(data) 
+                var resultText = getBMIStatus(Inputgender, bmi);
+                $('#bmiForm').hide()
+                $('#bmi-error').hide()
+                $('.info-result').show()
+                $('#genderResult').html("gender: " + Inputgender);
+                $('#weightResult').html("weight: " + Inputweight + " kg");
+                $('#heightResult').html("height: " + Inputheight + " " + InputheightUnit);
+                $('#bmiResult').show()
+                $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
+                $('.re-icon').show()
+            },
+            error: function(xhr, status, error) {
+                console.error("Error: " + status, error);
+            }
+        });
     }
 }
 function getBMIStatus(gender, bmi) {

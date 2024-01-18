@@ -1,28 +1,3 @@
-<?php
-    // include "process.php";
-
-    // if(isset($_POST["submit"])) {
-    //     $input_gender = $_POST["gender"];
-    //     $input_weight = floatval($_POST["weight"]);
-    //     $input_height = floatval($_POST["height"]);
-
-    //     $gender = $input_gender;
-    //     $bmi = calculateBMI($input_gender, $input_weight, $input_height);
-
-         
-    //     if ($gender == "male") {
-    //         $bmi_status = showBMIStatusMale($bmi);
-    //     } else
-    //     if ($gender == "female") {
-    //         $bmi_status = showBMIStatusFemale($bmi);
-    //     }
-        
-    //     $result = "Your BMI: " . $bmi . " <br>Your Status: " . $bmi_status;
-
-    //     $_POST["result"] = $result;
-    // }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +7,7 @@
 
     <link rel="icon" type="image/png" href="/thaiware_internship/bmi/img/1.png">
     <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/thaiware_internship/bmi/js/process.js"></script> 
 </head>
 <body>
