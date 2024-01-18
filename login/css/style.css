@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Mitr:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body {
+    text-align: center;
+}
+#username, #password {
+    font-size: 15px;
+    width: 200px;
+    padding: 5px;
+    margin-top: 10px;
+}
+button#login-btn {
+    font-size: 15px;
+    width: 200px;
+    background-color: #0C78A6;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#result {
+    margin-top: 20px;
+}

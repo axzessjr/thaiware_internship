@@ -11,10 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             echo "wrong";
         }
-    } else {
-        echo "invalid_data";
-    }
-} else {
-    echo "invalid_request";
-}
+    } 
+} 
 ?>
