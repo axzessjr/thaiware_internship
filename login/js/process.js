@@ -29,3 +29,11 @@ function login() {
         });
     }  
 }
+$(document).ready(function () {
+    $('#login-form').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            login();
+        }
+    });
+});

@@ -4,8 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $expectedUsername = "mugglez30";
-        $expectedPassword = "merz2002";
+        $expectedUsername = "muggle";
+        $expectedPassword = "123456";
         if ($username == $expectedUsername && $password == $expectedPassword) {
             echo "success";
         } else {

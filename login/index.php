@@ -16,9 +16,6 @@
         <input type="password" id="password" name="password" placeholder="password"><br>
         <button id="login-btn" onclick="login()">Login</button>
         <div id="result"></div>
-
     </div>
 </body>
 </html>
-
-
