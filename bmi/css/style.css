@@ -69,7 +69,7 @@ select, input[type="number"]  {
 }
 .cal.loading {
     background-color: gray;
-       cursor: auto;
+       cursor: no-drop;
    }
 #bmi-error, #bmiResult {
     font-size: 30px;
@@ -169,7 +169,7 @@ select, input[type="number"]  {
     }
     .cal.loading {
         background-color: gray;
-           cursor: auto;
+        cursor: no-drop;
     }
     select, input[type="number"] {
         margin-top: 0px;
