@@ -40,6 +40,20 @@ form {
     padding-top: 20px;
     color:  #0C78A6;
 }
+input.radio-input {
+    display: none;
+}
+label.r {
+    font-size: 8px;
+    margin: 0px 5px 0px 10px;
+    padding: 0px 6px;
+    border: dashed;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.radio-input:checked + .r {
+    background-color: #0C78A6;
+}
 label {
     font-size: 20px;
 }
@@ -69,7 +83,7 @@ select, input[type="number"]  {
 }
 .cal.loading {
     background-color: gray;
-       cursor: no-drop;
+    cursor: no-drop;
    }
 #bmi-error, #bmiResult {
     font-size: 30px;

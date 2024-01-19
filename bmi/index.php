@@ -27,20 +27,23 @@
     <form id="bmiForm" method="post" action="">
         <label for="gender">Gender:</label>
         <div class="gender" style="padding: 15px 5px 0px 0px;">
-            <input type="radio" name="genderUnit" value="male">
+            <input type="radio" id="rm" name="genderUnit" value="male" class="radio-input">
+            <label class="r" for="rm"></label>
             <label id="gm"> Male </label>
-            <input type="radio" name="genderUnit" value="female">
+            <input type="radio" id="rf" name="genderUnit" value="female" class="radio-input">
+            <label class="r" for="rf"></label>
             <label id="gf"> Female </label>
         </div><br>
         <label for="weight">Weight (kg):</label>
         <input type="number" name="weight" step="0.1" value="" required><br>
         <div class="height-op">
-            <label>Height:</label>
-            <input type="radio" id="cm" name="heightUnit" value="cm" checked>
+        <label>Height:</label>
+            <input type="radio" id="cm" name="heightUnit" value="cm" checked="" class="radio-input"><label class="r" for="cm"></label>
             <label for="cm">(cm)</label>
-            <input type="radio" id="m" name="heightUnit" value="m">
+            <input type="radio" id="m" name="heightUnit" value="m" class="radio-input">
+            <label class="r" for="m"></label>
             <label for="m">(m)</label><br>
-            <input type="number" name="height" step="0.01" value="" required><br>
+            <input type="number" name="height" step="0.01" value="" required=""><br>
         </div>
         <input type="button" id="submitBtn" class="cal" onclick="calculateBMI()" value="Calculate BMI">
     </form>
