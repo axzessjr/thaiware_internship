@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $weight = floatval($weight);
         $height = floatval($height);
         $bmi = $weight / ($height * $height);
+        sleep(2);
         echo number_format($bmi, 2);
     } 
 } 

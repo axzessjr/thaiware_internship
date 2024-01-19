@@ -56,7 +56,7 @@ select, input[type="number"]  {
 .cal {
     font-size: 15px;
     height: 50px;
-    background-color: #0C78A6;
+    background-color: #0c78a6;
     color: white;
     border: none;
     padding: 5px;
@@ -64,6 +64,17 @@ select, input[type="number"]  {
     margin-bottom: 20px;
     cursor: pointer;
 }
+.cal:hover {
+    background-color: hsl(198, 87%, 40%);
+}
+.cal:active {
+    background-color: gray;
+    cursor: auto;
+}
+.cal.loading {
+    background-color: gray;
+       cursor: auto;
+   }
 #bmi-error, #bmiResult {
     font-size: 30px;
     color: rgba(0, 0, 0, 0.5);

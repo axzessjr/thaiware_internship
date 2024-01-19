@@ -7,7 +7,11 @@ function calculateBMI() {
         $('#bmi-error').html("Please fill out the information completely.");
         $('#bmi-error').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#bmi-error').show()
+        
     } else {
+        $(".cal").addClass("loading");
+        $(".cal").attr({"disabled":"true"})
+       
         $.ajax({
             url: "process.php",
             method: "POST",
@@ -112,6 +116,8 @@ function hideandseek() {
     $('#bmiResult').hide()
     $('.re-icon').hide()
     $('#bmiForm').show()
+    $(".cal").removeClass("loading");
+    $(".cal").removeAttr("disabled");
 }
 $(document).ready(function () {
     $('#bmiForm').on('keypress', function (e) {

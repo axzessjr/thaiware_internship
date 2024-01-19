@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
 
-    <link rel="icon" type="image/png" href="/thaiware_internship/bmi/img/1.png">
+    <link rel="icon" type="image/png" href="/thaiware_internship/thaiware-icon.png">
     <link rel="stylesheet" href="/thaiware_internship/bmi/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/thaiware_internship/bmi/js/process.js"></script> 
@@ -42,7 +42,7 @@
             <label for="m">(m)</label><br>
             <input type="number" name="height" step="0.01" value="" required><br>
         </div>
-        <input type="button" class="cal" onclick="calculateBMI()" value="Calculate BMI">
+        <input type="button" id="submitBtn" class="cal" onclick="calculateBMI()" value="Calculate BMI">
     </form>
     <div class="info-result" style="display: none;">
         <div id="genderResult"></div>
