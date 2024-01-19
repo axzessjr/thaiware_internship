@@ -67,10 +67,6 @@ select, input[type="number"]  {
 .cal:hover {
     background-color: hsl(198, 87%, 40%);
 }
-.cal:active {
-    background-color: gray;
-    cursor: auto;
-}
 .cal.loading {
     background-color: gray;
        cursor: auto;
@@ -167,6 +163,13 @@ select, input[type="number"]  {
         background-color: blueviolet;
         margin-bottom: 0px;
         font-size: 14px;
+    }
+    .cal:hover {
+        background-color: hsl(271, 76%, 58%);
+    }
+    .cal.loading {
+        background-color: gray;
+           cursor: auto;
     }
     select, input[type="number"] {
         margin-top: 0px;
