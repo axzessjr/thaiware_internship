@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+.topic {
+    font-size: 36px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #0C78A6;
+    color: white;
+}
+.cal {
+    text-align: center;
+    margin-top: 50px;
+}
+.subject {
+    width: 300px;
+}
+.credits {
+    width: 180px;
+}
+.bt {
+    margin-bottom: 30px;
+}
+
+input#submitBtn, input#addInput, input#deleteInput {
+    border: solid 2px ;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+input#submitBtn, input#addInput {
+    border-color: #0C78A6;
+    color: #0C78A6;
+}
+input#deleteInput {
+    border-color: #a60c0c;
+    color: #a60c0c;
+}
+input#submitBtn:hover, input#addInput:hover, input#deleteInput:hover {
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+input#submitBtn:hover, input#addInput:hover {
+    background-color: #0C78A6;
+}
+
+input#deleteInput:hover {
+    background-color: #a60c0c;
+}
+input#submitBtn:active, input#addInput:active, input#deleteInput:active {
+    transform: translateY(2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.subject, select.grade, .credits {
+    padding: 10px;
+    border: none;
+    background-color: lch(0 0 0 / 0.1);
+    height: 50px;
+}
+div#gpa-result {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 30px;
+}
