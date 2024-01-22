@@ -30,13 +30,11 @@
                 <option value="3.5">3.5 (B+)</option>
                 <option value="4">4 (A)</option>
             </select>
-            <input type="text" id="credits" class="credits" placeholder="Credits"><br>
+            <input type="text" id="credits" class="credits" name="credits" placeholder="Credits">
         </div>
         <div id="subjectContainer"></div>
-        
         <input type="button" id="submitBtn" class="cal" onclick="calGPA()" value="Calculate GPA">
     </div>
-    <!-- <div id="gpa-error"></div> -->
     <div id="gpa-result"></div>
 </body>
 </html>

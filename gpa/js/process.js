@@ -30,14 +30,14 @@ $(document).ready(function() {
     });
 
     $("#deleteInput").click(function() {
-        $(".input-container:last").remove();
+        $(".input:last").remove();
         // if ($(".input-container").length === 0) {
         //     $("#deleteInput").hide();
         // }
     });
 });
 function addInputDiv() {
-    var newDiv = $("<div>").addClass("input-container");
+    var newDiv = $("<div>").addClass("input");
     var subjectInput = $("<input>").addClass("subject").attr({
         type: "text",
         placeholder: "Subject"
@@ -47,8 +47,6 @@ function addInputDiv() {
         name: "grade",
         required: true
     });
-
-    // เพิ่ม option สำหรับ Grade
     var gradeOptions = ["Select Grade", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
     for (var i = 0; i < gradeOptions.length; i++) {
         var option = $("<option>").attr({
@@ -56,16 +54,12 @@ function addInputDiv() {
         }).text(gradeOptions[i]);
         gradeSelect.append(option);
     }
-
     newDiv.append(gradeSelect);
-
-    // เพิ่ม input สำหรับ Credits
     var creditsInput = $("<input>").addClass("credits").attr({
         type: "text",
+        name: "credits",
         placeholder: "Credits"
     });
     newDiv.append(creditsInput);
-
-    // เพิ่ม div ลงใน container
     $("#subjectContainer").append(newDiv);
 }

@@ -64,6 +64,12 @@ input#submitBtn:active, input#addInput:active, input#deleteInput:active {
     background-color: lch(0 0 0 / 0.1);
     height: 50px;
 }
+.input {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
 div#gpa-result {
     text-align: center;
     font-size: 28px;
