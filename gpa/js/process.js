@@ -1,9 +1,28 @@
+function testArrayLoop() {
+    var total_subject = 3;
+    for (i=0; i<total_subject; i++) { // console.log(i); //  0 1 2 
+        let unit;
+        if (i===0) {
+            unit = "";
+        } else {
+            unit = i;
+        }
+        let Inputgrade = $(`select[name='grade${unit}"']`).val();
+        let Inputcredits = $(`input[name="credits${unit}`).val();
+
+        let result = Inputgrade * Inputcredits;
+        console.log(result);
+    }
+}
+
 
 function calGPA() {
     var Inputgrade = $('select[name="grade"]').val();
     var Inputcredits = $('input[name="credits"]').val();
+
     var Inputgrade1 = $('select[name="grade1"]').val();
     var Inputcredits1 = $('input[name="credits1"]').val();
+
     var Inputgrade2 = $('select[name="grade2"]').val();
     var Inputcredits2 = $('input[name="credits2"]').val();
 
