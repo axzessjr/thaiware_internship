@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $grade = $_POST['grade'];
         $credits = $_POST['credits'];
       
-        $gpa = ($grade * $credits) / $credits ;
+        $gpa = ($grade * $credits);
         echo number_format($gpa, 2);
     } 
 } 
