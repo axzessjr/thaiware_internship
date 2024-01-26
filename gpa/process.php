@@ -1,11 +1,16 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['grade']) && isset($_POST['credits'])) {
-        $grade = $_POST['grade'];
-        $credits = $_POST['credits'];
-      
-        $gpa = ($grade * $credits);
-        echo number_format($gpa, 2);
-    } 
-} 
+$total_subject = $_POST['total_subject'];
+$totalResult = 0;
+$creditsTotal = 0;
+for ($i = 0; $i < $total_subject; $i++) {
+    $unit = $i === 0 ? "" : $i;
+    $Inputgrade = $_POST["grade{$unit}"];
+    $Inputcredits = $_POST["credits{$unit}"];
+    $result = $Inputgrade * $Inputcredits;
+    $totalResult += $result;
+    $creditsTotal += floatval($Inputcredits);
+}
+$resultGPA = $totalResult / $creditsTotal;
+echo $resultGPA;
 ?>
+

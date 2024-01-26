@@ -13,7 +13,6 @@
 <body>
     <div class="topic">Calculate GPA</div>
     <div class="cal">
-        
         <div class="input">
             <!-- <input type="checkbox" id="checkbox" class="delete-checkbox">
             <label class="fc" for="checkbox"></label> -->
@@ -31,7 +30,6 @@
             </select>
             <input type="text" id="credits" class="credits" name="credits" placeholder="Credits">
         </div>
-        
         <div id="subjectContainer"></div>
         <div class="bt">
             <input type="button" id="addInput" class="add" value="+Add">
@@ -39,6 +37,9 @@
         </div>
         <input type="button" id="submitBtn" class="cal" onclick="calGPA()" value="Calculate GPA">
     </div>
-    <div id="gpa-result"></div>
+    <div id="gpa-result"></div><br>
+    <div class="re-icon" style="display: none;">
+        <img src="/thaiware_internship/bmi/img/refresh-icon.png" id="re-icon" onclick="hideandseek()">
+    </div>
 </body>
 </html>

@@ -91,3 +91,10 @@ label.fc {
 input[type="checkbox"]:checked + .fc {
     background: black;
 }
+.re-icon {
+    text-align: center;
+}
+#re-icon {
+    width: 20px;
+    cursor: pointer;
+}

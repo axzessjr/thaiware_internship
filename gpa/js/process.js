@@ -1,82 +1,56 @@
-function testArrayLoop() {
-    var total_subject = 3;
-    for (i=0; i<total_subject; i++) { // console.log(i); //  0 1 2 
-        let unit;
-        if (i===0) {
-            unit = "";
-        } else {
-            unit = i;
-        }
-        let Inputgrade = $(`select[name='grade${unit}"']`).val();
-        let Inputcredits = $(`input[name="credits${unit}`).val();
-
-        let result = Inputgrade * Inputcredits;
-        console.log(result);
-    }
-}
-
-
+var total_subject = 1;
 function calGPA() {
-    var Inputgrade = $('select[name="grade"]').val();
-    var Inputcredits = $('input[name="credits"]').val();
-
-    var Inputgrade1 = $('select[name="grade1"]').val();
-    var Inputcredits1 = $('input[name="credits1"]').val();
-
-    var Inputgrade2 = $('select[name="grade2"]').val();
-    var Inputcredits2 = $('input[name="credits2"]').val();
-
-    var resultArray = [Inputgrade * Inputcredits, Inputgrade1 * Inputcredits1, Inputgrade2 * Inputcredits2];
-    var creditsTotal = parseFloat(Inputcredits) + parseFloat(Inputcredits1) + parseFloat(Inputcredits2);
-    var result = resultArray.reduce(function (acc, value) {
-        return acc + value;
-    });
-    var resultGPA = result / creditsTotal;
-
-    console.log(result);
-    console.log(resultGPA.toFixed(2));
-    
-//     if(Inputgrade === "" || Inputcredits === "") {
-//         $('#gpa-result').html("Please fill out the information completely.");
-//         $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
-//         $('#gpa-result').show()
-//     } else {
-//         $.ajax({
-//             url: "process.php",
-//             method: "POST",
-//             data: {
-//                 grade: Inputgrade,
-//                 credits: Inputcredits
-//             },
-//             success: function(data) {
-//                 var gpa = parseFloat(data) 
-//                 var ReAr = [gpa];
-//                 console.log(ReAr);
-//                 // $('#gpa-result').html(gpa.toFixed(2));
-//                 // $('#gpa-result').css({"color":"rgba(0, 0, 0)"});
-//             },
-//             error: function(xhr, status, error) {
-//                 console.error("Error: " + status, error);
-//             }
-//         });
-//     }
+    var formData = {
+        total_subject: total_subject
+    };
+    for (var i = 0; i < total_subject; i++) {
+        var unit = i === 0 ? "" : i;
+        var Inputgrade = $(`select[name='grade${unit}']`).val();
+        var Inputcredits = $(`input[name='credits${unit}']`).val();
+        formData[`grade${unit}`] = Inputgrade;
+        formData[`credits${unit}`] = Inputcredits;
+    }
+    if(Inputgrade === "" || Inputcredits === "") {
+        $('#gpa-result').html("Please fill out the information completely.");
+        $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#gpa-result').show();
+    } else {
+        $.ajax({
+            url: "process.php",
+            method: "POST",
+            data: formData,
+            success: function(data) {
+                var resultGPA = parseFloat(data)
+                $('.cal').hide()
+                $('#gpa-result').html(resultGPA.toFixed(2));
+                $('#gpa-result').css({"color":"rgba(0, 0, 0)"});
+                $('#gpa-result').show();
+                $('.re-icon').show();
+            },
+            error: function(xhr, status, error) {
+                console.error("Error: " + status, error);
+            }
+        });          
+    }
 }
 $(document).ready(function() {
     $("#addInput").click(function() {
         addInputDiv();
     });
-    // $("#deleteInput").click(function() {
-    //     $(".input input[type=checkbox]:checked").each(function() {
-    //         $(this).closest(".input").remove();
-    //     });
-    // });
+    $("#deleteInput").click(function() {
+        $(".input input[type=checkbox]:checked").each(function() {
+            $(this).closest(".input").remove();
+        });
+    });
     $("#deleteInput").click(function() {
         $(".input:last").remove();
+        total_subject-=1
     });
 });
 function addInputDiv() {
     var newDiv = $("<div>").addClass("input");
     var index = $(".input").length;
+    total_subject+=1
     // var checkbox = $("<input>").attr({
     //     type: "checkbox",
     //     id: "checkbox" + index,
@@ -89,13 +63,11 @@ function addInputDiv() {
     //     for: "checkbox" + index
     // });
     // newDiv.append(checkboxsty);
-
     var subjectInput = $("<input>").addClass("subject").attr({
         type: "text",
         placeholder: "Subject"
     });
     newDiv.append(subjectInput);
-
     var gradeSelect = $("<select>").addClass("grade").attr({
         name: "grade" + index,
         required: true
@@ -127,4 +99,9 @@ function addInputDiv() {
     });
     newDiv.append(creditsInput);
     $("#subjectContainer").append(newDiv);
+}
+function hideandseek() {
+    $('#gpa-result').hide()
+    $('.re-icon').hide()
+    $('.cal').show()
 }
