@@ -14,8 +14,8 @@
     <div class="topic">Calculate GPA</div>
     <div class="cal">
         <div class="input">
-            <!-- <input type="checkbox" id="checkbox" class="delete-checkbox">
-            <label class="fc" for="checkbox"></label> -->
+            <input type="checkbox" id="checkbox" class="delete-checkbox">
+            <label class="fc" for="checkbox"></label>
             <input type="text" id="subject" class="subject" name="subject" placeholder="Subject">
             <select class="grade" name="grade" required="">
                 <option value="">Select Grade</option>
@@ -36,10 +36,7 @@
             <input type="button" id="deleteInput" class="delete" value="Delete">
         </div>
         <input type="button" id="submitBtn" class="cal" onclick="calGPA()" value="Calculate GPA">
-    </div>
-    <div id="gpa-result"></div><br>
-    <div class="re-icon" style="display: none;">
-        <img src="/thaiware_internship/bmi/img/refresh-icon.png" id="re-icon" onclick="hideandseek()">
-    </div>
+    </div><br>
+    <div id="gpa-result"></div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 var total_subject = 1;
+var action = 0;
 function calGPA() {
     var formData = {
         total_subject: total_subject
@@ -23,11 +24,8 @@ function calGPA() {
             data: formData,
             success: function(data) {
                 var resultGPA = parseFloat(data)
-                $('.cal').hide()
                 $('#gpa-result').html(resultGPA.toFixed(2));
                 $('#gpa-result').css({"color":"rgba(0, 0, 0)"});
-                $('#gpa-result').show();
-                $('.re-icon').show();
             },
             error: function(xhr, status, error) {
                 console.error("Error: " + status, error);
@@ -41,38 +39,41 @@ $(document).ready(function() {
     });
     $("#deleteInput").click(function() {
         $(".input input[type=checkbox]:checked").each(function() {
-            $(this).closest(".input").remove();
+            $(this).parent().remove();
+            total_subject-=1
         });
     });
-    $("#deleteInput").click(function() {
-        $(".input:last").remove();
-        total_subject-=1
-    });
+    // $("#deleteInput").click(function() {
+    //     $(".input:last").remove();
+    //     
+    // });
 });
 function addInputDiv() {
-    var newDiv = $("<div>").addClass("input");
-    var index = $(".input").length;
     total_subject+=1
-    // var checkbox = $("<input>").attr({
-    //     type: "checkbox",
-    //     id: "checkbox" + index,
-    //     class: "delete-checkbox"
-    // });
-    // newDiv.append(checkbox);
+    action+=1
+    var newDiv = $("<div>").addClass("input");
+    // var index = $(".input").length;
 
-    // var checkboxsty = $("<label>").attr({
-    //     class: "fc",
-    //     for: "checkbox" + index
-    // });
-    // newDiv.append(checkboxsty);
+    var checkbox = $("<input>").attr({
+        type: "checkbox",
+        id: "checkbox" + action,
+        class: "delete-checkbox"
+    });
+    newDiv.append(checkbox);
+
+    var checkboxsty = $("<label>").attr({
+        class: "fc",
+        for: "checkbox" + action
+    });
+    newDiv.append(checkboxsty);
     var subjectInput = $("<input>").addClass("subject").attr({
         type: "text",
-        name: "subject" + index,
+        name: "subject" + action,
         placeholder: "Subject"
     });
     newDiv.append(subjectInput);
     var gradeSelect = $("<select>").addClass("grade").attr({
-        name: "grade" + index,
+        name: "grade" + action,
         required: true
     });
     var gradeOptions = ["Select Grade", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
@@ -97,7 +98,7 @@ function addInputDiv() {
     newDiv.append(gradeSelect);
     var creditsInput = $("<input>").addClass("credits").attr({
         type: "text",
-        name: "credits" + index,
+        name: "credits" + action,
         placeholder: "Credits"
     });
     newDiv.append(creditsInput);
