@@ -5,8 +5,10 @@ function calGPA() {
     };
     for (var i = 0; i < total_subject; i++) {
         var unit = i === 0 ? "" : i;
+        var Inputsubject = $(`input[name='subject${unit}']`).val();
         var Inputgrade = $(`select[name='grade${unit}']`).val();
         var Inputcredits = $(`input[name='credits${unit}']`).val();
+        formData[`subject${unit}`] = Inputsubject;
         formData[`grade${unit}`] = Inputgrade;
         formData[`credits${unit}`] = Inputcredits;
     }
@@ -65,6 +67,7 @@ function addInputDiv() {
     // newDiv.append(checkboxsty);
     var subjectInput = $("<input>").addClass("subject").attr({
         type: "text",
+        name: "subject" + index,
         placeholder: "Subject"
     });
     newDiv.append(subjectInput);

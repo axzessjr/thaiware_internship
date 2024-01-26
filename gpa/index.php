@@ -16,7 +16,7 @@
         <div class="input">
             <!-- <input type="checkbox" id="checkbox" class="delete-checkbox">
             <label class="fc" for="checkbox"></label> -->
-            <input type="text" id="subject" class="subject" placeholder="Subject">
+            <input type="text" id="subject" class="subject" name="subject" placeholder="Subject">
             <select class="grade" name="grade" required="">
                 <option value="">Select Grade</option>
                 <option value="0">0 (F)</option>
