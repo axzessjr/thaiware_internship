@@ -8,23 +8,27 @@
 .topic {
     font-size: 36px;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 0px;
     background-color: #0C78A6;
     color: white;
 }
 .cal {
     text-align: center;
-    margin-top: 50px;
 }
 .subject {
     width: 300px;
+}
+select.grade {
+    width: 100px;
 }
 .credits {
     width: 180px;
 }
 .bt {
     margin-top: 30px;
+}
+input#submitBtn {
+    margin-bottom: 50px;
 }
 input#submitBtn, input#addInput, input#deleteInput {
     border: solid 2px ;
@@ -72,11 +76,12 @@ input#submitBtn:active, input#addInput:active, input#deleteInput:active {
     justify-content: center;
     gap: 5px;
     margin-bottom: 15px;
+    margin-top: 20px;
 }
 div#gpa-result {
     text-align: center;
-    font-size: 28px;
-    margin-top: 30px;
+    font-size: 36px;
+    margin: 50px 0px;
 }
 input[type="checkbox"] {
     display: none;
@@ -90,4 +95,62 @@ label.fc {
 }
 input[type="checkbox"]:checked + .fc {
     background: black;
+}
+@media screen and (max-width: 650px) {
+    .topic {
+        font-size: 30px;
+        padding: 15px 0px;
+    }
+    .subject {
+        width: 250px;
+    }
+    select.grade {
+        width: 85px;
+    }
+    .credits {
+        width: 150px;
+    }
+    .subject, select.grade, .credits {
+        height: 40px;
+    }
+    label.fc {
+        margin-top: 15px;
+    }
+    input#addInput {
+        margin-right: 30px;
+    }
+    div#gpa-result {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .topic {
+        font-size: 25px;
+        padding: 10px 0px;
+    }
+    .subject {
+        width: 200px;
+    }
+    .credits {
+        width: 100px;
+    }
+    div#gpa-result {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .input {
+        display: grid;
+        justify-items: center;
+    }
+    .subject, select.grade, .credits {
+        width: 200px;
+    }
+    div#gpa-result {
+        font-size: 20px;
+        margin: 25px 0px;
+    }
+    input#submitBtn {
+        margin-bottom: 25px;
+    }
 }

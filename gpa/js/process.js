@@ -4,14 +4,13 @@ function calGPA() {
     var formData = {
         total_subject: total_subject
     };
-    for (var i = 0; i < total_subject; i++) {
-        var unit = i === 0 ? "" : i;
-        var Inputsubject = $(`input[name='subject${unit}']`).val();
-        var Inputgrade = $(`select[name='grade${unit}']`).val();
-        var Inputcredits = $(`input[name='credits${unit}']`).val();
-        formData[`subject${unit}`] = Inputsubject;
-        formData[`grade${unit}`] = Inputgrade;
-        formData[`credits${unit}`] = Inputcredits;
+    for(let i=1; i<=total_subject; i++) {
+        var Inputsubject = $(`.cal .input:nth-child(${i}) .subject`).val()
+        var Inputgrade = $(`.cal .input:nth-child(${i}) .grade`).val()
+        var Inputcredits = $(`.cal .input:nth-child(${i}) .credits`).val()
+        formData[`subject${i}`] = Inputsubject;
+        formData[`grade${i}`] = Inputgrade;
+        formData[`credits${i}`] = Inputcredits;
     }
     if(Inputgrade === "" || Inputcredits === "") {
         $('#gpa-result').html("Please fill out the information completely.");
@@ -43,24 +42,17 @@ $(document).ready(function() {
             total_subject-=1
         });
     });
-    // $("#deleteInput").click(function() {
-    //     $(".input:last").remove();
-    //     
-    // });
 });
 function addInputDiv() {
     total_subject+=1
     action+=1
     var newDiv = $("<div>").addClass("input");
-    // var index = $(".input").length;
-
     var checkbox = $("<input>").attr({
         type: "checkbox",
         id: "checkbox" + action,
         class: "delete-checkbox"
     });
     newDiv.append(checkbox);
-
     var checkboxsty = $("<label>").attr({
         class: "fc",
         for: "checkbox" + action
@@ -76,7 +68,7 @@ function addInputDiv() {
         name: "grade" + action,
         required: true
     });
-    var gradeOptions = ["Select Grade", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
+    var gradeOptions = ["Grade", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
     var sum = 0;
     for (var i = 0; i < gradeOptions.length; i++) {
         if (i === 0) {
