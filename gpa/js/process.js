@@ -4,6 +4,7 @@ function calGPA() {
     var formData = {
         total_subject: total_subject
     };
+    let success = true;
     for(let i=1; i<=total_subject; i++) {
         var Inputsubject = $(`.cal .input:nth-child(${i}) .subject`).val()
         var Inputgrade = $(`.cal .input:nth-child(${i}) .grade`).val()
@@ -11,12 +12,15 @@ function calGPA() {
         formData[`subject${i}`] = Inputsubject;
         formData[`grade${i}`] = Inputgrade;
         formData[`credits${i}`] = Inputcredits;
+        if(Inputgrade === "" || Inputcredits === "") {
+            $('#gpa-result').html("Please fill out the information completely.");
+            $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
+            $('#gpa-result').show();
+            success = false; 
+            break;
+        }
     }
-    if(Inputgrade === "" || Inputcredits === "") {
-        $('#gpa-result').html("Please fill out the information completely.");
-        $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#gpa-result').show();
-    } else {
+    if(success) {
         $.ajax({
             url: "process.php",
             method: "POST",
@@ -30,6 +34,8 @@ function calGPA() {
                 console.error("Error: " + status, error);
             }
         });          
+    } else {
+        return; 
     }
 }
 $(document).ready(function() {
