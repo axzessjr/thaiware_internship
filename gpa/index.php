@@ -20,6 +20,7 @@
                 <input type="text" id="subject" class="subject" name="subject" placeholder="Subject">
                 <select class="grade" name="grade" required="">
                     <option value="">Grade</option>
+                    <option value="-1">Drop (W)</option>
                     <option value="0">0 (F)</option>
                     <option value="1">1 (D)</option>
                     <option value="1.5">1.5 (D+)</option>

@@ -7,9 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Inputsubject = $_POST["subject$i"];
         $Inputgrade = $_POST["grade$i"];
         $Inputcredits = $_POST["credits$i"];
-        $result = $Inputgrade * $Inputcredits;
-        $totalResult += $result;
-        $creditsTotal += floatval($Inputcredits);
+        if(($Inputgrade != -1)) {
+            $result = $Inputgrade * $Inputcredits;
+            $totalResult += $result;
+            $creditsTotal += floatval($Inputcredits);
+        }
     }
     $resultGPA = $totalResult / $creditsTotal;
     echo number_format($resultGPA, 2);

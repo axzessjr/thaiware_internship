@@ -46,7 +46,7 @@ input#submitBtn, input#addInput {
     color: #0C78A6;
 }
 input#deleteInput {
-    border-color: #a60c0c;
+    border-color: rgb(166, 12, 12);
     color: #a60c0c;
 }
 input#submitBtn:hover, input#addInput:hover, input#deleteInput:hover {
@@ -95,6 +95,9 @@ label.fc {
 }
 input[type="checkbox"]:checked + .fc {
     background: black;
+}
+.error, .grade.error {
+    background-color: rgba(255, 0, 0, 0.3);
 }
 @media screen and (max-width: 650px) {
     .topic {

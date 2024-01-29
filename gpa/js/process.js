@@ -13,11 +13,26 @@ function calGPA() {
         formData[`grade${i}`] = Inputgrade;
         formData[`credits${i}`] = Inputcredits;
         if(Inputgrade === "" || Inputcredits === "") {
+            $('.input').each(function() {
+                var Inputgrade = $(this).find('.grade');
+                var Inputcredits = $(this).find('.credits');
+                if (!Inputgrade.val()) {
+                    Inputgrade.addClass("error");
+                }
+                if (!Inputcredits.val()) {
+                    Inputcredits.addClass("error");
+                }
+            });
+            // $(`.input:nth-child(${i}) .grade`).addClass("error");
+            // $(`.input:nth-child(${i}) .credits`).addClass("error");
             $('#gpa-result').html("Please fill out the information completely.");
             $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
             $('#gpa-result').show();
-            success = false; 
+            success = false;
             break;
+        } else {
+            $('.grade').removeClass("error");
+            $('.credits').removeClass("error");
         }
     }
     if(success) {
@@ -74,16 +89,19 @@ function addInputDiv() {
         name: "grade" + action,
         required: true
     });
-    var gradeOptions = ["Grade", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
+    var gradeOptions = ["Grade","Drop (W)", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
     var sum = 0;
     for (var i = 0; i < gradeOptions.length; i++) {
         if (i === 0) {
             sum = "";
-        } else
+        } else 
         if (i === 1) {
-            sum = 0;
+            sum = -1;
         } else
         if (i === 2) {
+            sum = 0;
+        } else
+        if (i === 3) {
             sum = sum + 1;
         } else {
             sum += 0.5;
