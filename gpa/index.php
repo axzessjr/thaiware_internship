@@ -18,7 +18,7 @@
                 <input type="checkbox" id="checkbox" class="delete-checkbox">
                 <label class="fc" for="checkbox"></label>
                 <input type="text" id="subject" class="subject" name="subject" placeholder="Subject">
-                <select class="grade" name="grade" required="">
+                <select class="grade" name="grade" id="grade" required="">
                     <option value="">Grade</option>
                     <option value="-1">Drop (W)</option>
                     <option value="0">0 (F)</option>
@@ -30,7 +30,7 @@
                     <option value="3.5">3.5 (B+)</option>
                     <option value="4">4 (A)</option>
                 </select>
-                <input type="text" id="credits" class="credits" name="credits" placeholder="Credits">
+                <input type="number" id="credits" class="credits" name="credits" placeholder="Credits">
             </div>
         </div>
         <div class="bt">

@@ -13,18 +13,8 @@ function calGPA() {
         formData[`grade${i}`] = Inputgrade;
         formData[`credits${i}`] = Inputcredits;
         if(Inputgrade === "" || Inputcredits === "") {
-            $('.input').each(function() {
-                var Inputgrade = $(this).find('.grade');
-                var Inputcredits = $(this).find('.credits');
-                if (!Inputgrade.val()) {
-                    Inputgrade.addClass("error");
-                }
-                if (!Inputcredits.val()) {
-                    Inputcredits.addClass("error");
-                }
-            });
-            // $(`.input:nth-child(${i}) .grade`).addClass("error");
-            // $(`.input:nth-child(${i}) .credits`).addClass("error");
+            $('.grade').addClass("error");
+            $('.credits').addClass("error");
             $('#gpa-result').html("Please fill out the information completely.");
             $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
             $('#gpa-result').show();
@@ -63,7 +53,24 @@ $(document).ready(function() {
             total_subject-=1
         });
     });
+    $(document).on("input", ".cal .input .grade", function() {
+        var gradeInput = $(this).closest(".input").find(".grade");
+        if ($(gradeInput).val() === "") {
+            $(this).css("background-color", "rgba(255, 0, 0, 0.3)");
+        } else {
+            $(this).css("background-color", "lch(0 0 0 / 0.1)");
+        }
+    });
+    $(document).on("input", ".cal .input .credits", function() {
+        var creditsInput = $(this).closest(".input").find(".credits");
+        if ($(creditsInput).val() === "") {
+            $(this).css("background-color", "rgba(255, 0, 0, 0.3)");
+        } else {
+            $(this).css("background-color", "lch(0 0 0 / 0.1)");
+        }
+    });
 });
+
 function addInputDiv() {
     total_subject+=1
     action+=1
@@ -113,7 +120,7 @@ function addInputDiv() {
     }
     newDiv.append(gradeSelect);
     var creditsInput = $("<input>").addClass("credits").attr({
-        type: "text",
+        type: "number",
         name: "credits" + action,
         placeholder: "Credits"
     });
