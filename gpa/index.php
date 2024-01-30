@@ -6,7 +6,7 @@
     <title>GPA</title>
 
     <link rel="icon" type="image/png" href="/thaiware_internship/thaiware-icon.png">
-    <link rel="stylesheet" href="/thaiware_internship/gpa/css/style.css" />
+    <link rel="stylesheet" href="/thaiware_internship/gpa/css/style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/thaiware_internship/gpa/js/process.js"></script>
 </head>
@@ -40,6 +40,5 @@
         <div id="gpa-result"></div>
         <input type="button" id="submitBtn" class="cal" onclick="calGPA()" value="Calculate GPA">
     </div>
-   
 </body>
 </html>

@@ -38,9 +38,9 @@ function calGPA() {
             error: function(xhr, status, error) {
                 console.error("Error: " + status, error);
             }
-        });          
+        });
     } else {
-        return; 
+        return;
     }
 }
 $(document).ready(function() {
@@ -70,7 +70,6 @@ $(document).ready(function() {
         }
     });
 });
-
 function addInputDiv() {
     total_subject+=1
     action+=1
@@ -101,7 +100,7 @@ function addInputDiv() {
     for (var i = 0; i < gradeOptions.length; i++) {
         if (i === 0) {
             sum = "";
-        } else 
+        } else
         if (i === 1) {
             sum = -1;
         } else

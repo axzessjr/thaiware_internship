@@ -36,7 +36,6 @@ input#submitBtn {
 input#submitBtn, input#addInput, input#deleteInput {
     height: 50px;
     border: solid 2px ;
-    /* padding: 10px; */
     border-radius: 5px;
     background-color: white;
     cursor: pointer;
@@ -63,7 +62,6 @@ input#submitBtn:hover, input#addInput:hover, input#deleteInput:hover {
 input#submitBtn:hover, input#addInput:hover {
     background-color: #0C78A6;
 }
-
 input#deleteInput:hover {
     background-color: #a60c0c;
 }
