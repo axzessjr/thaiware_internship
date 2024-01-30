@@ -17,12 +17,14 @@
 }
 .subject {
     width: 300px;
+    border-radius: 15px 0px 0px 15px;
 }
 select.grade {
     width: 100px;
 }
 .credits {
     width: 180px;
+    border-radius: 0px 15px 15px 0px;
 }
 .bt {
     margin-top: 30px;
@@ -142,12 +144,11 @@ input[type="checkbox"]:checked + .fc {
     }
 }
 @media screen and (max-width: 430px) {
-    .input {
-        display: grid;
-        justify-items: center;
+    .subject {
+        width: 100px;
     }
-    .subject, select.grade, .credits {
-        width: 200px;
+    .credits{
+        width: 65px;
     }
     div#gpa-result {
         font-size: 20px;
