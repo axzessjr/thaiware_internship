@@ -17,31 +17,36 @@
 }
 .subject {
     width: 300px;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 5px 0px 0px 5px;
 }
 select.grade {
     width: 100px;
 }
 .credits {
     width: 180px;
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 .bt {
     margin-top: 30px;
 }
 input#submitBtn {
+    width: 130px;
     margin-bottom: 50px;
 }
 input#submitBtn, input#addInput, input#deleteInput {
+    height: 50px;
     border: solid 2px ;
-    padding: 10px;
-    border-radius: 15px;
+    /* padding: 10px; */
+    border-radius: 5px;
     background-color: white;
     cursor: pointer;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 input#addInput {
     margin-right: 60px;
+}
+input#addInput, input#deleteInput {
+    width: 80px;
 }
 input#submitBtn, input#addInput {
     border-color: #0C78A6;
@@ -110,7 +115,7 @@ input[type="checkbox"]:checked + .fc {
         width: 250px;
     }
     select.grade {
-        width: 85px;
+        width: 125px;
     }
     .credits {
         width: 150px;
@@ -126,6 +131,15 @@ input[type="checkbox"]:checked + .fc {
     }
     div#gpa-result {
         font-size: 30px;
+    }
+    input#submitBtn {
+        width: 115px;
+    }
+    input#addInput, input#deleteInput {
+        width: 65px;
+    }
+    input#submitBtn, input#addInput, input#deleteInput {
+        height: 40px;
     }
 }
 @media screen and (max-width: 520px) {
@@ -145,7 +159,10 @@ input[type="checkbox"]:checked + .fc {
 }
 @media screen and (max-width: 430px) {
     .subject {
-        width: 100px;
+        width: 160px;
+    }
+    select.grade {
+        width: 95px;
     }
     .credits{
         width: 65px;
@@ -154,7 +171,11 @@ input[type="checkbox"]:checked + .fc {
         font-size: 20px;
         margin: 25px 0px;
     }
+    input#addInput, input#deleteInput {
+        width: 50px;
+    }
     input#submitBtn {
         margin-bottom: 25px;
+        width: 100px;
     }
 }
