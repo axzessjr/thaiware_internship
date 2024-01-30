@@ -131,3 +131,11 @@ function hideandseek() {
     $('.re-icon').hide()
     $('.cal').show()
 }
+$(document).ready(function () {
+    $('#subjectContainer').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calGPA();
+        }
+    });
+});
