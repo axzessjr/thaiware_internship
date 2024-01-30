@@ -121,7 +121,8 @@ function addInputDiv() {
     var creditsInput = $("<input>").addClass("credits").attr({
         type: "number",
         name: "credits" + action,
-        placeholder: "Credits"
+        placeholder: "Credits",
+        onkeyup: "if(this.value<0){this.value=this.value*-1}"
     });
     newDiv.append(creditsInput);
     $("#subjectContainer").append(newDiv);

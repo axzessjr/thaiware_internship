@@ -30,7 +30,7 @@
                     <option value="3.5">3.5 (B+)</option>
                     <option value="4">4 (A)</option>
                 </select>
-                <input type="number" id="credits" class="credits" name="credits" placeholder="Credits">
+                <input type="number" min="1" id="credits" class="credits" name="credits" placeholder="Credits" onkeyup="if(this.value<0){this.value=this.value*-1}">
             </div>
         </div>
         <div class="bt">
