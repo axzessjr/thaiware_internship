@@ -15,7 +15,7 @@ function calGPA() {
         if(Inputgrade === "" || Inputcredits === "") {
             $('.grade').addClass("error");
             $('.credits').addClass("error");
-            $('#gpa-result').html("Please fill out the information completely.");
+            $('#gpa-result').html("กรุณากรอกข้อมูลให้ครบถ้วน");
             $('#gpa-result').css({"color":"rgba(200, 0, 0, 0.8)"});
             $('#gpa-result').show();
             success = false;
@@ -88,14 +88,14 @@ function addInputDiv() {
     var subjectInput = $("<input>").addClass("subject").attr({
         type: "text",
         name: "subject" + action,
-        placeholder: "Subject"
+        placeholder: "วิชา"
     });
     newDiv.append(subjectInput);
     var gradeSelect = $("<select>").addClass("grade").attr({
         name: "grade" + action,
         required: true
     });
-    var gradeOptions = ["Grade","Drop (W)", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
+    var gradeOptions = ["เกรด","ดรอป (W)", "0 (F)", "1 (D)", "1.5 (D+)", "2 (C)", "2.5 (C+)", "3 (B)", "3.5 (B+)", "4 (A)"];
     var sum = 0;
     for (var i = 0; i < gradeOptions.length; i++) {
         if (i === 0) {
@@ -121,7 +121,7 @@ function addInputDiv() {
     var creditsInput = $("<input>").addClass("credits").attr({
         type: "number",
         name: "credits" + action,
-        placeholder: "Credits",
+        placeholder: "หน่วยกิต",
         onkeyup: "if(this.value<0){this.value=this.value*-1}"
     });
     newDiv.append(creditsInput);

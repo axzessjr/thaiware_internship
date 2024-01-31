@@ -4,7 +4,7 @@ function calculateBMI() {
     var Inputheight = $('input[name="height"]').val();
     var InputheightUnit = $('input[name="heightUnit"]:checked').val();
     if(Inputweight === "" || Inputheight === "") {
-        $('#bmi-error').html("Please fill out the information completely.");
+        $('#bmi-error').html("กรุณากรอกข้อมูลให้ครบถ้วน");
         $('#bmi-error').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#bmi-error').show()
     } else {
@@ -25,9 +25,9 @@ function calculateBMI() {
                 $('#bmiForm').hide()
                 $('#bmi-error').hide()
                 $('.info-result').show()
-                $('#genderResult').html("gender: " + Inputgender);
-                $('#weightResult').html("weight: " + Inputweight + " kg");
-                $('#heightResult').html("height: " + Inputheight + " " + InputheightUnit);
+                $('#genderResult').html("เพศ: " + Inputgender);
+                $('#weightResult').html("น้ำหนัก: " + Inputweight + " กก.");
+                $('#heightResult').html("ส่วนสูง: " + Inputheight + " " + InputheightUnit);
                 $('#bmiResult').show()
                 $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
                 $('.re-icon').show()
@@ -40,15 +40,15 @@ function calculateBMI() {
 }
 function getBMIStatus(gender, bmi) {
     var bmiResult = $('#bmiResult');
-    if (gender === 'male') {
+    if (gender === 'ชาย') {
         colorMale(bmiResult, bmi);
-    } else if (gender === 'female') {
+    } else if (gender === 'หญิง') {
         colorFemale(bmiResult, bmi);
     }
     var gender_result
-    if (gender === "male") {
+    if (gender === "ชาย") {
         gender_result =  showBMIStatusMale(bmi);
-    } else if (gender === "female") {
+    } else if (gender === "หญิง") {
         gender_result = showBMIStatusFemale(bmi);
     }
     return gender_result;
@@ -75,34 +75,34 @@ function colorFemale(color, bmi) {
 function showBMIStatusMale(bmi) {
     var male_result
     if (bmi < 18.5) {
-        male_result = "Underweight";
+        male_result = "ผอม";
     } else if (bmi >= 18.5 && bmi <= 24.9) {
-        male_result = "Normal weight";
+        male_result = "ปกติ";
     } else if (bmi >= 25 && bmi <= 29.9) {
-        male_result = "Overweight";
+        male_result = "ท้วม";
     } else if (bmi >= 30 && bmi <= 34.9) {
-        male_result = "Obese class I";
+        male_result = "โรคอ้วนระดับ 1";
     } else if (bmi >= 35 && bmi <= 39.9) {
-        male_result = "Obese class II";
+        male_result = "โรคอ้วนระดับ 2";
     } else {
-        male_result = "Obese class III";
+        male_result = "โรคอ้วนระดับ 3";
     }
     return male_result; 
 }
 function showBMIStatusFemale(bmi) {
     var female_result
     if (bmi < 18.5) {
-        female_result = "Underweight";
+        female_result = "ผอม";
     } else if (bmi >= 18.5 && bmi <= 23.9) {
-        female_result = "Normal weight";
+        female_result = "ปกติ";
     } else if (bmi >= 24 && bmi <= 28.9) {
-        female_result = "Overweight";
+        female_result = "ท้วม";
     } else if (bmi >= 29 && bmi <= 34.9) {
-        female_result = "Obese class I";
+        female_result = "โรคอ้วนระดับ 1";
     } else if (bmi >= 35 && bmi <= 39.9) {
-        female_result = "Obese class II";
+        female_result = "โรคอ้วนระดับ 2";
     } else {
-        female_result = "Obese class III";
+        female_result = "โรคอ้วนระดับ 3";
     }
     return female_result;
 }

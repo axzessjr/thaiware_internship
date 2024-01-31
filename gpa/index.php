@@ -11,16 +11,16 @@
     <script src="/thaiware_internship/gpa/js/process.js"></script>
 </head>
 <body>
-    <div class="topic">Calculate GPA</div>
+    <div class="topic">คำนวณ GPA</div>
     <div class="cal">
         <div id="subjectContainer">
             <div class="input">
                 <input type="checkbox" id="checkbox" class="delete-checkbox">
                 <label class="fc" for="checkbox"></label>
-                <input type="text" id="subject" class="subject" name="subject" placeholder="Subject">
-                <select class="grade" name="grade" id="grade" required="">
-                    <option value="">Grade</option>
-                    <option value="-1">Drop (W)</option>
+                <input type="text" id="subject" class="subject" name="subject" placeholder="วิชา">
+                <select class="grade" name="grade" id="grade">
+                    <option value="">เกรด</option>
+                    <option value="-1">ดรอป (W)</option>
                     <option value="0">0 (F)</option>
                     <option value="1">1 (D)</option>
                     <option value="1.5">1.5 (D+)</option>
@@ -30,15 +30,15 @@
                     <option value="3.5">3.5 (B+)</option>
                     <option value="4">4 (A)</option>
                 </select>
-                <input type="number" min="1" id="credits" class="credits" name="credits" placeholder="Credits" onkeyup="if(this.value<0){this.value=this.value*-1}">
+                <input type="number" min="1" id="credits" class="credits" name="credits" placeholder="หน่วยกิต" onkeyup="if(this.value<0){this.value=this.value*-1}">
             </div>
         </div>
         <div class="bt">
-            <input type="button" id="addInput" class="add" value="+Add">
-            <input type="button" id="deleteInput" class="delete" value="Delete">
+            <input type="button" id="addInput" class="add" value="+เพิ่ม">
+            <input type="button" id="deleteInput" class="delete" value="ลบ">
         </div>
         <div id="gpa-result"></div>
-        <input type="button" id="submitBtn" class="cal" onclick="calGPA()" value="Calculate GPA">
+        <input type="button" id="submitBtn" class="cal" onclick="calGPA()" value="คำนวณ GPA">
     </div>
 </body>
 </html>
