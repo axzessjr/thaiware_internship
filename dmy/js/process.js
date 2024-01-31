@@ -1,3 +1,31 @@
+function calAge() {
+    var dayInput = $('input[name="dAge"]').val();
+    var monthInput = $('select[name="mAge"]').val();
+    var yearInput = $('input[name="yAge"]').val();
+    if( dayInput === "" || monthInput === "" || yearInput === "") {
+        $('#ageResult').html("Please fill out the information completely.");
+        $('#ageResult').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#ageResult').show();
+    } else {
+        $.ajax({
+            url: "process_age.php",
+            method: "POST",
+            data: {
+                dAge: dayInput,
+                mAge: monthInput,
+                yAge: yearInput
+            },
+            dataType: "json",
+            success: function(data) {
+                $('#ageResult').html("คุณอายุ " + data.years + " ปี " + data.months + " เดือน กับอีก " + data.days + " วัน");
+                $('#ageResult').css({"color":"rgba(0, 0, 0)"});
+            },
+            error: function(xhr, status, error) {
+                console.error("Error: " + status, error);
+            }
+        });
+    }  
+}
 function calDiff() {
     var dayInput = $('input[name="dDiff"]').val();
     var monthInput = $('select[name="mDiff"]').val();
@@ -59,11 +87,18 @@ $(document).ready(function(){
         $(this).addClass('active');
       }
     });
+    $('#age').click(function(){
+        $('.form-age').show()
+        $('.form-diff').hide()
+        $('.form-after').hide()
+    })
     $('#daydiff').click(function(){
+        $('.form-age').hide()
         $('.form-diff').show()
         $('.form-after').hide()
     })
     $('#dayafter').click(function(){
+        $('.form-age').hide()
         $('.form-diff').hide()
         $('.form-after').show()
     })

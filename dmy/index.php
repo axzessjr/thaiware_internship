@@ -13,11 +13,35 @@
 <body>
     <div class="topic">
         <div class="btn-topic" role="group">
-            <button type="button" class="daydiff active" id="daydiff" name="daydiff">ระยะห่างระหว่างวัน</button>
+            <button type="button" class="age active" id="age" name="age">อายุเท่าไหร่แล้ว?</button>
+            <button type="button" class="daydiff" id="daydiff" name="daydiff">ระยะห่างระหว่างวัน</button>
             <button type="button" class="dayafter" id="dayafter" name="dayafter">ถัดจากนี้ไปอีก...</button>
         </div>
     </div>
-    <div class="form-diff">
+    <div class="form-age">
+        <div class="input">
+            <input type="number" class="dAge" id="dAge" name="dAge" min="1" max="31" placeholder="วัน">
+            <select class="mAge" id="mAge" name="mAge">
+                <option value="">เดือน</option>
+                <option value="1">มกราคม</option>
+                <option value="2">กุมภาพันธ์</option>
+                <option value="3">มีนาคม</option>
+                <option value="4">เมษายน</option>
+                <option value="5">พฤษภาคม</option>
+                <option value="6">มิถุนายน</option>
+                <option value="7">กรกฎาคม</option>
+                <option value="8">สิงหาคม</option>
+                <option value="9">กันยายน</option>
+                <option value="10">ตุลาคม</option>
+                <option value="11">พฤศจิกายน</option>
+                <option value="12">ธันวาคม</option>
+            </select>
+            <input type="number" class="yAge" id="yAge" name="yAge" min="1000" max="3000" placeholder="ปี">
+        </div>
+        <div id="ageResult"></div>
+        <input type="button" id="submitAge" class="btnAge" onclick="calAge()" value="ตรวจสอบ">
+    </div>
+    <div class="form-diff" style="display: none;">
         <div class="input">
             <input type="number" class="dDiff" id="dDiff" name="dDiff" min="1" max="31" placeholder="วัน">
             <select class="mDiff" id="mDiff" name="mDiff">

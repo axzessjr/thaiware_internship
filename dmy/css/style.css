@@ -11,7 +11,7 @@
     padding: 100px 50px;
 }
 button {
-    border: none;
+    border: outset;
     height: 50px;
     width: 100%;
     color: rgb(0 0 0 / 50%);
@@ -21,9 +21,14 @@ button {
 .btn-topic button.active {
     color: white;
     background-color: #0C78A6;
+    border: outset #0C78A6;
     cursor: auto;
 }
-.form-diff, .form-after {
+button:hover {
+    border: outset #0C78A6;
+    color: #0C78A6;
+}
+.form-age, .form-diff, .form-after {
     text-align: center;
 }
 .input {
@@ -32,26 +37,26 @@ button {
     gap: 5px;
     padding: 0px 200px;
 }
-input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
+input#dAge, select#mAge, input#yAge, input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
     border: none;
     background-color: #0000001a;
     height: 50px;
     padding: 10px;
 }
-input#dDiff, input#dDiff2, input#dAfter, input#cAfter {
-    width: 20%;
+input#dAge, input#dDiff, input#dDiff2, input#dAfter, input#cAfter {
+    width: 200px;
 }
-select#mDiff, select#mDiff2, select#mAfter {
-    width: 45%;
+select#mAge, select#mDiff, select#mDiff2, select#mAfter {
+    width: 450px;
 }
-input#yDiff, input#yDiff2, input#yAfter {
-    width: 35%;
+input#yAge, input#yDiff, input#yDiff2, input#yAfter {
+    width: 350px;
 }
-#diffResult, #afterResult {
+#ageResult, #diffResult, #afterResult {
     font-size: 36px;
     margin: 50px 0px;
 }
-input#submitDiff, input#submitAfter {
+input#submitAge, input#submitDiff, input#submitAfter {
     height: 40px;
     width: 80px;
     border: solid 2px ;
@@ -61,6 +66,14 @@ input#submitDiff, input#submitAfter {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-color: #0C78A6;
     color: #0C78A6;
+}
+input#submitAge:hover, input#submitDiff:hover, input#submitAfter:hover {
+    background-color: #0C78A6;
+    color: white;
+}
+input#submitAge:active, input#submitDiff:active, input#submitAfter:active {
+    transform: translateY(2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 img {
     width: 40px;
