@@ -7,14 +7,14 @@ $datetime2 = new DateTime($date2);
 $interval = $datetime1->diff($datetime2);
 switch ($format) {
     case 'days':
-        echo $interval->days . " days";
+        echo $interval->days . " วัน";
         break;
     case 'months':
         $totalMonths = $interval->y * 12 + $interval->m;
-        echo $totalMonths . " months " . $interval->d . " days";
+        echo $totalMonths . " เดือน " . $interval->d . " วัน";
         break;
     case 'year':
-        echo $interval->y . " year " . $interval->m . " months " . $interval->d . " days";
+        echo $interval->y . " ปี " . $interval->m . " เดือน " . $interval->d . " วัน";
         break;
 }
 ?>

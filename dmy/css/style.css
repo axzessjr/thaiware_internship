@@ -22,7 +22,7 @@ button {
     background-color: rgb(0 0 0 / 30%);
     cursor: auto;
 }
-.form-age, .form-diff, .form-after {
+.form-diff, .form-after {
     text-align: center;
 }
 .input {
@@ -31,28 +31,28 @@ button {
     gap: 5px;
     padding: 0px 200px;
 }
-input#dAge, select#mAge, input#yAge, input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
+input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
     border: none;
-    background-color: rgb(0 0 0 / 10%);
+    background-color: #0000001a;
     height: 50px;
     padding: 10px;
 }
-input#dAge, input#dDiff, input#dDiff2, input#dAfter, input#cAfter {
+input#dDiff, input#dDiff2, input#dAfter, input#cAfter {
     width: 20%;
 }
-select#mAge, select#mDiff, select#mDiff2, select#mAfter {
+select#mDiff, select#mDiff2, select#mAfter {
     width: 45%;
 }
-input#yAge, input#yDiff, input#yDiff2, input#yAfter {
+input#yDiff, input#yDiff2, input#yAfter {
     width: 35%;
 }
-#ageResult, #diffResult, #afterResult {
+#diffResult, #afterResult {
     font-size: 36px;
     margin: 50px 0px;
 }
-input#submitAge, input#submitDiff, input#submitAfter {
+input#submitDiff, input#submitAfter {
     height: 40px;
-    width: 50px;
+    width: 80px;
     border: solid 2px ;
     border-radius: 5px;
     background-color: white;
@@ -60,6 +60,12 @@ input#submitAge, input#submitDiff, input#submitAfter {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-color: #0C78A6;
     color: #0C78A6;
+}
+img {
+    width: 40px;
+    margin-top: 10px;
+    padding: 0px 5px;
+    cursor: pointer;
 }
 select#format {
     margin-top: 20px;
