@@ -1,11 +1,20 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $date1 = $_POST['date1'];
-    $date2 = $_POST['date2'];
-    $timestamp1 = strtotime($date1);
-    $timestamp2 = strtotime($date2);
-    $seconds_diff = abs($timestamp2 - $timestamp1);
-    $days_diff = floor($seconds_diff / (60 * 60 * 24));
-    echo $days_diff;
+$date1 = $_POST['date1'];
+$date2 = $_POST['date2'];
+$format = $_POST['format'];
+$datetime1 = new DateTime($date1);
+$datetime2 = new DateTime($date2);
+$interval = $datetime1->diff($datetime2);
+switch ($format) {
+    case 'days':
+        echo $interval->days . " days";
+        break;
+    case 'months':
+        $totalMonths = $interval->y * 12 + $interval->m;
+        echo $totalMonths . " months " . $interval->d . " days";
+        break;
+    case 'year':
+        echo $interval->y . " year " . $interval->m . " months " . $interval->d . " days";
+        break;
 }
 ?>

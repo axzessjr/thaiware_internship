@@ -33,6 +33,7 @@ function calDiff() {
     var dayInput2 = $('input[name="dDiff2"]').val();
     var monthInput2 = $('select[name="mDiff2"]').val();
     var yearInput2 = $('input[name="yDiff2"]').val();
+    var format = $('#format').val();
     if( dayInput === "" || monthInput === "" || yearInput === "" || dayInput2 === "" || monthInput2 === "" || yearInput2 === "") {
         $('#diffResult').html("Please fill out the information completely.");
         $('#diffResult').css({"color":"rgba(200, 0, 0, 0.8)"});
@@ -43,10 +44,11 @@ function calDiff() {
             type: 'POST',
             data: {
                 date1: yearInput + '-' + monthInput + '-' + dayInput,
-                date2: yearInput2 + '-' + monthInput2 + '-' + dayInput2
+                date2: yearInput2 + '-' + monthInput2 + '-' + dayInput2,
+                format: format
             },
             success: function(response){
-              $('#diffResult').html('Day count: ' + response + ' Day');
+              $('#diffResult').html('Day count: ' + response);
               $('#diffResult').css({"color":"rgba(0, 0, 0)"});
             }
           });
