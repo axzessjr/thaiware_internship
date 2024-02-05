@@ -23,4 +23,3 @@ function calculateAge($birthdate) {
     return $age;
 }
 ?>
-
