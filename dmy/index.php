@@ -63,7 +63,7 @@
                 <input type="number" class="yDiff" id="yDiff" name="yDiff" min="1000" max="3000" placeholder="ปี">
             </div>
             <div class="icon-switch">
-                <img src="/thaiware_internship/dmy/img/switch.png" id="switch">
+                <img src="/thaiware_internship/dmy/img/vector.png" id="switch">
             </div>
             <div class="ip2">
                 <input type="number" class="dDiff2" id="dDiff2" name="dDiff2" min="01" max="31" placeholder="วัน" value="<?php echo date('j'); ?>">
