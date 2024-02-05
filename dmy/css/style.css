@@ -11,6 +11,7 @@
     padding: 100px 50px;
 }
 button {
+    font-size: 20px;
     border: outset;
     height: 50px;
     width: 100%;
@@ -31,17 +32,24 @@ button:hover {
 .form-age, .form-diff, .form-after {
     text-align: center;
 }
-.input {
+.inputAge, .inputAfter {
     display: flex;
     justify-content: center;
     gap: 5px;
-    padding: 0px 200px;
+    padding: 0px 50px;
+}
+.ip1, .ip2 {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding: 0px 50px;
 }
 input#dAge, select#mAge, input#yAge, input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
     border: none;
     background-color: #0000001a;
     height: 50px;
     padding: 10px;
+    font-size: 16px;
 }
 input#dAge, input#dDiff, input#dDiff2, input#dAfter, input#cAfter {
     width: 200px;
@@ -59,6 +67,7 @@ input#yAge, input#yDiff, input#yDiff2, input#yAfter {
 input#submitAge, input#submitDiff, input#submitAfter {
     height: 40px;
     width: 80px;
+    margin-bottom: 50px;
     border: solid 2px ;
     border-radius: 5px;
     background-color: white;
@@ -77,7 +86,7 @@ input#submitAge:active, input#submitDiff:active, input#submitAfter:active {
 }
 img {
     width: 40px;
-    margin-top: 10px;
+    margin-top: 7px;
     padding: 0px 5px;
     cursor: pointer;
 }
@@ -86,4 +95,75 @@ select#format {
     border: solid 2px #0c78a6;
     color: #0c78a6;
     border-radius: 5px;
+}
+@media screen and (max-width: 560px) {
+    button {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 530px) {
+    button {
+        font-size: 16px;
+    }
+    .btn-topic {
+        padding: 70px 50px;
+    }
+    .inputAge, .ip1, .ip2, .inputAfter {
+        gap: 1px;
+        padding: 0px 10px;
+    }
+    img {
+        width: 35px;
+    }
+    input#dAge, select#mAge, input#yAge, input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
+        font-size: 15px;
+    }
+    input#dAge, input#dDiff, input#dDiff2, input#dAfter {
+        width: 100px;
+    }
+    select#mAge, select#mDiff, select#mDiff2, select#mAfter {
+        width: 160px;
+    }
+    input#yAge, input#yDiff, input#yDiff2, input#yAfter {
+        width: 120px;
+    }
+    input#cAfter {
+        width: 130px;
+    }
+    #ageResult, #diffResult, #afterResult {
+        font-size: 30px;
+    }
+    input#submitAge, input#submitDiff, input#submitAfter {
+        height: 30px;
+        width: 70px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .btn-topic {
+        padding: 40px 50px;
+    }
+    input#dAge, select#mAge, input#yAge, input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
+        font-size: 14px;
+    }
+    input#dAge, input#dDiff, input#dDiff2, input#dAfter {
+        width: 50px;
+    }
+    select#mAge, select#mDiff, select#mDiff2, select#mAfter {
+        width: 110px;
+    }
+    input#yAge, input#yDiff, input#yDiff2, input#yAfter {
+        width: 70px;
+    }
+    input#cAfter {
+        width: 80px;
+    }
+    #ageResult, #diffResult, #afterResult {
+        font-size: 24px;
+    }
+    select#format {
+        height: 24px;
+    }
+    input#submitAge, input#submitDiff, input#submitAfter {
+        height: 24px;
+    }
 }
