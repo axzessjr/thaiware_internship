@@ -38,11 +38,12 @@
         <input type="number" name="weight" step="0.1" value="" required><br>
         <div class="height-op">
         <label>ส่วนสูง:</label>
-            <input type="radio" id="cm" name="heightUnit" value="cm" checked="" class="radio-input"><label class="r" for="cm"></label>
-            <label for="cm">(ซม.)</label>
-            <input type="radio" id="m" name="heightUnit" value="m" class="radio-input">
+            <input type="radio" id="cm" name="heightUnit" value="เซนติเมตร" checked="" class="radio-input">
+            <label class="r" for="cm"></label>
+            <label>(ซม.)</label>
+            <input type="radio" id="m" name="heightUnit" value="เมตร" class="radio-input">
             <label class="r" for="m"></label>
-            <label for="m">(ม.)</label><br>
+            <label>(ม.)</label><br>
             <input type="number" name="height" step="0.01" value="" required=""><br>
         </div>
         <input type="button" id="submitBtn" class="cal" onclick="calculateBMI()" value="คำนวณ BMI">

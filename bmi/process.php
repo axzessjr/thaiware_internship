@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $weight = $_POST['weight'];
         $height = $_POST['height'];
         $heightUnit = $_POST['heightUnit'];
-        if ($heightUnit === 'cm') {
+        if ($heightUnit === 'เซนติเมตร') {
             $height /= 100;
         }
         $gender = $gender;

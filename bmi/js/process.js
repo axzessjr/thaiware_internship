@@ -26,7 +26,7 @@ function calculateBMI() {
                 $('#bmi-error').hide()
                 $('.info-result').show()
                 $('#genderResult').html("เพศ: " + Inputgender);
-                $('#weightResult').html("น้ำหนัก: " + Inputweight + " กก.");
+                $('#weightResult').html("น้ำหนัก: " + Inputweight + " กิโลกรัม");
                 $('#heightResult').html("ส่วนสูง: " + Inputheight + " " + InputheightUnit);
                 $('#bmiResult').show()
                 $('#bmiResult').html("BMI: " + bmi.toFixed(2) + " - " + resultText);
