@@ -84,6 +84,9 @@ input#submitAge:active, input#submitDiff:active, input#submitAfter:active {
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
+.icon-switch {
+    padding: 10px;
+}
 img {
     width: 40px;
     margin-top: 7px;
@@ -111,6 +114,9 @@ select#format {
     .inputAge, .ip1, .ip2, .inputAfter {
         gap: 1px;
         padding: 0px 10px;
+    }
+    .icon-switch {
+        padding: 5px;
     }
     img {
         width: 35px;
@@ -141,6 +147,12 @@ select#format {
 @media screen and (max-width: 400px) {
     .btn-topic {
         padding: 40px 50px;
+    }
+    .icon-switch {
+        padding: 3px;
+    }
+    img {
+        width: 30px;
     }
     input#dAge, select#mAge, input#yAge, input#dDiff, select#mDiff, input#yDiff, input#dDiff2, select#mDiff2, input#yDiff2, input#dAfter, select#mAfter, input#yAfter, input#cAfter {
         font-size: 14px;
