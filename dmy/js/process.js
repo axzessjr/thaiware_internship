@@ -3,7 +3,7 @@ function calAge() {
     var monthInput = $('select[name="mAge"]').val();
     var yearInput = $('input[name="yAge"]').val();
     if( dayInput === "" || monthInput === "" || yearInput === "") {
-        $('#ageResult').html("Please fill out the information completely.");
+        $('#ageResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
         $('#ageResult').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#ageResult').show();
     } else {
@@ -24,7 +24,7 @@ function calAge() {
                 console.error("Error: " + status, error);
             }
         });
-    }  
+    }
 }
 function calDiff() {
     var dayInput = $('input[name="dDiff"]').val();
@@ -112,5 +112,25 @@ $(document).ready(function(){
         $('input[name="dDiff2"]').val(tempDayInput);
         $('select[name="mDiff2"]').val(tempMonthInput);
         $('input[name="yDiff2"]').val(tempYearInput);
+    });
+});
+$(document).ready(function () {
+    $('.form-age').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calAge();
+        }
+    });
+    $('.form-diff').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calDiff();
+        }
+    });
+    $('.form-after').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calAfter();
+        }
     });
 });
