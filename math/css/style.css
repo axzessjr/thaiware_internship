@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+.btn-topic {
+    display: flex;
+    justify-content: center;
+    padding: 100px 50px;
+}
+button {
+    font-size: 24px;
+    border: outset;
+    height: 50px;
+    width: 100%;
+    color: rgb(0 0 0 / 50%);
+    background-color: #0000001a;
+    cursor: pointer;
+}
+.btn-topic button.active {
+    color: white;
+    background-color: #0C78A6;
+    border: outset #0C78A6;
+    cursor: auto;
+}
+button:hover {
+    border: outset #0C78A6;
+    color: #0C78A6;
+}
+.form-gcd, .form-lcm {
+    text-align: center;
+}
+input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+input#gcd-ip, input#lcm-ip {
+    width: 200px;
+    padding: 10px;
+    background-color: #0000001a;
+    border: none;
+}
+input#gcd-bt, input#lcm-bt {
+    width: 100px;
+    padding: 5px;
+    color: #0C78A6;
+    background-color: white;
+    border: solid 2px;
+    border-color: #0C78A6;
+}
+input#gcd-bt:hover, input#lcm-bt:hover {
+    background-color: #0C78A6;
+    color: white;
+}
+input#gcd-bt:active, input#lcm-bt:active {
+    transform: translateY(2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+input#gcd-bt, input#lcm-bt {
+    cursor: pointer;
+}
+#gcdResult, #lcmResult {
+    font-size: 36px;
+    margin: 50px 0px;
+}
+@media screen and (max-width: 500px) {
+    .btn-topic {
+        padding: 70px 50px;
+    }
+    button {
+        font-size: 22px;
+    }
+    input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+        height: 45px;
+        font-size: 16px;
+    }
+    input#gcd-ip, input#lcm-ip {
+        width: 150px;
+    }
+    input#gcd-bt, input#lcm-bt {
+        width: 80px;
+    }
+    #gcdResult, #lcmResult {
+        font-size: 30px;
+        margin: 40px 0px;
+    }
+}
+@media screen and (max-width: 460px) {
+    button {
+        font-size: 20px;
+    }
+    input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+        height: 40px;
+        font-size: 14px;
+    }
+    #gcdResult, #lcmResult {
+        font-size: 28px;
+        margin: 35px 0px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .btn-topic {
+        padding: 50px 40px;
+    }
+    button {
+        font-size: 18px;
+    }
+    input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+        height: 35px;
+        font-size: 12px;
+    }
+    #gcdResult, #lcmResult {
+        font-size: 26px;
+        margin: 30px 0px;
+    }
+}
