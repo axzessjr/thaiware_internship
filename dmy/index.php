@@ -66,15 +66,15 @@
             <input type="number" class="dDiff2" id="dDiff2" name="dDiff2" min="1" max="31" placeholder="วัน" value="<?php echo date('d'); ?>">
             <select class="mDiff2" id="mDiff2" name="mDiff2">
                 <option value="">เดือน</option>
-                <option value="1" <?php echo (date('m') == '01') ? 'selected' : ''; ?>>มกราคม</option>
-                <option value="2" <?php echo (date('m') == '02') ? 'selected' : ''; ?>>กุมภาพันธ์</option>
-                <option value="3" <?php echo (date('m') == '03') ? 'selected' : ''; ?>>มีนาคม</option>
-                <option value="4" <?php echo (date('m') == '04') ? 'selected' : ''; ?>>เมษายน</option>
-                <option value="5" <?php echo (date('m') == '05') ? 'selected' : ''; ?>>พฤษภาคม</option>
-                <option value="6" <?php echo (date('m') == '06') ? 'selected' : ''; ?>>มิถุนายน</option>
-                <option value="7" <?php echo (date('m') == '07') ? 'selected' : ''; ?>>กรกฎาคม</option>
-                <option value="8" <?php echo (date('m') == '08') ? 'selected' : ''; ?>>สิงหาคม</option>
-                <option value="9" <?php echo (date('m') == '09') ? 'selected' : ''; ?>>กันยายน</option>
+                <option value="1" <?php echo (date('m') == '1') ? 'selected' : ''; ?>>มกราคม</option>
+                <option value="2" <?php echo (date('m') == '2') ? 'selected' : ''; ?>>กุมภาพันธ์</option>
+                <option value="3" <?php echo (date('m') == '3') ? 'selected' : ''; ?>>มีนาคม</option>
+                <option value="4" <?php echo (date('m') == '4') ? 'selected' : ''; ?>>เมษายน</option>
+                <option value="5" <?php echo (date('m') == '5') ? 'selected' : ''; ?>>พฤษภาคม</option>
+                <option value="6" <?php echo (date('m') == '6') ? 'selected' : ''; ?>>มิถุนายน</option>
+                <option value="7" <?php echo (date('m') == '7') ? 'selected' : ''; ?>>กรกฎาคม</option>
+                <option value="8" <?php echo (date('m') == '8') ? 'selected' : ''; ?>>สิงหาคม</option>
+                <option value="9" <?php echo (date('m') == '9') ? 'selected' : ''; ?>>กันยายน</option>
                 <option value="10" <?php echo (date('m') == '10') ? 'selected' : ''; ?>>ตุลาคม</option>
                 <option value="11" <?php echo (date('m') == '11') ? 'selected' : ''; ?>>พฤศจิกายน</option>
                 <option value="12" <?php echo (date('m') == '12') ? 'selected' : ''; ?>>ธันวาคม</option>
@@ -94,15 +94,15 @@
             <input type="number" class="dAfter" id="dAfter" name="dAfter" min="1" max="31" placeholder="วัน" value="<?php echo date('d'); ?>">
             <select class="mAfter" id="mAfter" name="mAfter">
                 <option value="">เดือน</option>
-                <option value="1" <?php echo (date('m') == '01') ? 'selected' : ''; ?>>มกราคม</option>
-                <option value="2" <?php echo (date('m') == '02') ? 'selected' : ''; ?>>กุมภาพันธ์</option>
-                <option value="3" <?php echo (date('m') == '03') ? 'selected' : ''; ?>>มีนาคม</option>
-                <option value="4" <?php echo (date('m') == '04') ? 'selected' : ''; ?>>เมษายน</option>
-                <option value="5" <?php echo (date('m') == '05') ? 'selected' : ''; ?>>พฤษภาคม</option>
-                <option value="6" <?php echo (date('m') == '06') ? 'selected' : ''; ?>>มิถุนายน</option>
-                <option value="7" <?php echo (date('m') == '07') ? 'selected' : ''; ?>>กรกฎาคม</option>
-                <option value="8" <?php echo (date('m') == '08') ? 'selected' : ''; ?>>สิงหาคม</option>
-                <option value="9" <?php echo (date('m') == '09') ? 'selected' : ''; ?>>กันยายน</option>
+                <option value="1" <?php echo (date('m') == '1') ? 'selected' : ''; ?>>มกราคม</option>
+                <option value="2" <?php echo (date('m') == '2') ? 'selected' : ''; ?>>กุมภาพันธ์</option>
+                <option value="3" <?php echo (date('m') == '3') ? 'selected' : ''; ?>>มีนาคม</option>
+                <option value="4" <?php echo (date('m') == '4') ? 'selected' : ''; ?>>เมษายน</option>
+                <option value="5" <?php echo (date('m') == '5') ? 'selected' : ''; ?>>พฤษภาคม</option>
+                <option value="6" <?php echo (date('m') == '6') ? 'selected' : ''; ?>>มิถุนายน</option>
+                <option value="7" <?php echo (date('m') == '7') ? 'selected' : ''; ?>>กรกฎาคม</option>
+                <option value="8" <?php echo (date('m') == '8') ? 'selected' : ''; ?>>สิงหาคม</option>
+                <option value="9" <?php echo (date('m') == '9') ? 'selected' : ''; ?>>กันยายน</option>
                 <option value="10" <?php echo (date('m') == '10') ? 'selected' : ''; ?>>ตุลาคม</option>
                 <option value="11" <?php echo (date('m') == '11') ? 'selected' : ''; ?>>พฤศจิกายน</option>
                 <option value="12" <?php echo (date('m') == '12') ? 'selected' : ''; ?>>ธันวาคม</option>
