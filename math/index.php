@@ -26,7 +26,7 @@
         </div>
         <div class="main">
             <input type="hidden" class="solutionType" id="solutionType" name="solutionType" value="gcd">
-            <textarea class="text-ip" id="text-ip" name="text-ip" placeholder="" oninput="validateInput(this)"></textarea>
+            <textarea class="text-ip" id="text-ip" name="text-ip" placeholder="กรุณาใส่ตัวเลข (2 จำนวนขึ้นไป)" oninput="validateInput(this)"></textarea>
             <input type="button" id="submit" class="submit" onclick="cal()" value="ตรวจสอบ">
         </div>
         <div id="Result"></div>
