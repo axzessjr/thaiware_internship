@@ -1,5 +1,6 @@
 function calGCD() {
     var GCD = $('input[name="gcd-ip"]').val();
+    var Unit = $('input[name="unit"]:checked').val();
     if( GCD === "" ) {
         $('#gcdResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
         $('#gcdResult').css({"color":"rgba(200, 0, 0, 0.8)"});
@@ -9,12 +10,14 @@ function calGCD() {
             url: "process_gcd.php",
             method: "POST",
             data: {
-                gcd: GCD
+                gcd: GCD,
+                Unit: Unit
             },
             success: function(response) {
-                $('#gcdResult').html("หรม. ของตัวเลขทั้งหมดคือ: " + response);
-                $('#gcdResult').css({"color":"#0C78A6"});
-                $('#gcdResult').show();
+                console.log(response)
+                // $('#gcdResult').html("หรม. ของตัวเลขทั้งหมดคือ: " + response);
+                // $('#gcdResult').css({"color":"#0C78A6"});
+                // $('#gcdResult').show();
             },
             error: function(xhr, status, error) {
                 console.error("Error: " + status, error);

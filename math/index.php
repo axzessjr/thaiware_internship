@@ -20,6 +20,12 @@
     <div class="form-gcd">
         <input type="text" class="gcd-ip" id="gcd-ip" name="gcd-ip" placeholder="หรม.">
         <input type="button" id="gcd-bt" class="gcd-bt" onclick="calGCD()" value="ตรวจสอบ">
+        <div class="radio">
+            <input type="radio" class="dot" id="dot" name="unit" value="dot"><label> ( . )</label>
+            <input type="radio" class="comma" id="comma" name="unit" value="comma"><label> ( , )</label>
+            <input type="radio" class="hyphen" id="Hyphen" name="unit" value="Hyphen"><label> ( - )</label>
+            <input type="radio" class="space-bar" id="space-bar" name="unit" value="space-bar" checked=""><label> ( space )</label>
+        </div>
         <div id="gcdResult"></div>
     </div>
     <div class="form-lcm" style="display: none;">
