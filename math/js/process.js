@@ -13,7 +13,7 @@ function cal() {
         isValidInput = false;
     }
     if( input === "" ) {
-        $('#Result').html("กรุณากรอกข้อมูลให้ครบถ้วน");
+        $('#Result').html("กรุณากรอกข้อมูล");
         $('#Result').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#Result').show();
     } else 
@@ -28,13 +28,14 @@ function cal() {
             method: "POST",
             data: {
                 input: input,
-                unit: unit
+                unit: unit,
+                solutionType: solutionType
             },
             success: function(data) {
-                if (solutionType.val(gcd)) {
-                    $('#Result').html("หรม. คือ" + data.gcd)
-                } else if (solutionType.val(lcm)) {
-                    $('#Result').html("ครน. คือ" + data.lcm)
+                if (solutionType === 'gcd') {
+                    $('#Result').html("หรม. คือ: " + data)
+                } else if (solutionType === 'lcm') {
+                    $('#Result').html("ครน. คือ: " + data)
                 }
                 $('#Result').css({"color":"#0C78A6"});
                 $('#Result').show();

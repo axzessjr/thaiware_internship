@@ -44,7 +44,7 @@ button:hover {
 #submit {
     height: 50px;
 }
-#text-ip, #submit {
+#text-ip, #submit, .radio {
     font-size: 20px;
     border-radius: 5px;
 }
@@ -84,15 +84,15 @@ button:hover {
     button {
         font-size: 22px;
     }
-    #text-ip, #submit {
+    #submit {
+        width: 80px;
         height: 45px;
         font-size: 16px;
     }
     #text-ip {
-        width: 150px;
-    }
-    #submit {
-        width: 80px;
+        width: 300px;
+        height: 150px;
+        font-size: 16px;
     }
     #Result {
         font-size: 30px;
@@ -103,9 +103,11 @@ button:hover {
     button {
         font-size: 20px;
     }
-    #text-ip, #submit {
-        height: 40px;
+    #text-ip, #submit, .radio {
         font-size: 14px;
+    }
+    #submit {
+        height: 40px;
     }
     #Result {
         font-size: 28px;
@@ -119,9 +121,15 @@ button:hover {
     button {
         font-size: 18px;
     }
-    #text-ip, #submit {
-        height: 35px;
+    #text-ip, #submit, .radio {
         font-size: 12px;
+    }
+    #submit {
+        height: 35px;
+    }
+    #text-ip {
+        width: 200px;
+        height: 100px;
     }
     #Result {
         font-size: 26px;

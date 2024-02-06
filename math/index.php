@@ -25,7 +25,7 @@
             <input type="radio" class="comma" id="comma" name="unit" value="comma"><label> ( , )</label>
         </div>
         <div class="main">
-            <input type="hidden" id="solutionType" value="gcd">
+            <input type="hidden" class="solutionType" id="solutionType" name="solutionType" value="gcd">
             <textarea class="text-ip" id="text-ip" name="text-ip" placeholder="" oninput="validateInput(this)"></textarea>
             <input type="button" id="submit" class="submit" onclick="cal()" value="ตรวจสอบ">
         </div>

@@ -1,6 +1,7 @@
 <?php
-if(isset($_POST['input']) && isset($_POST['unit'])) {
+if(isset($_POST['input']) && isset($_POST['unit']) && isset($_POST['solutionType'])) {
     $unit = $_POST['unit'];
+    $type = $_POST['solutionType'];
     $number_list = [];
     if ($unit === 'dot' || $unit === 'comma' || $unit === 'space-bar' || $unit === 'enter') {
         switch ($unit) {
@@ -17,7 +18,7 @@ if(isset($_POST['input']) && isset($_POST['unit'])) {
                 $number_list = explode("\n", $_POST['input']);
                 break;
         }
-    }
+    }    
     function find_gcd($a, $b) {
         while ($b != 0) {
             $temp = $b;
@@ -35,7 +36,10 @@ if(isset($_POST['input']) && isset($_POST['unit'])) {
         $gcd = find_gcd($gcd, $number);
         $lcm = find_lcm($lcm, $number);
     }
-    echo $gcd;
-    echo $lcm;
+    if ($type === 'gcd') {
+        echo $gcd;
+    } else if ($type === 'lcm') {
+        echo $lcm;
+    }
 }
 ?>
