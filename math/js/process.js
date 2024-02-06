@@ -1,78 +1,43 @@
-function calGCD() {
-    var GCD = $('textarea[name="gcd-ip"]').val();
+function cal() {
+    var input = $('textarea[name="text-ip"]').val();
     var unit = $('input[name="unit"]:checked').val();
+    var solutionType = $('#solutionType').val();
     var isValidInput = true;
-    if (unit === 'dot' && GCD.indexOf('.') === -1) {
+    if (unit === 'dot' && input.indexOf('.') === -1) {
         isValidInput = false;
-    } else if (unit === 'comma' && GCD.indexOf(',') === -1) {
+    } else if (unit === 'comma' && input.indexOf(',') === -1) {
         isValidInput = false;
-    } else if (unit === 'space-bar' && GCD.indexOf(' ') === -1) {
+    } else if (unit === 'space-bar' && input.indexOf(' ') === -1) {
         isValidInput = false;
-    } else if (unit === 'enter' && GCD.indexOf('\n') === -1) {
+    } else if (unit === 'enter' && input.indexOf('\n') === -1) {
         isValidInput = false;
     }
-    if( GCD === "" ) {
-        $('#gcdResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
-        $('#gcdResult').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#gcdResult').show();
+    if( input === "" ) {
+        $('#Result').html("กรุณากรอกข้อมูลให้ครบถ้วน");
+        $('#Result').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#Result').show();
     } else 
     if (!isValidInput) {
-        $('#gcdResult').html("ใส่ข้อมูลไม่ถูกต้อง");
-        $('#gcdResult').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#gcdResult').show(); 
+        $('#Result').html("ใส่ข้อมูลไม่ถูกต้อง");
+        $('#Result').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#Result').show(); 
     }
     else {
         $.ajax({
-            url: "process_gcd.php",
+            url: "process.php",
             method: "POST",
             data: {
-                gcd: GCD,
+                input: input,
                 unit: unit
             },
-            success: function(response) {
-                $('#gcdResult').html("หรม. ของตัวเลขทั้งหมดคือ: " + response);
-                $('#gcdResult').css({"color":"#0C78A6"});
-                $('#gcdResult').show();
-            },
-            error: function(xhr, status, error) {
-                console.error("Error: " + status, error);
-            }
-        });
-    }
-}
-function calLCM() {
-    var LCM = $('textarea[name="lcm-ip"]').val();
-    var unit2 = $('input[name="unit2"]:checked').val();
-    var isValidInput = true;
-    if (unit2 === 'dot2' && LCM.indexOf('.') === -1) {
-        isValidInput = false;
-    } else if (unit2 === 'comma2' && LCM.indexOf(',') === -1) {
-        isValidInput = false;
-    } else if (unit2 === 'space-bar2' && LCM.indexOf(' ') === -1) {
-        isValidInput = false;
-    } else if (unit2 === 'enter2' && LCM.indexOf('\n') === -1) {
-        isValidInput = false;
-    }
-    if( LCM === "" ) {
-        $('#lcmResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
-        $('#lcmResult').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#lcmResult').show();
-    } else if (!isValidInput) {
-        $('#lcmResult').html("ใส่ข้อมูลไม่ถูกต้อง");
-        $('#lcmResult').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#lcmResult').show(); 
-    } else {
-        $.ajax({
-            url: "process_lcm.php",
-            method: "POST",
-            data: {
-                lcm: LCM,
-                unit2: unit2
-            },
-            success: function(response) {
-                $('#lcmResult').html("ครน. ของตัวเลขทั้งหมดคือ: " + response);
-                $('#lcmResult').css({"color":"#0C78A6"});
-                $('#lcmResult').show();
+            success: function(data) {
+                if (solutionType.val(gcd)) {
+                    $('#Result').html("หรม. คือ" + data.gcd)
+                } else if (solutionType.val(lcm)) {
+                    $('#Result').html("ครน. คือ" + data.lcm)
+                }
+                $('#Result').css({"color":"#0C78A6"});
+                $('#Result').show();
             },
             error: function(xhr, status, error) {
                 console.error("Error: " + status, error);
@@ -83,8 +48,6 @@ function calLCM() {
 function validateInput(input) {
     input.value = input.value.replace(/[^\d\s\.,\n]/g, '');
 }
-
-
 $(document).ready(function(){
     $('.btn-topic button').click(function(){
       if (!$(this).hasClass('active')) {
@@ -100,16 +63,4 @@ $(document).ready(function(){
         $('.form-gcd').hide()
         $('.form-lcm').show()
     })
-    // $('.form-gcd').on('keypress', function (e) {
-    //     if (e.which === 13) {
-    //         e.preventDefault();
-    //         calGCD();
-    //     }
-    // });
-    // $('.form-lcm').on('keypress', function (e) {
-    //     if (e.which === 13) {
-    //         e.preventDefault();
-    //         calLCM();
-    //     }
-    // });
 })

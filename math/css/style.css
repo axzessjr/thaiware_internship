@@ -35,26 +35,26 @@ button:hover {
     flex-direction: column;
     align-items: center;
 }
-.form-gcd, .form-lcm {
+.form {
     text-align: center;
 }
-#gcd-ip, #lcm-ip {
+#text-ip {
     height: 200px;
 }
-#gcd-bt, #lcm-bt {
+#submit {
     height: 50px;
 }
-#gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
+#text-ip, #submit {
     font-size: 20px;
     border-radius: 5px;
 }
-#gcd-ip, #lcm-ip {
+#text-ip {
     width: 400px;
     padding: 10px;
     background-color: #0000001a;
     border: none;
 }
-#gcd-bt, #lcm-bt {
+#submit {
     width: 100px;
     padding: 5px;
     color: #0C78A6;
@@ -62,21 +62,21 @@ button:hover {
     border: solid 2px;
     border-color: #0C78A6;
 }
-#gcd-bt:hover, #lcm-bt:hover {
+#submit:hover {
     background-color: #0C78A6;
     color: white;
 }
-#gcd-bt:active, #lcm-bt:active {
+#submit:active {
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-#gcd-bt, #lcm-bt {
+#submit {
     cursor: pointer;
 }
 .radio {
     margin-bottom: 10px;
 }
-#gcdResult, #lcmResult {
+#Result {
     font-size: 36px;
     margin: 50px 0px;
 }
@@ -84,17 +84,17 @@ button:hover {
     button {
         font-size: 22px;
     }
-    #gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
+    #text-ip, #submit {
         height: 45px;
         font-size: 16px;
     }
-    #gcd-ip, #lcm-ip {
+    #text-ip {
         width: 150px;
     }
-    #gcd-bt, #lcm-bt {
+    #submit {
         width: 80px;
     }
-    #gcdResult, #lcmResult {
+    #Result {
         font-size: 30px;
         margin: 40px 0px;
     }
@@ -103,11 +103,11 @@ button:hover {
     button {
         font-size: 20px;
     }
-    #gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
+    #text-ip, #submit {
         height: 40px;
         font-size: 14px;
     }
-    #gcdResult, #lcmResult {
+    #Result {
         font-size: 28px;
         margin: 35px 0px;
     }
@@ -119,11 +119,11 @@ button:hover {
     button {
         font-size: 18px;
     }
-    #gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
+    #text-ip, #submit {
         height: 35px;
         font-size: 12px;
     }
-    #gcdResult, #lcmResult {
+    #Result {
         font-size: 26px;
         margin: 30px 0px;
     }
