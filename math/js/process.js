@@ -1,14 +1,14 @@
 function calGCD() {
-    var GCD = $('input[name="gcd-ip"]').val();
+    var GCD = $('textarea[name="gcd-ip"]').val();
     var unit = $('input[name="unit"]:checked').val();
     var isValidInput = true;
     if (unit === 'dot' && GCD.indexOf('.') === -1) {
         isValidInput = false;
     } else if (unit === 'comma' && GCD.indexOf(',') === -1) {
         isValidInput = false;
-    } else if (unit === 'hyphen' && GCD.indexOf('-') === -1) {
-        isValidInput = false;
     } else if (unit === 'space-bar' && GCD.indexOf(' ') === -1) {
+        isValidInput = false;
+    } else if (unit === 'enter' && GCD.indexOf('\n') === -1) {
         isValidInput = false;
     }
     if( GCD === "" ) {
@@ -41,16 +41,16 @@ function calGCD() {
     }
 }
 function calLCM() {
-    var LCM = $('input[name="lcm-ip"]').val();
+    var LCM = $('textarea[name="lcm-ip"]').val();
     var unit2 = $('input[name="unit2"]:checked').val();
     var isValidInput = true;
     if (unit2 === 'dot2' && LCM.indexOf('.') === -1) {
         isValidInput = false;
     } else if (unit2 === 'comma2' && LCM.indexOf(',') === -1) {
         isValidInput = false;
-    } else if (unit2 === 'hyphen2' && LCM.indexOf('-') === -1) {
-        isValidInput = false;
     } else if (unit2 === 'space-bar2' && LCM.indexOf(' ') === -1) {
+        isValidInput = false;
+    } else if (unit2 === 'enter2' && LCM.indexOf('\n') === -1) {
         isValidInput = false;
     }
     if( LCM === "" ) {
@@ -81,7 +81,7 @@ function calLCM() {
     }
 }
 function validateInput(input) {
-    input.value = input.value.replace(/[^\d\s\.,-]/g, '');
+    input.value = input.value.replace(/[^\d\s\.,\n]/g, '');
 }
 
 
@@ -100,16 +100,16 @@ $(document).ready(function(){
         $('.form-gcd').hide()
         $('.form-lcm').show()
     })
-    $('.form-gcd').on('keypress', function (e) {
-        if (e.which === 13) {
-            e.preventDefault();
-            calGCD();
-        }
-    });
-    $('.form-lcm').on('keypress', function (e) {
-        if (e.which === 13) {
-            e.preventDefault();
-            calLCM();
-        }
-    });
+    // $('.form-gcd').on('keypress', function (e) {
+    //     if (e.which === 13) {
+    //         e.preventDefault();
+    //         calGCD();
+    //     }
+    // });
+    // $('.form-lcm').on('keypress', function (e) {
+    //     if (e.which === 13) {
+    //         e.preventDefault();
+    //         calLCM();
+    //     }
+    // });
 })

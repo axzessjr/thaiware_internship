@@ -29,21 +29,31 @@ button:hover {
     border: outset #0C78A6;
     color: #0C78A6;
 }
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
 .form-gcd, .form-lcm {
     text-align: center;
 }
-input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+#gcd-ip, #lcm-ip {
+    height: 110px;
+}
+#gcd-bt, #lcm-bt {
     height: 50px;
+}
+#gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
     font-size: 20px;
     border-radius: 5px;
 }
-input#gcd-ip, input#lcm-ip {
+#gcd-ip, #lcm-ip {
     width: 200px;
     padding: 10px;
     background-color: #0000001a;
     border: none;
 }
-input#gcd-bt, input#lcm-bt {
+#gcd-bt, #lcm-bt {
     width: 100px;
     padding: 5px;
     color: #0C78A6;
@@ -51,16 +61,19 @@ input#gcd-bt, input#lcm-bt {
     border: solid 2px;
     border-color: #0C78A6;
 }
-input#gcd-bt:hover, input#lcm-bt:hover {
+#gcd-bt:hover, #lcm-bt:hover {
     background-color: #0C78A6;
     color: white;
 }
-input#gcd-bt:active, input#lcm-bt:active {
+#gcd-bt:active, #lcm-bt:active {
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-input#gcd-bt, input#lcm-bt {
+#gcd-bt, #lcm-bt {
     cursor: pointer;
+}
+.radio {
+    margin-top: 10px;
 }
 #gcdResult, #lcmResult {
     font-size: 36px;
@@ -73,14 +86,14 @@ input#gcd-bt, input#lcm-bt {
     button {
         font-size: 22px;
     }
-    input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+    #gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
         height: 45px;
         font-size: 16px;
     }
-    input#gcd-ip, input#lcm-ip {
+    #gcd-ip, #lcm-ip {
         width: 150px;
     }
-    input#gcd-bt, input#lcm-bt {
+    #gcd-bt, #lcm-bt {
         width: 80px;
     }
     #gcdResult, #lcmResult {
@@ -92,7 +105,7 @@ input#gcd-bt, input#lcm-bt {
     button {
         font-size: 20px;
     }
-    input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+    #gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
         height: 40px;
         font-size: 14px;
     }
@@ -108,7 +121,7 @@ input#gcd-bt, input#lcm-bt {
     button {
         font-size: 18px;
     }
-    input#gcd-ip, input#gcd-bt, input#lcm-ip, input#lcm-bt {
+    #gcd-ip, #gcd-bt, #lcm-ip, #lcm-bt {
         height: 35px;
         font-size: 12px;
     }

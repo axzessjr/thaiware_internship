@@ -5,10 +5,10 @@ if(isset($_POST['gcd']) && isset($_POST['unit'])) {
         $number_list = explode(".", $_POST['gcd']);
     } else if ($unit === 'comma') {
         $number_list = explode(",", $_POST['gcd']);
-    } else if ($unit === 'hyphen') {
-        $number_list = explode("-", $_POST['gcd']);
     } else if ($unit === 'space-bar') {
         $number_list = explode(" ", $_POST['gcd']);
+    } else if ($unit === 'enter') {
+        $number_list = explode("\n", $_POST['gcd']);
     }
     $gcd = $number_list[0];
     foreach($number_list as $number) {

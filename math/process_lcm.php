@@ -5,10 +5,10 @@ if(isset($_POST['lcm']) && isset($_POST['unit2'])) {
         $number_list = explode(".", $_POST['lcm']);
     } else if ($unit2 === 'comma2') {
         $number_list = explode(",", $_POST['lcm']);
-    } else if ($unit2 === 'hyphen2') {
-        $number_list = explode("-", $_POST['lcm']);
     } else if ($unit2 === 'space-bar2') {
         $number_list = explode(" ", $_POST['lcm']);
+    } else if ($unit2 === 'enter2') {
+        $number_list = explode("\n", $_POST['lcm']);
     }
     $lcm = $number_list[0];
     foreach($number_list as $number) {
