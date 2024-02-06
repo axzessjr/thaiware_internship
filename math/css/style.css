@@ -31,14 +31,15 @@ button:hover {
 }
 .main {
     display: flex;
-    justify-content: center;
-    gap: 5px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
 }
 .form-gcd, .form-lcm {
     text-align: center;
 }
 #gcd-ip, #lcm-ip {
-    height: 110px;
+    height: 200px;
 }
 #gcd-bt, #lcm-bt {
     height: 50px;
@@ -48,7 +49,7 @@ button:hover {
     border-radius: 5px;
 }
 #gcd-ip, #lcm-ip {
-    width: 200px;
+    width: 400px;
     padding: 10px;
     background-color: #0000001a;
     border: none;
@@ -73,7 +74,7 @@ button:hover {
     cursor: pointer;
 }
 .radio {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #gcdResult, #lcmResult {
     font-size: 36px;
