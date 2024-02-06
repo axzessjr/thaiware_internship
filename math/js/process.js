@@ -80,6 +80,11 @@ function calLCM() {
         });
     }
 }
+function validateInput(input) {
+    input.value = input.value.replace(/[^\d\s\.,-]/g, '');
+}
+
+
 $(document).ready(function(){
     $('.btn-topic button').click(function(){
       if (!$(this).hasClass('active')) {

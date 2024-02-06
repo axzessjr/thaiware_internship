@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="form-gcd">
-        <input type="text" class="gcd-ip" id="gcd-ip" name="gcd-ip" placeholder="หรม.">
+        <input type="text" class="gcd-ip" id="gcd-ip" name="gcd-ip" placeholder="หรม." oninput="validateInput(this)">
         <input type="button" id="gcd-bt" class="gcd-bt" onclick="calGCD()" value="ตรวจสอบ">
         <div class="radio">
             <input type="radio" class="dot" id="dot" name="unit" value="dot"><label> ( . )</label>
@@ -29,7 +29,7 @@
         <div id="gcdResult"></div>
     </div>
     <div class="form-lcm" style="display: none;">
-        <input type="text" class="lcm-ip" id="lcm-ip" name="lcm-ip"placeholder="ครน.">
+        <input type="text" class="lcm-ip" id="lcm-ip" name="lcm-ip"placeholder="ครน." oninput="validateInput(this)">
         <input type="button" id="lcm-bt" class="lcm-bt" onclick="calLCM()" value="ตรวจสอบ">
         <div class="radio">
             <input type="radio" class="dot2" id="dot2" name="unit2" value="dot2"><label> ( . )</label>
