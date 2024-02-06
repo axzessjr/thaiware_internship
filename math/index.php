@@ -23,7 +23,7 @@
         <div class="radio">
             <input type="radio" class="dot" id="dot" name="unit" value="dot"><label> ( . )</label>
             <input type="radio" class="comma" id="comma" name="unit" value="comma"><label> ( , )</label>
-            <input type="radio" class="hyphen" id="Hyphen" name="unit" value="Hyphen"><label> ( - )</label>
+            <input type="radio" class="hyphen" id="hyphen" name="unit" value="hyphen"><label> ( - )</label>
             <input type="radio" class="space-bar" id="space-bar" name="unit" value="space-bar" checked=""><label> ( space )</label>
         </div>
         <div id="gcdResult"></div>
@@ -31,6 +31,12 @@
     <div class="form-lcm" style="display: none;">
         <input type="text" class="lcm-ip" id="lcm-ip" name="lcm-ip"placeholder="ครน.">
         <input type="button" id="lcm-bt" class="lcm-bt" onclick="calLCM()" value="ตรวจสอบ">
+        <div class="radio">
+            <input type="radio" class="dot2" id="dot2" name="unit2" value="dot2"><label> ( . )</label>
+            <input type="radio" class="comma2" id="comma2" name="unit2" value="comma2"><label> ( , )</label>
+            <input type="radio" class="hyphen2" id="hyphen2" name="unit2" value="hyphen2"><label> ( - )</label>
+            <input type="radio" class="space-bar2" id="space-bar2" name="unit2" value="space-bar2" checked=""><label> ( space )</label>
+        </div>
         <div id="lcmResult"></div>
     </div>
 </body>

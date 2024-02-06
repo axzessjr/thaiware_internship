@@ -2,17 +2,17 @@
 if(isset($_POST['gcd']) && isset($_POST['unit'])) {
     $unit = $_POST['unit'];
     if ($unit === 'dot') {
-        $numbers = explode(".", $_POST['gcd']);
+        $number_list = explode(".", $_POST['gcd']);
     } else if ($unit === 'comma') {
-        $numbers = explode(",", $_POST['gcd']);
-    } else if ($unit === 'Hyphen') {
-        $numbers = explode("-", $_POST['gcd']);
+        $number_list = explode(",", $_POST['gcd']);
+    } else if ($unit === 'hyphen') {
+        $number_list = explode("-", $_POST['gcd']);
     } else if ($unit === 'space-bar') {
-        $numbers = explode(" ", $_POST['gcd']);
+        $number_list = explode(" ", $_POST['gcd']);
     }
-    $gcd = $numbers;
-    foreach($numbers as $number) {
-        $gcd = find_gcd($gcd, $numbers);
+    $gcd = $number_list[0];
+    foreach($number_list as $number) {
+        $gcd = find_gcd($gcd, $number);
     }
     echo $gcd;
 }
