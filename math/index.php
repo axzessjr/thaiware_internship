@@ -29,7 +29,7 @@
             <textarea class="text-ip" id="text-ip" name="text-ip" placeholder="กรุณาใส่ตัวเลข (2 จำนวนขึ้นไป)" oninput="validateInput(this)"></textarea>
             <input type="button" id="submit" class="submit" onclick="cal()" value="ตรวจสอบ">
         </div>
-        <div id="Result"></div>
+        <div id="result"></div>
     </div>
 </body>
 </html>

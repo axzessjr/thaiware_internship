@@ -13,14 +13,13 @@ function cal() {
         isValidInput = false;
     }
     if( input === "" ) {
-        $('#Result').html("กรุณากรอกข้อมูล");
-        $('#Result').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#Result').show();
-    } else 
-    if (!isValidInput) {
-        $('#Result').html("ใส่ข้อมูลไม่ถูกต้อง");
-        $('#Result').css({"color":"rgba(200, 0, 0, 0.8)"});
-        $('#Result').show(); 
+        $('#result').html("กรุณากรอกข้อมูล");
+        $('#result').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#result').show();
+    } else if (!isValidInput) {
+        $('#result').html("ใส่ข้อมูลไม่ถูกต้อง");
+        $('#result').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#result').show();
     }
     else {
         $.ajax({
@@ -33,12 +32,12 @@ function cal() {
             },
             success: function(data) {
                 if (solutionType === 'gcd') {
-                    $('#Result').html("หรม. คือ: " + data)
+                    $('#result').html("หรม. คือ: " + data)
                 } else if (solutionType === 'lcm') {
-                    $('#Result').html("ครน. คือ: " + data)
+                    $('#result').html("ครน. คือ: " + data)
                 }
-                $('#Result').css({"color":"#0C78A6"});
-                $('#Result').show();
+                $('#result').css({"color":"#0C78A6"});
+                $('#result').show();
             },
             error: function(xhr, status, error) {
                 console.error("Error: " + status, error);

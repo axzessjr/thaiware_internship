@@ -76,7 +76,7 @@ button:hover {
 .radio {
     margin-bottom: 10px;
 }
-#Result {
+#result {
     font-size: 36px;
     margin: 50px 0px;
 }
@@ -94,7 +94,7 @@ button:hover {
         height: 150px;
         font-size: 16px;
     }
-    #Result {
+    #result {
         font-size: 30px;
         margin: 40px 0px;
     }
@@ -109,7 +109,7 @@ button:hover {
     #submit {
         height: 40px;
     }
-    #Result {
+    #result {
         font-size: 28px;
         margin: 35px 0px;
     }
@@ -131,7 +131,7 @@ button:hover {
         width: 200px;
         height: 100px;
     }
-    #Result {
+    #result {
         font-size: 26px;
         margin: 30px 0px;
     }

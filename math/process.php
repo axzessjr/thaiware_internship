@@ -18,7 +18,7 @@ if(isset($_POST['input']) && isset($_POST['unit']) && isset($_POST['solutionType
                 $number_list = explode("\n", $_POST['input']);
                 break;
         }
-    }    
+    }
     function find_gcd($a, $b) {
         while ($b != 0) {
             $temp = $b;
@@ -38,7 +38,8 @@ if(isset($_POST['input']) && isset($_POST['unit']) && isset($_POST['solutionType
     }
     if ($type === 'gcd') {
         echo $gcd;
-    } else if ($type === 'lcm') {
+    } else
+    if ($type === 'lcm') {
         echo $lcm;
     }
 }
