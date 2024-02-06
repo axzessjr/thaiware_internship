@@ -56,12 +56,4 @@ $(document).ready(function(){
         $(this).addClass('active');
       }
     });
-    $('#gcd').click(function(){
-        $('.form-gcd').show()
-        $('.form-lcm').hide()
-    })
-    $('#lcm').click(function(){
-        $('.form-gcd').hide()
-        $('.form-lcm').show()
-    })
 })
