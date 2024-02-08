@@ -1,8 +1,8 @@
 <?php
-if (isset($_POST['degree-ip1']) && isset($_POST['degree-ip2']) && isset($_POST['degree-ip3'])) {
-    $a = $_POST['degree-ip1'];
-    $b = $_POST['degree-ip2'];
-    $c = $_POST['degree-ip3'];
+if (isset($_POST['input1']) && isset($_POST['input2']) && isset($_POST['input3'])) {
+    $a = $_POST['input1'];
+    $b = $_POST['input2'];
+    $c = $_POST['input3'];
     $result = factor($a, $b, $c);
     echo $result;
 }
