@@ -47,7 +47,7 @@ function calDegree() {
              },
             success: function(data) {
                 $('#degreeResult').html(data);
-                $('#degreeResult').css({"color":"rgba(0, 0, 200, 0.8)"});
+                $('#degreeResult').css({"color":"#0C78A6"});
                 $('#degreeResult').show();
             },
             error: function(xhr, status, error) {

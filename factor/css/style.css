@@ -72,7 +72,7 @@ label {
 #submit {
     cursor: pointer;
 }
-#countResult {
+#countResult, #degreeResult {
     font-size: 36px;
     margin: 50px 0px;
 }
