@@ -42,6 +42,5 @@ function findXY($a, $b, $c) {
     } else {
         return "หาค่าไม่ได้";
     }
-    
 }
 ?>
