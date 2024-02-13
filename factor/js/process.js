@@ -32,7 +32,7 @@ function calDegree() {
     var input1 = $('input[name="degree-ip1"]').val();
     var input2 = $('input[name="degree-ip2"]').val();
     var input3 = $('input[name="degree-ip3"]').val();
-    if( input1 === "" || input2 === "" || input3 === "" ) {
+    if(input2 === "" || input3 === "" ) {
         $('#degreeResult').html("กรุณากรอกข้อมูล");
         $('#degreeResult').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#degreeResult').show();
