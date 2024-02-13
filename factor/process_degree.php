@@ -11,6 +11,7 @@ function findXY($a, $b, $c) {
         $a = 1;
     }
     $delta = $b * $b - 4 * $a * $c;
+    $found_solution = false;
     if ($delta >= 0 ) {
         $x1y1 = array();
         $x2y2 = array();
@@ -41,24 +42,26 @@ function findXY($a, $b, $c) {
                 $sum_of_AC = $product_of_A + $product_of_C;
                 if ($x1 == -1) {
                     $x1_display = '-';
-                } elseif ($x1 == 1) {
+                } else if ($x1 == 1) {
                     $x1_display = '';
                 } else {
                     $x1_display = $x1;
                 }
                 if ($y1 == -1) {
                     $y1_display = '-';
-                } elseif ($y1 == 1) {
+                } else if ($y1 == 1) {
                     $y1_display = '';
                 } else {
                     $y1_display = $y1;
                 }
-                if($sum_of_AC == $B){
+                if ($sum_of_AC == $B) {
                     echo "(" . $x1_display . "x" . ($x2 >= 0 ? "+" : "") . $x2 . ")(" . $y1_display . "x" . ($y2 >= 0 ? "+" : "") . $y2 . ")<br>";
-                } 
+                    $found_solution = true;
+                }
             }
         } 
-    } else {
+    }
+    if (!$found_solution) {
         return "หาค่าไม่ได้";
     }
 }
