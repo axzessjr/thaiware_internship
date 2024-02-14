@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+.btn-topic {
+    display: flex;
+    justify-content: center;
+    padding: 70px 50px;
+}
+button {
+    font-size: 24px;
+    border: outset;
+    height: 50px;
+    width: 100%;
+    color: rgb(0 0 0 / 50%);
+    background-color: #0000001a;
+    cursor: pointer;
+}
+.btn-topic button.active {
+    color: white;
+    background-color: #0C78A6;
+    border: outset #0C78A6;
+    cursor: auto;
+}
+button:hover {
+    border: outset #0C78A6;
+    color: #0C78A6;
+}
+.form-low-frac, .form-decimals {
+    text-align: center;
+}
+label {
+    font-size: 20px;
+}
+#low-frac-ip, #decimals-ip, #repeat, #submit {
+    height: 50px;
+}
+#low-frac-ip, #decimals-ip, #repeat, #submit {
+    font-size: 20px;
+    border-radius: 5px;
+}
+#low-frac-ip, #decimals-ip {
+    width: 200px;
+}
+#repeat {
+    width: 50px;
+}
+#low-frac-ip, #decimals-ip, #repeat {
+    padding: 10px;
+    background-color: #0000001a;
+    border: none;
+}
+#submit {
+    width: 100px;
+    padding: 5px;
+    color: #0C78A6;
+    background-color: white;
+    border: solid 2px;
+    border-color: #0C78A6;
+}
+#submit:hover {
+    background-color: #0C78A6;
+    color: white;
+}
+#submit:active {
+    transform: translateY(2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#submit {
+    cursor: pointer;
+}
+#low-fracResult, #decimalsResult {
+    font-size: 36px;
+    margin: 50px 0px;
+}
