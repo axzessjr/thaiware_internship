@@ -76,3 +76,41 @@ label {
     font-size: 36px;
     margin: 50px 0px;
 }
+@media screen and (max-width: 800px) {
+    button {
+        font-size: 20px;
+    }
+    #count-ip, #degree-ip1, #degree-ip2, #degree-ip3, #submit {
+        height: 50px;
+    }
+    #countResult, #degreeResult {
+        font-size: 32px;
+        margin: 30px 0px;
+    }
+}
+@media screen and (max-width: 630px) {
+    .btn-topic {
+        padding: 40px 50px;
+    }
+    button {
+        font-size: 18px;
+        height: 80px;
+    }
+    #submit {
+        width: 90px;
+    }
+    #count-ip, #degree-ip1, #degree-ip2, #degree-ip3, #submit {
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    #count-ip {
+        width: 180px;
+    }
+    #degree-ip1, #degree-ip2, #degree-ip3 {
+        width: 50px;
+    }
+    #countResult, #degreeResult {
+        font-size: 28px;
+        margin: 20px 0px;
+    }
+}

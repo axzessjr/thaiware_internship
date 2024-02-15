@@ -46,7 +46,7 @@ label {
     width: 200px;
 }
 #repeat {
-    width: 50px;
+    width: 60px;
 }
 #low-frac-ip, #decimals-ip, #repeat {
     padding: 10px;
@@ -75,4 +75,49 @@ label {
 #low-fracResult, #decimalsResult {
     font-size: 36px;
     margin: 50px 0px;
+}
+@media screen and (max-width: 720px) {
+    button {
+        font-size: 18px;
+    }
+    label {
+        font-size: 14px;
+    }
+    #low-frac-ip, #decimals-ip, #repeat, #submit {
+        font-size: 14px;
+    }
+    #low-frac-ip, #decimals-ip {
+        width: 150px;
+    }
+    #low-frac-ip, #decimals-ip, #repeat, #submit {
+        height: 45px;
+    }
+    #repeat {
+        width: 55px;
+    }
+    #submit {
+        width: 70px;
+    }
+    #low-fracResult, #decimalsResult {
+        font-size: 30px;
+        margin: 40px 0px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .btn-topic {
+        padding: 40px 50px;
+    }
+    button {
+        height: 65px;
+    }
+    #decimals-ip {
+        width: 90px;
+    }
+    #low-frac-ip, #decimals-ip, #repeat, #submit {
+        height: 40px;
+    }
+    #low-fracResult, #decimalsResult {
+        font-size: 24px;
+        margin: 30px 0px;
+    }
 }

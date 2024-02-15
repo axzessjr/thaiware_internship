@@ -38,7 +38,7 @@ function calDecimals() {
                 repeat: repeat
             },
             success: function(data) {
-                $('#decimalsResult').html("แปลงเป็นเศษส่วนได้ = " + data);
+                $('#decimalsResult').html(data);
                 $('#decimalsResult').css({"color":"#0C78A6"});
                 $('#decimalsResult').show();
             },

@@ -13,8 +13,8 @@
 <body>
     <div class="topic">
         <div class="btn-topic" role="group">
-            <button type="button" class="count active" id="count" name="count">แยกตัวประกอบ(จำนวนนับ)</button>
-            <button type="button" class="degree" id="degree" name="degree" >แยกตัวประกอบพหุนามดีกรีสอง</button>
+            <button type="button" class="count active" id="count" name="count">แยกตัวประกอบ (จำนวนนับ)</button>
+            <button type="button" class="degree" id="degree" name="degree" >แยกตัวประกอบ พหุนามดีกรีสอง</button>
         </div>
     </div>
     <div class="form-count">

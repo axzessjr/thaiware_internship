@@ -29,7 +29,7 @@
             <label id="text-decimals">ทศนิยมซ้ำ</label>
             <input type="text" id="decimals-ip" name="decimals-ip" oninput="validateInput2(this)">
             <label id="text-repeat">หลักที่ซ้ำ</label>
-            <input type="number" id="repeat" name="repeat" value="1" oninput="validateInput3(this)">
+            <input type="number" id="repeat" name="repeat" value="1" min="1" max="10" oninput="validateInput3(this)">
             <input type="button" id="submit" onclick="calDecimals()" value="ตรวจสอบ">
         </div>
         <div id="decimalsResult"></div>
