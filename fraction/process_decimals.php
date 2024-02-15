@@ -3,17 +3,52 @@
 if(isset($_POST['input']) && isset($_POST['repeat'])) {
     $input = $_POST['input'];
     $repeat = $_POST['repeat'];
-    $switch = true;
+    $integer_part = intval($input);
     $decimal_part = substr(strval($input), strpos(strval($input), '.') + 1);
+    $decimal_not_repeat = "";
+    $array = str_split($decimal_part);
+    $count = count($array);
     if ($repeat >= strlen($decimal_part)) {
         $decimal_not_repeat = 0;
-    } 
-    else {
-        $decimal_not_repeat = substr($decimal_part, -$repeat, $repeat);
-        $switch = false;
+    } else {
+        for ($i = 0; $i < $count; $i++) {
+            if ($i < $count-$repeat) {
+                $decimal_not_repeat.=$array[$i];
+            }
+        }
     }
-    echo $decimal_part . "," . $decimal_not_repeat;
+    $number_repeat = str_repeat("9", $repeat);
+    $number_not_repeat = str_repeat("0", $count-$repeat);
+    $decimal_btm_result = $number_repeat.$number_not_repeat;
+    $decimal_top = $decimal_part-$decimal_not_repeat;
+    $decimal_top_result = $decimal_top+($integer_part*$decimal_btm_result);
+    $result = $decimal_top_result . "/" . $decimal_btm_result;
+    $fraction = explode('/', $result);
+    if(count($fraction) == 1) {
+        $resulLowFrac = $fraction[0];
+    } else {
+        $numerator = $fraction[0];
+        $denominator = $fraction[1];
+        function gcd($a, $b) {
+            while ($b != 0) {
+                $t = $b;
+                $b = $a % $b;
+                $a = $t;
+            }
+            return $a;
+        }
+        $gcd = gcd($numerator, $denominator);
+        $numerator /= $gcd;
+        $denominator /= $gcd;
+        if ($denominator > 1) {
+            $resulLowFrac = $numerator . "/" . $denominator;
+        } else {
+            $resulLowFrac = $numerator;
+        }
+    }
+    echo $resulLowFrac;
 }
+
 
 // if(isset($_POST['input']) && isset($_POST['repeat'])) {
 //     $input = $_POST['input'];

@@ -11,8 +11,8 @@ function calLowFrac() {
             data: {
                 input: input
             },
-            success: function(response) {
-                $('#low-fracResult').html("เศษส่วนอย่างต่ำคือ: " + response);
+            success: function(data) {
+                $('#low-fracResult').html("เศษส่วนอย่างต่ำคือ: " + data);
                 $('#low-fracResult').css({"color":"#0C78A6"});
                 $('#low-fracResult').show();
             },
@@ -38,7 +38,7 @@ function calDecimals() {
                 repeat: repeat
             },
             success: function(data) {
-                $('#decimalsResult').html(data);
+                $('#decimalsResult').html("แปลงเป็นเศษส่วนได้ = " + data);
                 $('#decimalsResult').css({"color":"#0C78A6"});
                 $('#decimalsResult').show();
             },
