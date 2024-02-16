@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แยกตัวประกอบ</title>
+    <title>เศษส่วนอย่างต่ำ</title>
 
     <link rel="icon" type="image/png" href="/thaiware_internship/thaiware-icon.png">
     <link rel="stylesheet" href="/thaiware_internship/fraction/css/style.css"/>

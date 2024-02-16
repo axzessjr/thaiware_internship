@@ -60,6 +60,7 @@ label {
     background-color: white;
     border: solid 2px;
     border-color: #0C78A6;
+    cursor: pointer;
 }
 #submit:hover {
     background-color: #0C78A6;
@@ -68,9 +69,6 @@ label {
 #submit:active {
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-#submit {
-    cursor: pointer;
 }
 #low-fracResult, #decimalsResult {
     font-size: 36px;
