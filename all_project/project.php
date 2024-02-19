@@ -32,6 +32,7 @@
         </div>
         <div class="col4">
             <a href="/thaiware_internship/average/index.php" id="average">Average</a>
+            <a href="/thaiware_internship/triangle/index.php" id="triangle">Triangle area</a>
         </div>
     </div>
 </body>

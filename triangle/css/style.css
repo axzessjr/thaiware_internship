@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+.topic {
+    padding: 70px 50px;
+}
+.topic-is {
+    display: flex;
+    font-size: 24px;
+    height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #0C78A6;
+    border: outset #0C78A6;
+    cursor: auto;
+    align-items: center;
+    justify-content: center;
+}
+.sub-topic {
+    display: flex;
+}
+button {
+    font-size: 20px;
+    border: outset;
+    height: 50px;
+    width: 100%;
+    color: rgb(0 0 0 / 50%);
+    background-color: #0000001a;
+    cursor: pointer;
+}
+.sub-topic button.active {
+    color: white;
+    background-color: #0C78A6;
+    border: outset #0C78A6;
+    cursor: auto;
+}
+button:hover {
+    border: outset #0C78A6;
+    color: #0C78A6;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.find2 {
+    text-align: center;
+}
+.side, .angle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side {
+    gap: 5px;
+}
+.angle {
+    gap: 9px;
+}
+#base, #high, #sideA, #sideB, #sideC, #angleA, #angleB, #angleC {
+    padding: 10px;
+    background-color: #0000001a;
+    border: none;
+}
+#base, #high, #sideA, #sideB, #sideC, #angleA, #angleB, #angleC, #submit {
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+}
+#submit {
+    padding: 5px;
+    color: #0C78A6;
+    background-color: white;
+    border: solid 2px;
+    border-color: #0C78A6;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: #0C78A6;
+    color: white;
+}
+#submit:active {
+    transform: translateY(2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#BHresult, #SAresult {
+    text-align: center;
+    font-size: 36px;
+    margin: 50px 0px;
+}
