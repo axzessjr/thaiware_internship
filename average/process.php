@@ -10,10 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mode = array_count_values($numbers);
     arsort($mode);
     $maxFrequency = reset($mode);
-    $mode = array_keys(array_filter($mode, function($value) use ($maxFrequency) {
-        return $value === $maxFrequency;
-    }));
-    $mode = implode(", ", $mode);
+    if ($maxFrequency > 1) {
+        $mode = array_keys(array_filter($mode, function($value) use ($maxFrequency) {
+            return $value === $maxFrequency;
+        }));
+        $mode = implode(", ", $mode);
+    } else {
+        $mode = "ไม่มีฐานนิยม";
+    }
     $sumSquaredDiff = 0;
     foreach ($numbers as $num) {
         $sumSquaredDiff += pow($num - $mean, 2);
@@ -22,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $standardDeviation = sqrt($variance);
     $standardDeviation = round($standardDeviation, 2, PHP_ROUND_HALF_UP);
     $result = "ค่าเฉลี่ย = $mean<br>";
-    $result .= "ค่ามัธยฐาน = $median<br>";
-    $result .= "ค่าฐานนิยม = $mode<br>";
+    $result .= "มัธยฐาน = $median<br>";
+    $result .= "ฐานนิยม = $mode<br>";
     $result .= "ส่วนเบี่ยงเบนมาตรฐาน ≈ $standardDeviation";
     echo $result;
 }
