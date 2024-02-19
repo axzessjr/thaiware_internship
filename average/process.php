@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $input = $_POST['input'];
-    $numbers = array_map('intval', explode(',', $input));
+    $numbers = array_map('intval', explode(' ', $input));
     $numbers = array_filter($numbers);
     $mean = array_sum($numbers) / count($numbers);
     sort($numbers);

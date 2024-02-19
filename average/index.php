@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="topic">
-        <div class="topic_is">
+        <div class="topic-is">
             <div>ค่าเฉลี่ย, มัธยฐาน, ฐานนิยม, ส่วนเบี่ยงเบนมาตรฐาน</div>
         </div>
     </div>
