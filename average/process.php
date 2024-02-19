@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $variance = $sumSquaredDiff / count($numbers);
     $standardDeviation = sqrt($variance);
-    $standardDeviation = round($standardDeviation, 2, PHP_ROUND_HALF_UP);
+    $standardDeviation = round($standardDeviation, 2);
     $result = "ค่าเฉลี่ย = $mean<br>";
     $result .= "มัธยฐาน = $median<br>";
     $result .= "ฐานนิยม = $mode<br>";
