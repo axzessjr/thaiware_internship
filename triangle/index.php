@@ -17,7 +17,7 @@
         </div>
         <div class="sub-topic" role="group">
             <button type="button" class="BH active" id="BH" name="BH">หาด้วยความยาวฐาน และความสูง</button>
-            <button type="button" class="SA" id="SA" name="SA" >หาด้วยด้าน หรือมุม</button>
+            <button type="button" class="SA" id="SA" name="SA">หาด้วยด้าน</button>
         </div>
     </div>
     <div class="form">
@@ -32,7 +32,7 @@
             <div id="BHresult"></div>
         </div>
         <div class="find2" style="display: none;">
-            <img src="/thaiware_internship/triangle/img/tri.png" style="width: 250px;">
+            <img src="/thaiware_internship/triangle/img/tri.png">
             <div class="main2">
                 <div class="side">
                     <label for="sideA">ด้าน a</label>

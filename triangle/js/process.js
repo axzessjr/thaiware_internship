@@ -14,7 +14,7 @@ function calBH() {
                 high: high
             },
             success: function(data) {
-                $('#BHresult').html(data);
+                $('#BHresult').html("พื้นที่ของสามเหลี่ยม = " + data);
                 $('#BHresult').css({"color":"#0C78A6"});
                 $('#BHresult').show();
             },
@@ -31,26 +31,32 @@ function calSA() {
     // var angleA = $('#angleA').val();
     // var angleB = $('#angleB').val();
     // var angleC = $('#angleC').val();
-    $.ajax({
-        url: 'process_SA.php',
-        type: 'POST',
-        data: {
-            sideA: sideA,
-            sideB: sideB,
-            sideC: sideC,
-            // angleA: angleA,
-            // angleB: angleB,
-            // angleC: angleC
-        },
-        success: function(data) {
-            $('#SAresult').html(data);
-            $('#SAresult').css({"color":"#0C78A6"});
-            $('#SAresult').show();
-        },
-        error: function(xhr, status, error) {
-            console.error("Error: " + status, error);
-        }
-    });
+    if( sideA === "" || sideB === "" || sideC === "") {
+        $('#SAresult').html("กรุณากรอกข้อมูล");
+        $('#SAresult').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#SAresult').show();
+    } else {
+        $.ajax({
+            url: 'process_SA.php',
+            type: 'POST',
+            data: {
+                sideA: sideA,
+                sideB: sideB,
+                sideC: sideC,
+                // angleA: angleA,
+                // angleB: angleB,
+                // angleC: angleC
+            },
+            success: function(data) {
+                $('#SAresult').html("พื้นที่ของสามเหลี่ยมคือ = " + data);
+                $('#SAresult').css({"color":"#0C78A6"});
+                $('#SAresult').show();
+            },
+            error: function(xhr, status, error) {
+                console.error("Error: " + status, error);
+            }
+        });
+    }
 }
 function validateInput(input) {
     input.value = input.value.replace(/[^\d.]/g, '');
