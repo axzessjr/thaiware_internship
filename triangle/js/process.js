@@ -28,14 +28,20 @@ function calSA() {
     var sideA = $('#sideA').val();
     var sideB = $('#sideB').val();
     var sideC = $('#sideC').val();
-    // var angleA = $('#angleA').val();
-    // var angleB = $('#angleB').val();
-    // var angleC = $('#angleC').val();
-    if( sideA === "" || sideB === "" || sideC === "") {
+    var angleA = $('#angleA').val();
+    var angleB = $('#angleB').val();
+    var angleC = $('#angleC').val();
+    if( sideA === "" && sideB === "" && sideC === "") {
         $('#SAresult').html("กรุณากรอกข้อมูล");
         $('#SAresult').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#SAresult').show();
-    } else {
+    } else
+     if( sideA === "0" || sideB === "0" || sideC === "0") {
+        $('#SAresult').html("ข้อมูลไม่ถูกต้อง");
+        $('#SAresult').css({"color":"rgba(200, 0, 0, 0.8)"});
+        $('#SAresult').show();
+    }
+     else {
         $.ajax({
             url: 'process_SA.php',
             type: 'POST',
@@ -43,12 +49,12 @@ function calSA() {
                 sideA: sideA,
                 sideB: sideB,
                 sideC: sideC,
-                // angleA: angleA,
-                // angleB: angleB,
-                // angleC: angleC
+                angleA: angleA,
+                angleB: angleB,
+                angleC: angleC
             },
             success: function(data) {
-                $('#SAresult').html("พื้นที่ของสามเหลี่ยมคือ = " + data);
+                $('#SAresult').html(data);
                 $('#SAresult').css({"color":"#0C78A6"});
                 $('#SAresult').show();
             },

@@ -17,7 +17,7 @@
         </div>
         <div class="sub-topic" role="group">
             <button type="button" class="BH active" id="BH" name="BH">หาด้วยความยาวฐาน และความสูง</button>
-            <button type="button" class="SA" id="SA" name="SA">หาด้วยด้าน</button>
+            <button type="button" class="SA" id="SA" name="SA">หาด้วยด้าน หรือมุม</button>
         </div>
     </div>
     <div class="form">
@@ -42,14 +42,14 @@
                     <label for="sideC">ด้าน c</label>
                     <input type="text" id="sideC" name="sideC" oninput="validateInput(this)">
                 </div><br>
-                <!-- <div class="angle">
+                <div class="angle">
                     <label for="angleA">มุม A</label>
                     <input type="number" id="angleA" name="angleA">
                     <label for="angleB">มุม B</label>
                     <input type="number" id="angleB" name="angleB">
                     <label for="angleC">มุม C</label>
                     <input type="number" id="angleC" name="angleC">
-                </div> -->
+                </div>
                 <input type="button" id="submit" onclick="calSA()" value="ตรวจสอบ" style="margin-top: 10px;">
                 <div id="SAresult"></div>
             </div>
