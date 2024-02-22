@@ -30,6 +30,9 @@
             <a href="/thaiware_internship/factor/index.php" id="factor">Factor</a>
             <a href="/thaiware_internship/fraction/index.php" id="fraction">Fraction</a>
         </div>
+        <div class="col4">
+            <a href="/thaiware_internship/average/index.php" id="average">Arithmetic mean</a>
+        </div>
     </div>
 </body>
 </html>

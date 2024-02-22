@@ -50,15 +50,15 @@ body {
     gap: 150px;
     margin-top: 100px;
 }
-.col1, .col2, .col3 {
+.col1, .col2, .col3, .col4 {
     display: flex;
     justify-content: center;
     gap: 100px;
 }
-.col2, .col3 {
+.col2, .col3, .col4 {
     margin-top: 80px;
 }
-#company, #project, #bmi, #gpa, #dmy, #math, #factor, #fraction {
+#company, #project, #bmi, #gpa, #dmy, #math, #factor, #fraction, #average {
     text-align: center;
     border: outset 5px #0C78A6;
     border-radius: 20px;
@@ -72,16 +72,16 @@ body {
     height: 200px;
     padding: 75px;
 }
-#bmi, #gpa, #dmy, #math, #factor, #fraction {
+#bmi, #gpa, #dmy, #math, #factor, #fraction, #average {
     width: 500px;
     height: 100px;
     padding: 20px;
 }
-#company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover {
+#company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover {
     background-color: #0C78A6;
     color: white;
 }
-#company:active, #project:active, #bmi:active, #gpa:active, #dmy:active, #math:active, #factor:active, #fraction:active {
+#company:active, #project:active, #bmi:active, #gpa:active, #dmy:active, #math:active, #factor:active, #fraction:active, #average:active {
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
