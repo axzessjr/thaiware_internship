@@ -58,7 +58,11 @@ body {
 .col2, .col3, .col4 {
     margin-top: 80px;
 }
+<<<<<<< HEAD
 #company, #project, #bmi, #gpa, #dmy, #math, #factor, #fraction, #average {
+=======
+#company, #project, #bmi, #gpa, #dmy, #math, #factor, #fraction, #average, #triangle {
+>>>>>>> origin/main
     text-align: center;
     border: outset 5px #0C78A6;
     border-radius: 20px;
@@ -72,16 +76,28 @@ body {
     height: 200px;
     padding: 75px;
 }
+<<<<<<< HEAD
 #bmi, #gpa, #dmy, #math, #factor, #fraction, #average {
+=======
+#bmi, #gpa, #dmy, #math, #factor, #fraction, #average, #triangle {
+>>>>>>> origin/main
     width: 500px;
     height: 100px;
     padding: 20px;
 }
+<<<<<<< HEAD
 #company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover {
     background-color: #0C78A6;
     color: white;
 }
 #company:active, #project:active, #bmi:active, #gpa:active, #dmy:active, #math:active, #factor:active, #fraction:active, #average:active {
+=======
+#company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover, #triangle:hover {
+    background-color: #0C78A6;
+    color: white;
+}
+#company:active, #project:active, #bmi:active, #gpa:active, #dmy:active, #math:active, #factor:active, #fraction:active, #average:active, #triangle:active {
+>>>>>>> origin/main
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }

@@ -31,7 +31,12 @@
             <a href="/thaiware_internship/fraction/index.php" id="fraction">Fraction</a>
         </div>
         <div class="col4">
+<<<<<<< HEAD
             <a href="/thaiware_internship/average/index.php" id="average">Arithmetic mean</a>
+=======
+            <a href="/thaiware_internship/average/index.php" id="average">Average</a>
+            <a href="/thaiware_internship/triangle/index.php" id="triangle">Triangle area</a>
+>>>>>>> origin/main
         </div>
     </div>
 </body>
