@@ -59,7 +59,7 @@ function findXY($a, $b, $c) {
                     $found_solution = true;
                 }
             }
-        } 
+        }
     }
     if (!$found_solution) {
         return "หาค่าไม่ได้";

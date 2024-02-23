@@ -14,6 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $bmi = $weight / ($height * $height);
         sleep(5);
         echo number_format($bmi, 2);
-    } 
-} 
+    }
+}
 ?>

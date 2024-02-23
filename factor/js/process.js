@@ -8,7 +8,9 @@ function calCount() {
         $.ajax({
             url: 'process_count.php',
             type: 'POST',
-            data: { number: input },
+            data: {
+                number: input
+            },
             success: function(response) {
                 var factors = JSON.parse(response);
                 var resultMessage = input + " = ";
@@ -40,7 +42,7 @@ function calDegree() {
         $.ajax({
             url: 'process_degree.php',
             type: 'POST',
-            data: { 
+            data: {
                 input1: input1,
                 input2: input2,
                 input3: input3

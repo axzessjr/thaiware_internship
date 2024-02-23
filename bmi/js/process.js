@@ -20,7 +20,7 @@ function calculateBMI() {
                 heightUnit: InputheightUnit
             },
             success: function(data) {
-                var bmi = parseFloat(data) 
+                var bmi = parseFloat(data)
                 var resultText = getBMIStatus(Inputgender, bmi);
                 $('#bmiForm').hide()
                 $('#bmi-error').hide()
@@ -52,7 +52,6 @@ function getBMIStatus(gender, bmi) {
         gender_result = showBMIStatusFemale(bmi);
     }
     return gender_result;
-   
 }
 function colorMale(color, bmi) {
     if (bmi < 18) {
@@ -87,7 +86,7 @@ function showBMIStatusMale(bmi) {
     } else {
         male_result = "โรคอ้วนระดับ 3";
     }
-    return male_result; 
+    return male_result;
 }
 function showBMIStatusFemale(bmi) {
     var female_result

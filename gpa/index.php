@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA</title>
+    <title>คำนวณเกรดเฉลี่ย (GPA)</title>
 
     <link rel="icon" type="image/png" href="/thaiware_internship/thaiware-icon.png">
     <link rel="stylesheet" href="/thaiware_internship/gpa/css/style.css"/>
@@ -11,7 +11,7 @@
     <script src="/thaiware_internship/gpa/js/process.js"></script>
 </head>
 <body>
-    <div class="topic">คำนวณ GPA</div>
+    <div class="topic">คำนวณเกรดเฉลี่ย (GPA)</div>
     <div class="cal">
         <div id="subjectContainer">
             <div class="input">

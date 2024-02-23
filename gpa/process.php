@@ -15,5 +15,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $resultGPA = $totalResult / $creditsTotal;
     echo number_format($resultGPA, 2);
-    }
+}
 ?>

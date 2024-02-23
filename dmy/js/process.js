@@ -51,7 +51,7 @@ function calDiff() {
               $('#diffResult').html('ระยะห่าง : ' + response);
               $('#diffResult').css({"color":"rgba(0, 0, 0)"});
             }
-          });
+        });
     }
 }
 function calAfter() {
