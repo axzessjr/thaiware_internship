@@ -5,7 +5,6 @@ $sideC = isset($_POST['sideC']) ? $_POST['sideC'] : "";
 $angleA = isset($_POST['angleA']) ? $_POST['angleA'] : "";
 $angleB = isset($_POST['angleB']) ? $_POST['angleB'] : "";
 $angleC = isset($_POST['angleC']) ? $_POST['angleC'] : "";
-
 if (!empty($sideA) && !empty($sideB) && !empty($sideC)) {
     if ($sideA + $sideB > $sideC && $sideA + $sideC > $sideB && $sideB + $sideC > $sideA) {
         $s = ($sideA + $sideB + $sideC) / 2;
