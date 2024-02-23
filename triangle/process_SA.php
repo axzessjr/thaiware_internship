@@ -103,5 +103,7 @@ if (!empty($sideA) && !empty($sideB) && !empty($sideC)) {
     $sideA = ($sideC * sin($angleC_rad)) / sin($angleA_rad);
     $area = 0.5 * $sideC * $sideA * sin(deg2rad($angleB));
     echo "พื้นที่ของสามเหลี่ยม = " . round($area, 4);
+} else {
+    echo "กรอกข้อมูลไม่ครบ";
 }
 ?>
