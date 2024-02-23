@@ -44,11 +44,11 @@
                 </div><br>
                 <div class="angle">
                     <label for="angleA">มุม A</label>
-                    <input type="number" id="angleA" name="angleA">
+                    <input type="text" id="angleA" name="angleA" oninput="validateInput(this)">
                     <label for="angleB">มุม B</label>
-                    <input type="number" id="angleB" name="angleB">
+                    <input type="text" id="angleB" name="angleB" oninput="validateInput(this)">
                     <label for="angleC">มุม C</label>
-                    <input type="number" id="angleC" name="angleC">
+                    <input type="text" id="angleC" name="angleC" oninput="validateInput(this)">
                 </div>
                 <input type="button" id="submit" onclick="calSA()" value="ตรวจสอบ" style="margin-top: 30px;">
                 <div id="SAresult"></div>

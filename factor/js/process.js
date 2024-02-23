@@ -75,3 +75,17 @@ $(document).ready(function(){
         $('.form-degree').show()
     })
 })
+$(document).ready(function () {
+    $('.form-count').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calCount();
+        }
+    });
+    $('.form-degree').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calDegree();
+        }
+    });
+});

@@ -83,3 +83,17 @@ $(document).ready(function(){
         $('.find2').show()
     })
 })
+$(document).ready(function () {
+    $('.find1').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calBH();
+        }
+    });
+    $('.find2').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calSA();
+        }
+    });
+});

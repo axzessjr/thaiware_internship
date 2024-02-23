@@ -25,3 +25,11 @@ function cal() {
 function validateInput(input) {
     input.value = input.value.replace(/[^\d ]/g, '');
 }
+$(document).ready(function () {
+    $('.main').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            cal();
+        }
+    });
+});

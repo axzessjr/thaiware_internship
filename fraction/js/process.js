@@ -73,3 +73,17 @@ $(document).ready(function(){
         $('.form-decimals').show()
     })
 })
+$(document).ready(function () {
+    $('.form-low-frac').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calLowFrac();
+        }
+    });
+    $('.form-decimals').on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            calDecimals();
+        }
+    });
+});
