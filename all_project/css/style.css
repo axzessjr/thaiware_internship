@@ -77,10 +77,6 @@ body {
     height: 100px;
     padding: 20px;
 }
-#company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover {
-    background-color: #0C78A6;
-    color: white;
-}
 #company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover, #triangle:hover {
     background-color: #0C78A6;
     color: white;
