@@ -50,7 +50,7 @@
                     <label for="angleC">มุม C</label>
                     <input type="number" id="angleC" name="angleC">
                 </div>
-                <input type="button" id="submit" onclick="calSA()" value="ตรวจสอบ" style="margin-top: 10px;">
+                <input type="button" id="submit" onclick="calSA()" value="ตรวจสอบ" style="margin-top: 30px;">
                 <div id="SAresult"></div>
             </div>
         </div>
