@@ -1,31 +1,15 @@
-function validateBinary(event) {
-    var key = event.key;
-    if (key !== '0' && key !== '1') {
-        event.preventDefault();
-    }
-}
-function validateOctal(event) {
-    var key = event.key;
-    if (key < '0' || key > '7') {
-        event.preventDefault();
-    }
-}
-function validateNumeric(event) {
-    var key = event.key;
-    if (key < '0' || key > '9') {
-        event.preventDefault();
-    }
-}
-function validateHexadecimal(event) {
-    var key = event.key.toLowerCase();
-    if ((key < '0' || key > '9') && (key < 'a' || key > 'f')) {
-        event.preventDefault();
-    }
-}
 function convert(inputBase) {
     var value = $('#' + inputBase).val();
     var bases = ['binary', 'octal', 'decimal', 'hexadecimal'];
     var validInput = validateInput(value, inputBase);
+    if (value.trim() === '') {
+        bases.forEach(function (base) {
+            if (base != inputBase) {
+                $('#' + base).val('');
+            }
+        });
+        return;
+    }
     if (!validInput) {
         return;
     }
@@ -60,5 +44,31 @@ function validateInput(value, inputBase) {
     } else if (inputBase === 'hexadecimal') {
         var validChars = /^[0-9A-Fa-f]*$/;
         return validChars.test(value);
+    }
+}
+function validateBinary(event) {
+    var key = event.key;
+    if (key !== '0' && key !== '1') {
+        event.preventDefault();
+    }
+}
+function validateOctal(event) {
+    var key = event.key;
+    if (key < '0' || key > '7') {
+        event.preventDefault();
+    }
+}
+function validateNumeric(event) {
+    var key = event.key;
+    if (key < '0' || key > '9') {
+        event.preventDefault();
+    }
+}
+function validateHexadecimal(event) {
+    var key = event.key.toLowerCase();
+    if (key < '0' || key > '9') {
+        if (key < 'a' || key > 'f') {
+            event.preventDefault();
+        }
     }
 }

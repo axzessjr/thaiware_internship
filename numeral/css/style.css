@@ -11,7 +11,7 @@ body {
 .topic {
     display: flex;
     justify-content: center;
-    padding: 70px 50px 40px;
+    padding: 70px 50px 10px;
 }
 .topic-is {
     display: flex;
@@ -30,7 +30,7 @@ body {
     justify-items: start;
 }
 label {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 #decimal, #binary, #octal, #hexadecimal {
     width: 300px;
@@ -41,27 +41,6 @@ label {
     height: 50px;
     border-radius: 5px;
 }
-/* #submit {
-    width: 100px;
-    padding: 5px;
-    color: #0C78A6;
-    background-color: white;
-    border: solid 2px;
-    border-color: #0C78A6;
-    cursor: pointer;
-}
-#submit:hover {
-    background-color: #0C78A6;
-    color: white;
-}
-#submit:active {
-    transform: translateY(2px);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-#result {
-    font-size: 36px;
-    margin: 50px 0px;
-} */
 @media screen and (max-width: 610px) {
     .topic-is {
         font-size: 18px;
