@@ -1,6 +1,7 @@
-function cal() {
-    var input = $('#input_number').val();
-    if( input === "" ) {
+function calPL() {
+    var cost = $('#cost').val();
+    var price = $('#price').val();
+    if( cost === "" || price === "") {
         $('#result').html("กรุณากรอกข้อมูล");
         $('#result').css({"color":"rgba(200, 0, 0, 0.8)"});
         $('#result').show();
@@ -9,7 +10,8 @@ function cal() {
             url: 'process.php',
             type: 'POST',
             data: {
-                input: input
+                cost: cost,
+                price: price
             },
             success: function(data) {
                 $('#result').html(data);
@@ -23,13 +25,5 @@ function cal() {
     }
 }
 function validateInput(input) {
-    input.value = input.value.replace(/[^\d ]/g, '');
+    input.value = input.value.replace(/[^\d]/g, '');
 }
-$(document).ready(function () {
-    $('.main').on('keypress', function (e) {
-        if (e.which === 13) {
-            e.preventDefault();
-            cal();
-        }
-    });
-});

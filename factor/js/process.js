@@ -1,5 +1,5 @@
 function calCount() {
-    var input = $('input[name="count-ip"]').val();
+    var input = $('#count-ip').val();
     if( input === "" ) {
         $('#countResult').html("กรุณากรอกข้อมูล");
         $('#countResult').css({"color":"rgba(200, 0, 0, 0.8)"});
@@ -31,9 +31,9 @@ function calCount() {
     }
 }
 function calDegree() {
-    var input1 = $('input[name="degree-ip1"]').val();
-    var input2 = $('input[name="degree-ip2"]').val();
-    var input3 = $('input[name="degree-ip3"]').val();
+    var input1 = $('#degree-ip1').val();
+    var input2 = $('#degree-ip2').val();
+    var input3 = $('#degree-ip3').val();
     if(input2 === "" || input3 === "" ) {
         $('#degreeResult').html("กรุณากรอกข้อมูล");
         $('#degreeResult').css({"color":"rgba(200, 0, 0, 0.8)"});

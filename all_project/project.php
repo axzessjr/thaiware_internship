@@ -32,7 +32,11 @@
         </div>
         <div class="col4">
             <a href="/thaiware_internship/average/index.php" id="average">Average</a>
-            <a href="/thaiware_internship/triangle/index.php" id="triangle">Triangle area</a>
+            <a href="/thaiware_internship/triangle/index.php" id="triangle">Triangle Area</a>
+        </div>
+        <div class="col5">
+            <a href="/thaiware_internship/pl/index.php" id="pl">Profit and Loss</a>
+            <a href="/thaiware_internship/numeral/index.php" id="numeral">Numeral System</a>
         </div>
     </div>
 </body>

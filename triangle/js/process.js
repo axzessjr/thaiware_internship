@@ -1,6 +1,6 @@
 function calBH() {
-    var base = $('input[name="base"]').val();
-    var high = $('input[name="high"]').val();
+    var base = $('#base').val();
+    var high = $('#high').val();
     if( base === "" || high === "" ) {
         $('#BHresult').html("กรุณากรอกข้อมูล");
         $('#BHresult').css({"color":"rgba(200, 0, 0, 0.8)"});

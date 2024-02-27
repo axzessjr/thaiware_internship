@@ -1,5 +1,5 @@
 function cal() {
-    var input = $('textarea[name="text-ip"]').val();
+    var input = $('#text-ip').val();
     var unit = $('input[name="unit"]:checked').val();
     var solutionType = $('#solutionType').val();
     var isValidInput = true;

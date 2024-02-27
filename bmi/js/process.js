@@ -1,7 +1,7 @@
 function calculateBMI() {
     var Inputgender = $('input[name="genderUnit"]:checked').val();
-    var Inputweight = $('input[name="weight"]').val();
-    var Inputheight = $('input[name="height"]').val();
+    var Inputweight = $('#weight').val();
+    var Inputheight = $('#height').val();
     var InputheightUnit = $('input[name="heightUnit"]:checked').val();
     if(Inputweight === "" || Inputheight === "") {
         $('#bmi-error').html("กรุณากรอกข้อมูลให้ครบถ้วน");

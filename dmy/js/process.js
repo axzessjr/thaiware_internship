@@ -1,7 +1,7 @@
 function calAge() {
-    var dayInput = $('input[name="dAge"]').val();
+    var dayInput = $('#dAge').val();
     var monthInput = $('select[name="mAge"]').val();
-    var yearInput = $('input[name="yAge"]').val();
+    var yearInput = $('#yAge').val();
     if( dayInput === "" || monthInput === "" || yearInput === "") {
         $('#ageResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
         $('#ageResult').css({"color":"rgba(200, 0, 0, 0.8)"});
@@ -27,12 +27,12 @@ function calAge() {
     }
 }
 function calDiff() {
-    var dayInput = $('input[name="dDiff"]').val();
+    var dayInput = $('#dDiff').val();
     var monthInput = $('select[name="mDiff"]').val();
-    var yearInput = $('input[name="yDiff"]').val();
-    var dayInput2 = $('input[name="dDiff2"]').val();
+    var yearInput = $('#yDiff').val();
+    var dayInput2 = $('#dDiff2').val();
     var monthInput2 = $('select[name="mDiff2"]').val();
-    var yearInput2 = $('input[name="yDiff2"]').val();
+    var yearInput2 = $('#yDiff2').val();
     var format = $('#format').val();
     if( dayInput === "" || monthInput === "" || yearInput === "" || dayInput2 === "" || monthInput2 === "" || yearInput2 === "") {
         $('#diffResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
@@ -55,10 +55,10 @@ function calDiff() {
     }
 }
 function calAfter() {
-    var dayInput = $('input[name="dAfter"]').val();
+    var dayInput = $('#dAfter').val();
     var monthInput = $('select[name="mAfter"]').val();
-    var yearInput = $('input[name="yAfter"]').val();
-    var countInput = $('input[name="cAfter"]').val();
+    var yearInput = $('#yAfter').val();
+    var countInput = $('#cAfter').val();
     if( dayInput === "" || monthInput === "" || yearInput === "" || countInput === "") {
         $('#afterResult').html("กรุณากรอกข้อมูลให้ครบถ้วน");
         $('#afterResult').css({"color":"rgba(200, 0, 0, 0.8)"});

@@ -1,5 +1,5 @@
 function calLowFrac() {
-    var input = $('input[name="low-frac-ip"]').val();
+    var input = $('#low-frac-ip').val();
     if( input === "" ) {
         $('#low-fracResult').html("กรุณากรอกข้อมูล");
         $('#low-fracResult').css({"color":"rgba(200, 0, 0, 0.8)"});
@@ -23,8 +23,8 @@ function calLowFrac() {
     }
 }
 function calDecimals() {
-    var input = $('input[name="decimals-ip"]').val();
-    var repeat = $('input[name="repeat"]').val();
+    var input = $('#decimals-ip').val();
+    var repeat = $('#repeat').val();
     if(input === "" || repeat === "") {
         $('#decimalsResult').html("กรุณากรอกข้อมูล");
         $('#decimalsResult').css({"color":"rgba(200, 0, 0, 0.8)"});
