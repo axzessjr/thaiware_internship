@@ -38,6 +38,9 @@
             <a href="/thaiware_internship/pl/index.php" id="pl">Profit and Loss</a>
             <a href="/thaiware_internship/numeral/index.php" id="numeral">Numeral System</a>
         </div>
+        <div class="col6">
+            <a href="/thaiware_internship/vat/index.php" id="vat">VAT</a>
+        </div>
     </div>
 </body>
 </html>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D/M/Y</title>
-
     <link rel="icon" type="image/png" href="/thaiware_internship/thaiware-icon.png">
     <link rel="stylesheet" href="/thaiware_internship/dmy/css/style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
