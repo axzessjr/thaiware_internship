@@ -29,7 +29,7 @@
                 <select name="numtype" id="numtype">
                     <option value="vatex">ราคาก่อน VAT</option>
                     <option value="vatin">ราคารวม VAT</option>
-                    <option value="taxin">ราคาหลังจากหัก ณ ที่จ่าย</option>
+                    <option value="taxin">ราคาหลังหัก ณ ที่จ่าย</option>
                 </select>
                 <input type="text" id="pricein" name="pricein" oninput="validateInput(this)">
             </div>

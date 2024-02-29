@@ -29,5 +29,5 @@ function calVAT() {
     }
 }
 function validateInput(input) {
-    input.value = input.value.replace(/[^\d]/g, '');
+    input.value = input.value.replace(/[^\d.]/g, '');
 }

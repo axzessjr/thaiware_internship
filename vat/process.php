@@ -36,6 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "VAT $vatrate% = " . number_format($vat, 2) . "<br>";
     echo "ราคารวม VAT = " . number_format($price_with_vat, 2) . "<br>";
     echo "หัก ณ ที่จ่าย $taxrate% = " . number_format($tax, 2) . "<br>";
-    echo "ราคาหลังจากหัก ณ ที่จ่าย= " . number_format($price_after_tax, 2) . "<br>";
+    echo "ราคาหลังหัก ณ ที่จ่าย = " . number_format($price_after_tax, 2) . "<br>";
 }
 ?>
