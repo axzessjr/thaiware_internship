@@ -40,6 +40,7 @@
         </div>
         <div class="col6">
             <a href="/thaiware_internship/vat/index.php" id="vat">VAT</a>
+            <a href="/thaiware_internship/payment/index.php" id="payment">Payment</a>
         </div>
     </div>
 </body>

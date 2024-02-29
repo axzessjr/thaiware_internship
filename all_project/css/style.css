@@ -63,7 +63,7 @@ body {
     height: 200px;
     padding: 75px;
 }
-#company, #project, #bmi, #gpa, #dmy, #math, #factor, #fraction, #average, #triangle, #numeral, #pl, #vat {
+#company, #project, #bmi, #gpa, #dmy, #math, #factor, #fraction, #average, #triangle, #numeral, #pl, #vat, #payment {
     text-align: center;
     border: outset 5px #0C78A6;
     border-radius: 20px;
@@ -72,16 +72,16 @@ body {
     font-size: 30px;
     text-decoration: none;
 }
-#bmi, #gpa, #dmy, #math, #factor, #fraction, #average, #triangle, #numeral, #pl, #vat {
+#bmi, #gpa, #dmy, #math, #factor, #fraction, #average, #triangle, #numeral, #pl, #vat, #payment {
     width: 500px;
     height: 100px;
     padding: 20px;
 }
-#company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover, #triangle:hover, #numeral:hover, #pl:hover, #vat:hover {
+#company:hover, #project:hover, #bmi:hover, #gpa:hover, #dmy:hover, #math:hover, #factor:hover, #fraction:hover, #average:hover, #triangle:hover, #numeral:hover, #pl:hover, #vat:hover, #payment:hover {
     background-color: #0C78A6;
     color: white;
 }
-#company:active, #project:active, #bmi:active, #gpa:active, #dmy:active, #math:active, #factor:active, #fraction:active, #average:active, #triangle:active, #numeral:active, #pl:active, #vat:active {
+#company:active, #project:active, #bmi:active, #gpa:active, #dmy:active, #math:active, #factor:active, #fraction:active, #average:active, #triangle:active, #numeral:active, #pl:active, #vat:active, #payment:active {
     transform: translateY(2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
