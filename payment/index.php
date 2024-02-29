@@ -22,7 +22,7 @@
                 <input type="text" id="productPrice" oninput="validateInput(this)">
             </div>
             <div>
-                <label for="downPaymentPercentage">ร้อยละการดาวน์: </label>
+                <label for="downPaymentPercentage">การดาวน์ (%): </label>
                 <select id="downPaymentPercentage">
                     <option value="20">20%</option>
                     <option value="30">30%</option>
@@ -45,7 +45,7 @@
                 </select>
             </div>
             <div>
-                <label for="interestRate">อัตราดอกเบี้ยต่อเดือน (เปอร์เซ็นต์): </label>
+                <label for="interestRate">อัตราดอกเบี้ยต่อเดือน (%): </label>
                 <input type="text" id="interestRate" oninput="validateInput(this)">
             </div>
             <div>
