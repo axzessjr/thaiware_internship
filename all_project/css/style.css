@@ -41,9 +41,6 @@ body {
 .co-col2 {
     font-size: 18px;
 }
-.menu-pj {
-    margin-top: 30px;
-}
 .menu {
     display: flex;
     justify-content: center;
@@ -54,8 +51,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 100px;
-}
-.col2, .col3, .col4, .col5, .col6, .col7 {
     margin-top: 80px;
 }
 #company, #project {

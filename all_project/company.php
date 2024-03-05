@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="topic">
-        <label class="name">Company</label>
+        <label class="name">COMPANY</label>
     </div>
     <a href="/thaiware_internship/all_project/index.php" class="icon">
         <img src="/thaiware_internship/all_project/img/back.png" style="width: 50px;" id="icon-back">
