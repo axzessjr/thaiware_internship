@@ -48,7 +48,7 @@
                 <label for="interestRate">อัตราดอกเบี้ยต่อเดือน (%): </label>
                 <input type="text" id="interestRate" oninput="validateInput(this)">
             </div>
-            <div>
+            <div class="sm">
                 <input type="button" id="submit" onclick="calculate()" value="ตรวจสอบ">
             </div>
         </div>

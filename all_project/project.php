@@ -20,26 +20,29 @@
     <div class="menu-pj">
         <div class="col1">
             <a href="/thaiware_internship/bmi/index.php" id="bmi">Calculate BMI</a>
-            <a href="/thaiware_internship/gpa/index.php" id="gpa">Calculate GPA</a>
+            <a href="/thaiware_internship/bmr/index.php" id="bmr">Calculate BMR</a>
         </div>
         <div class="col2">
+            <a href="/thaiware_internship/gpa/index.php" id="gpa">Calculate GPA</a>
             <a href="/thaiware_internship/dmy/index.php" id="dmy">Age/Daydiff/Dayafter</a>
-            <a href="/thaiware_internship/math/index.php" id="math">GCD/LCM</a>
         </div>
         <div class="col3">
+            <a href="/thaiware_internship/math/index.php" id="math">GCD/LCM</a>
             <a href="/thaiware_internship/factor/index.php" id="factor">Factor</a>
-            <a href="/thaiware_internship/fraction/index.php" id="fraction">Fraction</a>
         </div>
         <div class="col4">
+            <a href="/thaiware_internship/fraction/index.php" id="fraction">Fraction</a>
             <a href="/thaiware_internship/average/index.php" id="average">Average</a>
-            <a href="/thaiware_internship/triangle/index.php" id="triangle">Triangle Area</a>
         </div>
         <div class="col5">
+            <a href="/thaiware_internship/triangle/index.php" id="triangle">Triangle Area</a>
             <a href="/thaiware_internship/pl/index.php" id="pl">Profit and Loss</a>
-            <a href="/thaiware_internship/numeral/index.php" id="numeral">Numeral System</a>
         </div>
         <div class="col6">
+            <a href="/thaiware_internship/numeral/index.php" id="numeral">Numeral System</a>
             <a href="/thaiware_internship/vat/index.php" id="vat">VAT</a>
+        </div>
+        <div class="col7">
             <a href="/thaiware_internship/payment/index.php" id="payment">Payment</a>
         </div>
     </div>

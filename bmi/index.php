@@ -34,7 +34,7 @@
             <label id="gf"> หญิง </label>
         </div><br>
         <label for="weight">น้ำหนัก (กก.):</label>
-        <input type="number" name="weight" step="0.1" value="" required><br>
+        <input type="number" id="weight" name="weight" step="0.1" value="" required><br>
         <div class="height-op">
         <label>ส่วนสูง:</label>
             <input type="radio" id="cm" name="heightUnit" value="เซนติเมตร" checked="" class="radio-input">
@@ -43,7 +43,7 @@
             <input type="radio" id="m" name="heightUnit" value="เมตร" class="radio-input">
             <label class="r" for="m"></label>
             <label>(ม.)</label><br>
-            <input type="number" name="height" step="0.01" value="" required=""><br>
+            <input type="number" id="height" name="height" step="0.01" value="" required=""><br>
         </div>
         <input type="button" id="submitBtn" class="cal" onclick="calculateBMI()" value="คำนวณ BMI">
     </form>

@@ -54,10 +54,7 @@ button:hover {
     background-color: #0000001a;
     border: none;
 }
-select, #interestRate {
-    width: 120px;
-}
-#productPrice {
+#productPrice, select, #interestRate {
     width: 200px;
 }
 #productPrice, #interestRate, select, #submit {
@@ -67,6 +64,9 @@ select, #interestRate {
 }
 .price, #submit {
     margin-top: 10px;
+}
+.sm {
+    text-align: center;
 }
 #submit {
     width: 100px;
