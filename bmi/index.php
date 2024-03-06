@@ -27,22 +27,18 @@
         <label for="gender">เพศ:</label>
         <div class="gender" style="padding: 15px 5px 0px 0px;">
             <input type="radio" id="rm" name="genderUnit" value="ชาย" class="radio-input">
-            <label class="r" for="rm"></label>
-            <label id="gm"> ชาย </label>
+            <label class="r" for="rm">ชาย</label>
             <input type="radio" id="rf" name="genderUnit" value="หญิง" class="radio-input">
-            <label class="r" for="rf"></label>
-            <label id="gf"> หญิง </label>
+            <label class="r" for="rf">หญิง</label>
         </div><br>
         <label for="weight">น้ำหนัก (กก.):</label>
         <input type="number" id="weight" name="weight" step="0.1" value="" required><br>
         <div class="height-op">
         <label>ส่วนสูง:</label>
             <input type="radio" id="cm" name="heightUnit" value="เซนติเมตร" checked="" class="radio-input">
-            <label class="r" for="cm"></label>
-            <label>(ซม.)</label>
+            <label class="r" for="cm">ซม.</label>
             <input type="radio" id="m" name="heightUnit" value="เมตร" class="radio-input">
-            <label class="r" for="m"></label>
-            <label>(ม.)</label><br>
+            <label class="r" for="m">ม.</label><br>
             <input type="number" id="height" name="height" step="0.01" value="" required=""><br>
         </div>
         <input type="button" id="submitBtn" class="cal" onclick="calculateBMI()" value="คำนวณ BMI">
