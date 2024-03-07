@@ -41,7 +41,6 @@
                 <div class="copied-password" id="copied-password"></div>
             </div>
         </div>
-        
     </div>
 </body>
 </html>
