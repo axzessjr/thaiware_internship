@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body {
+    text-align: center;
+}
+.topic {
+    display: flex;
+    justify-content: center;
+    padding: 70px 50px;
+}
+.topic-is {
+    display: flex;
+    font-size: 24px;
+    height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #0C78A6;
+    border: outset #0C78A6;
+    cursor: auto;
+    align-items: center;
+    justify-content: center;
+}
+#submit { 
+    font-size: 20px;
+    height: 50px;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px;
+    color: #0C78A6;
+    background-color: white;
+    border: solid 2px;
+    border-color: #0C78A6;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: #0C78A6;
+    color: white;
+}
+#submit:active {
+    transform: translateY(2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#password-display {
+    font-size: 36px;
+    padding: 50px 0px;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+input[type=range]:hover {
+    opacity: 1;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0C78A6;
+    cursor: pointer;
+    border-radius: 50%;
+}
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0C78A6;
+    cursor: pointer;
+    border-radius: 50%;
+}
+@media screen and (max-width: 610px) {
+    .topic-is {
+        font-size: 18px;
+    }
+    #submit {
+        font-size: 14px;
+        height: 45px;
+        width: 70px;
+    }
+    #password-display {
+        font-size: 30px;
+        margin: 40px 0px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .topic {
+        padding: 40px 70px;
+    }
+    .topic-is {
+        height: 65px;
+    }
+    #submit {
+        height: 40px;
+    }
+    #password-display {
+        font-size: 24px;
+        margin: 30px 0px;
+    }
+}

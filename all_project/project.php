@@ -44,6 +44,7 @@
         </div>
         <div class="col7">
             <a href="/thaiware_internship/payment/index.php" id="payment">Payment</a>
+            <a href="/thaiware_internship/password/index.php" id="password">Password Random</a>
         </div>
     </div>
 </body>
