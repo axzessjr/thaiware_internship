@@ -38,3 +38,26 @@ function copyPassword() {
 function updatePasswordLength(length) {
     $("#password-length-display").text(length);
 }
+function copyPassword() {
+    var password = $("#password-display").text();
+    var passwordText = document.getElementById("password-display");
+    var range = document.createRange();
+    range.selectNode(passwordText);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    $("#copied-password").text(password);
+}
+function openPopup() {
+    var popup = document.getElementById('popup');
+    var topic = document.getElementById('topic');
+    popup.style.display = 'block';
+    topic.style.display = 'none';
+}
+function closePopup() {
+    var popup = document.getElementById('popup');
+    var topic = document.getElementById('topic');
+    popup.style.display = 'none';
+    topic.style.display = 'block';
+}
