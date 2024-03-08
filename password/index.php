@@ -47,16 +47,6 @@
                     <label style="margin-left: 25px;">#$&</label>
                 </div>
             </div>
-            
-
-            <!-- <input type="checkbox" id="uppercase" checked>
-            <label for="uppercase">ABC</label>
-            <input type="checkbox" id="lowercase" checked>
-            <label for="lowercase">abc</label>
-            <input type="checkbox" id="numbers" checked>
-            <label for="numbers">123</label>
-            <input type="checkbox" id="special">
-            <label for="special">#$&</label> -->
         </div>
         <div class="tab">
             <!-- <div class="topic-copied" id="topic" onclick="openPopup()">ประวัติการคัดลอก</div>
