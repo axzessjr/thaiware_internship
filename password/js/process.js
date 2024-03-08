@@ -38,6 +38,7 @@ function copyPassword() {
 function updatePasswordLength(length) {
     $("#password-length-display").text(length);
 }
+var copiedHistory = [];
 function copyPassword() {
     var password = $("#password-display").text();
     var passwordText = document.getElementById("password-display");
@@ -47,17 +48,28 @@ function copyPassword() {
     window.getSelection().addRange(range);
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
-    $("#copied-password").text(password);
+    copiedHistory.push(password);
+    displayCopiedHistory();
 }
-function openPopup() {
-    var popup = document.getElementById('popup');
-    var topic = document.getElementById('topic');
-    popup.style.display = 'block';
-    topic.style.display = 'none';
+function displayCopiedHistory() {
+    var historyText = "ประวัติการคัดลอก<br>";
+    for (var i = 0; i < copiedHistory.length; i++) {
+        historyText += copiedHistory[i];
+        if (i !== copiedHistory.length - 1) {
+            historyText += "<br>";
+        }
+    }
+    $("#copied-password").html(historyText);
 }
-function closePopup() {
-    var popup = document.getElementById('popup');
-    var topic = document.getElementById('topic');
-    popup.style.display = 'none';
-    topic.style.display = 'block';
-}
+// function openPopup() {
+//     var popup = document.getElementById('popup');
+//     var topic = document.getElementById('topic');
+//     popup.style.display = 'block';
+//     topic.style.display = 'none';
+// }
+// function closePopup() {
+//     var popup = document.getElementById('popup');
+//     var topic = document.getElementById('topic');
+//     popup.style.display = 'none';
+//     topic.style.display = 'block';
+// }

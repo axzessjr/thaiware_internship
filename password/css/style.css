@@ -49,6 +49,9 @@ body {
     font-size: 36px;
     padding: 50px 0px;
 }
+.tools {
+    margin-bottom: 20px;
+}
 input[type=range] {
     -webkit-appearance: none;
     height: 10px;
@@ -78,17 +81,16 @@ input[type=range]::-moz-range-thumb {
     cursor: pointer;
     border-radius: 50%;
 }
-.tab {
-    text-align: left;
+/* .tab {
+    text-align: center;
     position: fixed;
     bottom: 0;
-    left: 0;
-    background-color: #0000001a;
-    padding: 10px;
+    left: 0; 
+    padding: 10px 340px;
     box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.1);
     z-index: 9999;
     margin-left: 10%;
-}
+} 
 .topic-copied {
     cursor: pointer;
     width: 250px;
@@ -108,7 +110,7 @@ input[type=range]::-moz-range-thumb {
     padding: 20px;
     width: 250px;
     height: 100px;
-}
+} */
 @media screen and (max-width: 610px) {
     .topic-is {
         font-size: 18px;
