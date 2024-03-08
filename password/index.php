@@ -25,14 +25,38 @@
             <label for="password-length">ความยาวของรหัสผ่าน:</label>
             <input type="range" id="password-length" min="1" max="20" value="4" oninput="updatePasswordLength(this.value)">
             <span id="password-length-display">4</span><br>
-            <input type="checkbox" id="uppercase" checked>
+            <div class="check">
+                <div class="checkbox-wrapper-19">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase" class="check-box">
+                    <label style="margin-left: 25px;">ABC</label>
+                </div>
+                <div class="checkbox-wrapper-19">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase" class="check-box">
+                    <label style="margin-left: 25px;">abc</label>
+                </div>
+                <div class="checkbox-wrapper-19">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers" class="check-box">
+                    <label style="margin-left: 25px;">123</label>
+                </div>
+                <div class="checkbox-wrapper-19">
+                    <input type="checkbox" id="special">
+                    <label for="special" class="check-box">
+                    <label style="margin-left: 25px;">#$&</label>
+                </div>
+            </div>
+            
+
+            <!-- <input type="checkbox" id="uppercase" checked>
             <label for="uppercase">ABC</label>
             <input type="checkbox" id="lowercase" checked>
             <label for="lowercase">abc</label>
             <input type="checkbox" id="numbers" checked>
             <label for="numbers">123</label>
             <input type="checkbox" id="special">
-            <label for="special">#$&</label>
+            <label for="special">#$&</label> -->
         </div>
         <div class="tab">
             <!-- <div class="topic-copied" id="topic" onclick="openPopup()">ประวัติการคัดลอก</div>
