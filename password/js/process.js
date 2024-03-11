@@ -20,11 +20,19 @@ function generatePassword() {
         charset += "0123456789";
     if ($("#special").is(":checked"))
         charset += "!@#$%^&*()-_+=~[]{}|:;<>,.?/";
+    if (charset === "") {
+        $("#password-display").text("กรุณาเลือกประเภทของรหัสผ่านที่ต้องการ");
+        $("#password-display").css({"color":"rgba(200, 0, 0, 0.8)"});
+        $("#password-display").show();
+        return;
+    }
     var password = "";
     for (var i = 0; i < length; i++) {
         password += charset.charAt(Math.floor(Math.random() * charset.length));
     }
     $("#password-display").text(password);
+    $("#password-display").css({"color":"black"});
+    $("#password-display").show();
 }
 function copyPassword() {
     var passwordText = document.getElementById("password-display");
