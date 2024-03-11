@@ -49,11 +49,7 @@
             </div>
         </div>
         <div class="tab">
-            <!-- <div class="topic-copied" id="topic" onclick="openPopup()">ประวัติการคัดลอก</div>
-            <div class="tab-close" id="popup" style="display: none;">
-                <div class="topic-copied" onclick="closePopup()">ประวัติการคัดลอก</div> -->
-                <div class="copied-password" id="copied-password"></div>
-            <!-- </div> -->
+            <div class="copied-password" id="copied-password"></div>
         </div>
     </div>
 </body>

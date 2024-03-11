@@ -61,15 +61,3 @@ function displayCopiedHistory() {
     }
     $("#copied-password").html(historyText);
 }
-// function openPopup() {
-//     var popup = document.getElementById('popup');
-//     var topic = document.getElementById('topic');
-//     popup.style.display = 'block';
-//     topic.style.display = 'none';
-// }
-// function closePopup() {
-//     var popup = document.getElementById('popup');
-//     var topic = document.getElementById('topic');
-//     popup.style.display = 'none';
-//     topic.style.display = 'block';
-// }
